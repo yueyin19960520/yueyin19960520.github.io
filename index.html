@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOSS</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+
+    .main-container {
+        position: relative;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bg-container {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('toss_1.png');
+        background-position: bottom center;
+        background-size: 800px 800px;
+        background-repeat: no-repeat;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 0 0;
+    }
+
+    h1 {
+        font-size: 6vw;
+        text-align: center;
+        margin-bottom: 0.5vw;
+        margin-top: 2vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    h2 span {
+        color: red;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 0;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+    }
+
+    button {
+        flex: 1 1 auto;
+        background-color: inherit;
+        font-size: 1.2vw;
+        font-weight: bold;
+        margin: 0vw 1.5vw;
+        padding: 0vh 0vw;
+    }
+
+    footer {
+        /*background-color: #f8f9fa;*/
+        padding: 0px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1vw;
+        margin-top: 28vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="bg-container"></div>
+    <dic class="content-container">
+      <h1>TOSS</h1>
+      <h2><span>T</span>singhua <span>O</span>xidation <span>S</span>tates in <span>S</span>olids</h2>
+
+      <div class="button-container">
+        <button id="go-to-periodic-table">Periodic Table</button>
+        <button id="go-to-threshold-matrix">Threshold Matrix</button>
+        <button id="go-to-3d-radii">3D Atomic Radii</button>
+        <button id="go-to-BP-Finder">Bond Parameters Finder</button>
+        <button id="go-to-SR-Finder">Species Radii Finder</button>
+
+      </div>
+
+      <script>
+        document.getElementById("go-to-periodic-table").addEventListener("click", function() {
+          window.open("radii.html");
+        });
+      </script>
+
+      <script>
+        document.getElementById("go-to-threshold-matrix").addEventListener("click", function() {
+          window.open("thresholds.html");
+        });
+      </script>
+      
+      <script>
+        document.getElementById("go-to-3d-radii").addEventListener("click", function() {
+          window.open("3DAR.html");
+        });
+      </script>
+
+      <script>
+        document.getElementById("go-to-BP-Finder").addEventListener("click", function() {
+          window.open("search.html");
+        });
+      </script>
+
+      <script>
+        document.getElementById("go-to-SR-Finder").addEventListener("click", function() {
+          window.open("species_radii.html");
+        });
+      </script>
+
+      <footer>
+        <p>&copy; 2023 Yue Yin and Hai Xiao. All rights reserved.</p>
+        <p>Contact: <a href="mailto:yiny21@mails.tsinghua.edu.cn">yiny21@mails.tsinghua.edu.cn</a></p>
+        <p style="color:black;"><a href="https://beian.miit.gov.cn">京ICP备2023009848号</a></p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
