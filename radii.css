@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 56px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+
+#periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, 75px);
+  grid-template-rows: repeat(10, 50px);
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 50px;
+  border: 1px solid #ccc;
+  cursor: auto;
+}
+
+
+.cus-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 155px;
+  height: 76px;
+  border: 1px solid #ccc;
+  cursor: auto;
+}
+
+
+.element.selected {
+  background-color: #ffa500;
+}
+
+
+.element-symbol {
+  text-align: center;
+  line-height: 18px;
+  height:  30px;
+  font-size: 25px; /* Adjust the font size for the symbol */
+  color: #000; /* Set the color for the symbol */
+}
+
+.element-radius {
+  text-align: center;
+  font-size: 1px; /* Adjust the font size for the radius */
+  color: #777; /* Set the color for the radius */
+}
+
+
+.cus-element-symbol {
+  text-align: center;
+  line-height: 18px;
+  height:  35px;
+  font-size: 32px; /* Adjust the font size for the symbol */
+  color: #000; /* Set the color for the symbol */
+}
+
+.cus-element-radius {
+  text-align: center;
+  font-size: 15px; /* Adjust the font size for the radius */
+  color: #777; /* Set the color for the radius */
+}
+
+
+#selected-elements {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <title>Extremely Extended Bond Parameters Finder</title>
+</head>
+<body>
+    <h1>Extremely Extended Bond Parameters Finder</h1>
+    <form id="pair-keys">
+        <label for="EP1">Element 1:</label>
+        <input type="text" id="EP1" name="EP1" required>
+
+        <label for="CN1">CN1:</label>
+        <input type="text" id="CN1" name="CN1">
+
+        <label for="OS1">OS1:</label>
+        <input type="text" id="OS1" name="OS1">
+
+        <br>
+
+        <label for="EP2">Element 2:</label>
+        <input type="text" id="EP2" name="EP2" required>
+
+        <label for="CN2">CN2:</label>
+        <input type="text" id="CN2" name="CN2">
+
+        <label for="OS2">OS2:</label>
+        <input type="text" id="OS2" name="OS2">
+
+        <br>
+
+        <p>Sorry about that, it usually costs several minates.</p>
+
+        <button type="submit">Dataloading...</button>
+
+        <div class="instructions">
+          <p>Here are some instructions for using the Finder:</p>
+            <li>Please enter the corresonding Coordination Numbers and Oxidation States of the Element 1 or 2</li>
+            <li>You do not have to enter the Coordination Numbers and Oxidation States.</li>
+            <li>Please use "3" instead of "+3" for representing valence +3.</li>
+
+      </div> 
+
+    </form>
+    <div class="result" id="result"></div>
+
+    <script src="search.js"></script>
+</body>
+</html>
