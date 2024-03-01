@@ -56,7 +56,7 @@ h1 {
 
 .element-radius {
   text-align: center;
-  font-size: 1px; /* Adjust the font size for the radius */
+  font-size: 12px; /* Adjust the font size for the radius */
   color: #777; /* Set the color for the radius */
 }
 
