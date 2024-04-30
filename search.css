@@ -12,9 +12,10 @@ input, button {
     margin: 5px;
 }
 
-.result {
-    margin-top: 20px;
-    font-weight: bold;
+
+.result-table{
+    margin: 0 auto; /* This centers the element horizontally */
+    width: fit-content; /* Adjusts the width of the element based on its content */
 }
 
 
