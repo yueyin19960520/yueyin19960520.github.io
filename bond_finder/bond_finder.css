@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 95%; /* Adjust based on your preference */
+    max-width: 1200px; /* Keeps the container from becoming too wide on large screens */
+}
+
+.form-container {
+    margin-bottom: 20px; /* Space between the form and table */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.input-row {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the row */
+    margin-bottom: 20px;
+    align-items: center; /* Centers items vertically */
+}
+
+.input-row label {
+    flex: 0 0 auto; /* Does not grow, does not shrink, and is automatically sized based on content */
+    margin-left: 20px; /* Space between label and input */
+    text-align: right; /* Aligns text to the right */
+    white-space: nowrap; /* Prevents the label from wrapping */
+}
+
+.input-row input {
+    flex: 1 1 auto; /* Grows and shrinks with additional space, and initially sized based on content */
+    margin: 0 10px; /* Margin on both sides */
+    padding: 10px;
+    min-width: 40px; /* Ensures input has a reasonable width */
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px; /* Adds a bit of space above the button */
+}
+
+.table-container {
+    overflow-x: auto; /* Allows for horizontal scrolling on smaller screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Adjust or remove as needed */
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+.sort-indicator {
+    font-size: 1.5em;  /* Increase font size */
+    color: #333;       /* Darker color for better visibility */
+    cursor: pointer;   /* Indicates that the element is clickable */
+    user-select: none; /* Prevents the text from being selectable */
+}
+
+h1 {
+    text-align: center;  /* Centers the title */
+    margin-top: 20px;    /* Adds space at the top */
+    margin-bottom: 20px; /* Adds space below the title */
+    color: #333;         /* Sets the text color */
+    font-family: Arial, sans-serif; /* Font style for the title */
+}

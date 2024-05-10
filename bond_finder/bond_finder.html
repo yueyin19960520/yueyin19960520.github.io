@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extremely Extended Bond Parameters Finder</title>
+    <link rel="stylesheet" href="bond_finder.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Extremely Extended Bond Parameters Finder</h1>
+        <div class="form-container">
+            <div class="input-row">
+                <label for="et1">Element 1:</label>
+                <input type="text" id="et1">
+                <label for="cn1">Coordination Number 1:</label>
+                <input type="text" id="cn1">
+                <label for="os1">Oxidation State 1:</label>
+                <input type="text" id="os1">
+            </div>
+            <div class="input-row">
+                <label for="et2">Element 2:</label>
+                <input type="text" id="et2">
+                <label for="cn2">Coordination Number 2:</label>
+                <input type="text" id="cn2">
+                <label for="os2">Oxidation State 2:</label>
+                <input type="text" id="os2">
+            </div>
+            <div class="button-row">
+                <button onclick="filterPairs()">Search</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="results">
+                <thead>
+                    <tr>
+                        <th>(ET1, ET2)</th>
+                        <th>(CN1, CN2)</th>
+                        <th>(OS1, OS2)</th>
+                        <th onclick="sortTable('Mean')">
+                            Mean <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                        <th onclick="sortTable('Sigma')">
+                            Sigma <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                        <th onclick="sortTable('Number')">
+                            Number <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="bond_finder.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('bond_parameters.json')
+                .then(response => response.json())
+                .then(data => {
+                    keyValuePairs = data;  // This will load your data into the keyValuePairs variable
+                })
+                .catch(error => console.error('Error loading the data:', error));
+        });
+    </script>
+</body>
+</html>
