@@ -156,7 +156,7 @@ function scrollToPlot() {
 function displayPlot() {
   const img = document.getElementById("png-viewer-img");
   if (selected.ele1 && selected.ele2) {
-    img.src = `./redefined_length_png/Threshold of ${selected.ele1.symbol} and ${selected.ele2.symbol}.png`;
+    img.src = `./redefined_length_png/Threshold of ${selected.ele1.symbol} and ${selected.ele2.symbol}.svg`;
     scrollToPlot()
   } else {
     img.src = "";
