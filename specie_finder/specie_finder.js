@@ -1,4 +1,4 @@
-let currentJsonFile = 'Without_Alloys_specie_parameters.json';
+let currentJsonFile = 'WA_specie_parameters.json';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Fetch data when the page loads
@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function switchJson() {
     console.log('Switch button clicked'); // Add this line
-    if (currentJsonFile === 'Without_Alloys_specie_parameters.json') {
+    if (currentJsonFile === 'WA_specie_parameters.json') {
         currentJsonFile = 'specie_parameters.json';
         document.getElementById('switchButton').textContent = 'Exclude Alloys';
     } else {
-        currentJsonFile = 'Without_Alloys_specie_parameters.json';
+        currentJsonFile = 'WA_specie_parameters.json';
         document.getElementById('switchButton').textContent = 'Include Alloys';
     }
     fetchData(currentJsonFile);
