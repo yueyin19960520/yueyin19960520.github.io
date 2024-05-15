@@ -23,7 +23,7 @@ function handleEnterKey(event) {
 
 function switchJson() {
     if (currentJsonFile === 'bond_parameters.json') {
-        currentJsonFile = 'Without_Alloys_bond_parameters.json';
+        currentJsonFile = 'WA_bond_parameters.json';
         document.getElementById('switchButton').textContent = 'Include Alloys';
     } else {
         currentJsonFile = 'bond_parameters.json';
