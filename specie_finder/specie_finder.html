@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extremely Extended Specie Parameters Finder</title>
+    <link rel="stylesheet" href="specie_finder.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Extremely Extended Specie Parameters Finder</h1>
+        <div class="form-container">
+            <div class="input-row">
+                <label for="elementInput">Element:</label>
+                <input type="text" id="elementInput" placeholder="required (e.g. Fe)">
+            </div>
+            <div class="button-row">
+                <button onclick="filterPairs()">Search</button>
+                <button id="switchButton" onclick="switchJson()">Include Alloys</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="results">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('CN')">
+                            CN <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                        <th onclick="sortTable('OS')">
+                            OS <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                        <th onclick="sortTable('Mean')">
+                            Mean <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                        <th onclick="sortTable('Sigma')">
+                            Sigma <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                        <th onclick="sortTable('Number')">
+                            Number <span class="sort-indicator">&#x2195;</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="specie_finder.js"></script>
+</body>
+</html>
