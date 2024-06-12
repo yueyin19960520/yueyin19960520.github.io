@@ -1,123 +1,130 @@
 const elements = [
-{symbol: "H" , position:1   ,radius: "37.70" ,sigma:"0.40" ,color:"#FFFFE0"}, 
-{symbol: "He", position:18  ,radius: "No Data" ,sigma:"" ,color:"#D3D3D3"}, 
-{symbol: "Li", position:19  ,radius: "139.40" ,sigma:"12.30" ,color:"#ADD8E6"}, 
-{symbol: "Be", position:20  ,radius: "125.95" ,sigma:"7.20" ,color:"#ADD8E6"}, 
-{symbol: "B" , position:31  ,radius: "89.35" ,sigma:"3.65" ,color:"#FFFFE0"}, 
-{symbol: "C" , position:32  ,radius: "76.75" ,sigma:"1.25" ,color:"#FFFFE0"}, 
-{symbol: "N" , position:33  ,radius: "69.30" ,sigma:"3.50" ,color:"#FFFFE0"}, 
-{symbol: "O" , position:34  ,radius: "69.50" ,sigma:"6.25" ,color:"#FFFFE0"}, 
-{symbol: "F" , position:35  ,radius: "124.90" ,sigma:"7.35" ,color:"#FFFFE0"}, 
-{symbol: "Ne", position:36  ,radius: "No Data" ,sigma:"" ,color:"#D3D3D3"}, 
-{symbol: "Na", position:37  ,radius: "167.85" ,sigma:"8.50" ,color:"#ADD8E6"}, 
-{symbol: "Mg", position:38  ,radius: "157.05" ,sigma:"1.60" ,color:"#ADD8E6"}, 
-{symbol: "Al", position:49  ,radius: "139.20" ,sigma:"7.35" ,color:"#ADD8E6"}, 
-{symbol: "Si", position:50  ,radius: "122.90" ,sigma:"5.40" ,color:"#FFFFE0"}, 
-{symbol: "P" , position:51  ,radius: "112.60" ,sigma:"3.45" ,color:"#FFFFE0"}, 
-{symbol: "S" , position:52  ,radius: "135.40" ,sigma:"14.35" ,color:"#FFFFE0"}, 
-{symbol: "Cl", position:53  ,radius: "156.70" ,sigma:"23.55" ,color:"#FFFFE0"}, 
-{symbol: "Ar", position:54  ,radius: "No Data" ,sigma:"" ,color:"#D3D3D3"}, 
-{symbol: "K" , position:55  ,radius: "194.85" ,sigma:"22.20" ,color:"#ADD8E6"}, 
-{symbol: "Ca", position:56  ,radius: "179.65" ,sigma:"12.85" ,color:"#ADD8E6"}, 
-{symbol: "Sc", position:57  ,radius: "159.35" ,sigma:"3.10" ,color:"#ADD8E6"}, 
-{symbol: "Ti", position:58  ,radius: "142.65" ,sigma:"5.00" ,color:"#ADD8E6"}, 
-{symbol: "V" , position:59  ,radius: "135.30" ,sigma:"9.70" ,color:"#ADD8E6"}, 
-{symbol: "Cr", position:60  ,radius: "137.80" ,sigma:"5.95" ,color:"#ADD8E6"}, 
-{symbol: "Mn", position:61  ,radius: "128.50" ,sigma:"10.00" ,color:"#ADD8E6"}, 
-{symbol: "Fe", position:62  ,radius: "128.35" ,sigma:"6.55" ,color:"#ADD8E6"}, 
-{symbol: "Co", position:63  ,radius: "134.15" ,sigma:"6.20" ,color:"#ADD8E6"}, 
-{symbol: "Ni", position:64  ,radius: "126.00" ,sigma:"7.85" ,color:"#ADD8E6"}, 
-{symbol: "Cu", position:65  ,radius: "129.20" ,sigma:"5.95" ,color:"#ADD8E6"}, 
-{symbol: "Zn", position:66  ,radius: "143.20" ,sigma:"6.85" ,color:"#ADD8E6"}, 
-{symbol: "Ga", position:67  ,radius: "138.45" ,sigma:"1.25" ,color:"#ADD8E6"}, 
-{symbol: "Ge", position:68  ,radius: "143.55" ,sigma:"8.35" ,color:"#ADD8E6"}, 
-{symbol: "As", position:69  ,radius: "140.85" ,sigma:"9.80" ,color:"#FFFFE0"}, 
-{symbol: "Se", position:70  ,radius: "142.70" ,sigma:"14.20" ,color:"#FFFFE0"}, 
-{symbol: "Br", position:71  ,radius: "168.10" ,sigma:"21.80" ,color:"#FFFFE0"}, 
-{symbol: "Kr", position:72  ,radius: "No Data" ,sigma:"" ,color:"#D3D3D3"}, 
-{symbol: "Rb", position:73  ,radius: "205.75" ,sigma:"18.75" ,color:"#ADD8E6"}, 
-{symbol: "Sr", position:74  ,radius: "188.95" ,sigma:"18.25" ,color:"#ADD8E6"}, 
-{symbol: "Y" , position:75  ,radius: "173.20" ,sigma:"7.00" ,color:"#ADD8E6"}, 
-{symbol: "Zr", position:76  ,radius: "158.95" ,sigma:"3.60" ,color:"#ADD8E6"}, 
-{symbol: "Nb", position:77  ,radius: "158.95" ,sigma:"3.35" ,color:"#ADD8E6"}, 
-{symbol: "Mo", position:78  ,radius: "138.55" ,sigma:"8.05" ,color:"#ADD8E6"}, 
-{symbol: "Tc", position:79  ,radius: "134.45" ,sigma:"6.50" ,color:"#D8BFD8"}, 
-{symbol: "Ru", position:80  ,radius: "141.65" ,sigma:"7.95" ,color:"#ADD8E6"}, 
-{symbol: "Rh", position:81  ,radius: "137.20" ,sigma:"6.65" ,color:"#ADD8E6"}, 
-{symbol: "Pd", position:82  ,radius: "140.70" ,sigma:"6.10" ,color:"#ADD8E6"}, 
-{symbol: "Ag", position:83  ,radius: "144.90" ,sigma:"4.75" ,color:"#ADD8E6"}, 
-{symbol: "Cd", position:84  ,radius: "155.85" ,sigma:"0.40" ,color:"#ADD8E6"}, 
-{symbol: "In", position:85  ,radius: "164.20" ,sigma:"1.60" ,color:"#ADD8E6"}, 
-{symbol: "Sn", position:86  ,radius: "166.30" ,sigma:"4.10" ,color:"#ADD8E6"}, 
-{symbol: "Sb", position:87  ,radius: "158.10" ,sigma:"9.25" ,color:"#ADD8E6"}, 
-{symbol: "Te", position:88  ,radius: "165.45" ,sigma:"11.35" ,color:"#ADD8E6"}, 
-{symbol: "I" , position:89  ,radius: "202.65" ,sigma:"8.00" ,color:"#FFFFE0"}, 
-{symbol: "Xe", position:90  ,radius: "240.25" ,sigma:"0.70" ,color:"#D3D3D3"}, 
-{symbol: "Cs", position:91  ,radius: "264.90" ,sigma:"15.05" ,color:"#ADD8E6"}, 
-{symbol: "Ba", position:92  ,radius: "200.65" ,sigma:"15.30" ,color:"#ADD8E6"}, 
-{symbol: "Hf", position:94 ,radius: "154.90" ,sigma:"5.20" ,color:"#ADD8E6"}, 
-{symbol: "Ta", position:95 ,radius: "156.05" ,sigma:"5.25" ,color:"#ADD8E6"}, 
-{symbol: "W ", position:96 ,radius: "151.90" ,sigma:"4.45" ,color:"#ADD8E6"}, 
-{symbol: "Re", position:97 ,radius: "148.85" ,sigma:"3.90" ,color:"#ADD8E6"}, 
-{symbol: "Os", position:98 ,radius: "136.45" ,sigma:"1.65" ,color:"#ADD8E6"}, 
-{symbol: "Ir", position:99 ,radius: "135.50" ,sigma:"6.80" ,color:"#ADD8E6"}, 
-{symbol: "Pt", position:100 ,radius: "138.70" ,sigma:"4.80" ,color:"#ADD8E6"}, 
-{symbol: "Au", position:101 ,radius: "146.35" ,sigma:"2.95" ,color:"#ADD8E6"}, 
-{symbol: "Hg", position:102 ,radius: "158.55" ,sigma:"7.55" ,color:"#ADD8E6"}, 
-{symbol: "Tl", position:103 ,radius: "166.00" ,sigma:"2.75" ,color:"#ADD8E6"}, 
-{symbol: "Pb", position:104 ,radius: "171.10" ,sigma:"2.15" ,color:"#ADD8E6"}, 
-{symbol: "Bi", position:105 ,radius: "173.05" ,sigma:"6.35" ,color:"#ADD8E6"}, 
-{symbol: "Po", position:106 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "At", position:107 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Rn", position:108 ,radius: "No Data" ,sigma:"" ,color:"#D3D3D3"}, 
-{symbol: "Fr", position:109 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Ra", position:110 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Rf", position:112 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Db", position:113 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Sg", position:114 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Bh", position:115 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Hs", position:116 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Mt", position:117 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Ds", position:118 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Rg", position:119 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Cn", position:120 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Nh", position:121 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Fl", position:122 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Mc", position:123 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Lv", position:124 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Ts", position:125 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "Og", position:126 ,radius: "No Data" ,sigma:"" ,color:"#ADD8E6"}, 
-{symbol: "La", position:147 ,radius: "177.85" ,sigma:"9.60" ,color:"#ccffcc"}, 
-{symbol: "Ce", position:148 ,radius: "174.55" ,sigma:"10.25",color:"#ccffcc"}, 
-{symbol: "Pr", position:149 ,radius: "183.35" ,sigma:"1.50" ,color:"#ccffcc"}, 
-{symbol: "Nd", position:150 ,radius: "183.55" ,sigma:"2.45" ,color:"#ccffcc"}, 
-{symbol: "Pm", position:151 ,radius: "181.85" ,sigma:"1.15" ,color:"#ccffcc"}, 
-{symbol: "Sm", position:152 ,radius: "180.40" ,sigma:"1.85" ,color:"#ccffcc"}, 
-{symbol: "Eu", position:153 ,radius: "184.15" ,sigma:"11.85",color:"#ccffcc"}, 
-{symbol: "Gd", position:154 ,radius: "178.65" ,sigma:"1.80" ,color:"#ccffcc"}, 
-{symbol: "Tb", position:155 ,radius: "176.55" ,sigma:"1.85" ,color:"#ccffcc"}, 
-{symbol: "Dy", position:156 ,radius: "174.20" ,sigma:"4.95" ,color:"#ccffcc"}, 
-{symbol: "Ho", position:157 ,radius: "172.90" ,sigma:"5.60" ,color:"#ccffcc"}, 
-{symbol: "Er", position:158 ,radius: "171.50" ,sigma:"5.75" ,color:"#ccffcc"}, 
-{symbol: "Tm", position:159 ,radius: "170.55" ,sigma:"5.70" ,color:"#ccffcc"}, 
-{symbol: "Yb", position:160 ,radius: "185.25" ,sigma:"2.35" ,color:"#ccffcc"}, 
-{symbol: "Lu", position:161 ,radius: "169.00" ,sigma:"5.95" ,color:"#ccffcc"}, 
-{symbol: "Ac", position:165 ,radius: "188.10" ,sigma:"8.85" ,color:"#ccffcc"}, 
-{symbol: "Th", position:166 ,radius: "178.20" ,sigma:"0.90" ,color:"#ccffcc"}, 
-{symbol: "Pa", position:167 ,radius: "162.65" ,sigma:"4.45" ,color:"#ccffcc"}, 
-{symbol: "U" , position:168 ,radius: "154.55" ,sigma:"7.35" ,color:"#ccffcc"}, 
-{symbol: "Np", position:169 ,radius: "161.65" ,sigma:"1.95" ,color:"#ccffcc"}, 
-{symbol: "Pu", position:170 ,radius: "167.55" ,sigma:"1.60" ,color:"#ccffcc"}, 
-{symbol: "Am", position:171 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "Cm", position:172 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "Bk", position:173 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "Cf", position:174 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "Es", position:175 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "Fm", position:176 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "Md", position:177 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "No", position:178 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
-{symbol: "Lr", position:179 ,radius: "No Data" ,sigma:"" ,color:"#ccffcc"}, 
+{symbol: "H" , position:1   ,color:"#F9B3AD"}, 
+{symbol: "He", position:18  ,color:"#D9DEE7"}, 
+{symbol: "Li", position:19  ,color:"#9FDAF7"}, 
+{symbol: "Be", position:20  ,color:"#9FDAF7"}, 
+{symbol: "B" , position:31  ,color:"#F9B3AD"}, 
+{symbol: "C" , position:32  ,color:"#F9B3AD"}, 
+{symbol: "N" , position:33  ,color:"#F9B3AD"}, 
+{symbol: "O" , position:34  ,color:"#F9B3AD"}, 
+{symbol: "F" , position:35  ,color:"#F9B3AD"}, 
+{symbol: "Ne", position:36  ,color:"#D9DEE7"}, 
+{symbol: "Na", position:37  ,color:"#9FDAF7"}, 
+{symbol: "Mg", position:38  ,color:"#9FDAF7"}, 
+{symbol: "Al", position:49  ,color:"#9FDAF7"}, 
+{symbol: "Si", position:50  ,color:"#F9B3AD"}, 
+{symbol: "P" , position:51  ,color:"#F9B3AD"}, 
+{symbol: "S" , position:52  ,color:"#F9B3AD"}, 
+{symbol: "Cl", position:53  ,color:"#F9B3AD"}, 
+{symbol: "Ar", position:54  ,color:"#D9DEE7"}, 
+{symbol: "K" , position:55  ,color:"#9FDAF7"}, 
+{symbol: "Ca", position:56  ,color:"#9FDAF7"}, 
+{symbol: "Sc", position:57  ,color:"#9FDAF7"}, 
+{symbol: "Ti", position:58  ,color:"#9FDAF7"}, 
+{symbol: "V" , position:59  ,color:"#9FDAF7"}, 
+{symbol: "Cr", position:60  ,color:"#9FDAF7"}, 
+{symbol: "Mn", position:61  ,color:"#9FDAF7"}, 
+{symbol: "Fe", position:62  ,color:"#9FDAF7"}, 
+{symbol: "Co", position:63  ,color:"#9FDAF7"}, 
+{symbol: "Ni", position:64  ,color:"#9FDAF7"}, 
+{symbol: "Cu", position:65  ,color:"#9FDAF7"}, 
+{symbol: "Zn", position:66  ,color:"#9FDAF7"}, 
+{symbol: "Ga", position:67  ,color:"#9FDAF7"}, 
+{symbol: "Ge", position:68  ,color:"#9FDAF7"}, 
+{symbol: "As", position:69  ,color:"#F9B3AD"}, 
+{symbol: "Se", position:70  ,color:"#F9B3AD"}, 
+{symbol: "Br", position:71  ,color:"#F9B3AD"}, 
+{symbol: "Kr", position:72  ,color:"#D9DEE7"}, 
+{symbol: "Rb", position:73  ,color:"#9FDAF7"}, 
+{symbol: "Sr", position:74  ,color:"#9FDAF7"}, 
+{symbol: "Y" , position:75  ,color:"#9FDAF7"}, 
+{symbol: "Zr", position:76  ,color:"#9FDAF7"}, 
+{symbol: "Nb", position:77  ,color:"#9FDAF7"}, 
+{symbol: "Mo", position:78  ,color:"#9FDAF7"}, 
+{symbol: "Tc", position:79  ,color:"#9FDAF7"}, 
+{symbol: "Ru", position:80  ,color:"#9FDAF7"}, 
+{symbol: "Rh", position:81  ,color:"#9FDAF7"}, 
+{symbol: "Pd", position:82  ,color:"#9FDAF7"}, 
+{symbol: "Ag", position:83  ,color:"#9FDAF7"}, 
+{symbol: "Cd", position:84  ,color:"#9FDAF7"}, 
+{symbol: "In", position:85  ,color:"#9FDAF7"}, 
+{symbol: "Sn", position:86  ,color:"#9FDAF7"}, 
+{symbol: "Sb", position:87  ,color:"#9FDAF7"}, 
+{symbol: "Te", position:88  ,color:"#F9B3AD"}, 
+{symbol: "I" , position:89  ,color:"#F9B3AD"}, 
+{symbol: "Xe", position:90  ,color:"#D9DEE7"}, 
+{symbol: "Cs", position:91  ,color:"#9FDAF7"}, 
+{symbol: "Ba", position:92  ,color:"#9FDAF7"}, 
+{symbol: "Hf", position:94  ,color:"#9FDAF7"}, 
+{symbol: "Ta", position:95  ,color:"#9FDAF7"}, 
+{symbol: "W ", position:96  ,color:"#9FDAF7"}, 
+{symbol: "Re", position:97  ,color:"#9FDAF7"}, 
+{symbol: "Os", position:98  ,color:"#9FDAF7"}, 
+{symbol: "Ir", position:99  ,color:"#9FDAF7"}, 
+{symbol: "Pt", position:100 ,color:"#9FDAF7"}, 
+{symbol: "Au", position:101 ,color:"#9FDAF7"}, 
+{symbol: "Hg", position:102 ,color:"#9FDAF7"}, 
+{symbol: "Tl", position:103 ,color:"#9FDAF7"}, 
+{symbol: "Pb", position:104 ,color:"#9FDAF7"}, 
+{symbol: "Bi", position:105 ,color:"#9FDAF7"}, 
+{symbol: "Po", position:106 ,color:"#9FDAF7"}, 
+{symbol: "At", position:107 ,color:"#9FDAF7"}, 
+{symbol: "Rn", position:108 ,color:"#D9DEE7"}, 
+{symbol: "Fr", position:109 ,color:"#9FDAF7"}, 
+{symbol: "Ra", position:110 ,color:"#9FDAF7"}, 
+{symbol: "Rf", position:112 ,color:"#9FDAF7"}, 
+{symbol: "Db", position:113 ,color:"#9FDAF7"}, 
+{symbol: "Sg", position:114 ,color:"#9FDAF7"}, 
+{symbol: "Bh", position:115 ,color:"#9FDAF7"}, 
+{symbol: "Hs", position:116 ,color:"#9FDAF7"}, 
+{symbol: "Mt", position:117 ,color:"#9FDAF7"}, 
+{symbol: "Ds", position:118 ,color:"#9FDAF7"}, 
+{symbol: "Rg", position:119 ,color:"#9FDAF7"}, 
+{symbol: "Cn", position:120 ,color:"#9FDAF7"}, 
+{symbol: "Nh", position:121 ,color:"#9FDAF7"}, 
+{symbol: "Fl", position:122 ,color:"#9FDAF7"}, 
+{symbol: "Mc", position:123 ,color:"#9FDAF7"}, 
+{symbol: "Lv", position:124 ,color:"#9FDAF7"}, 
+{symbol: "Ts", position:125 ,color:"#9FDAF7"}, 
+{symbol: "Og", position:126 ,color:"#9FDAF7"}, 
+{symbol: "La", position:147 ,color:"#9FDAF7"}, 
+{symbol: "Ce", position:148 ,color:"#9FDAF7"}, 
+{symbol: "Pr", position:149 ,color:"#9FDAF7"}, 
+{symbol: "Nd", position:150 ,color:"#9FDAF7"}, 
+{symbol: "Pm", position:151 ,color:"#9FDAF7"}, 
+{symbol: "Sm", position:152 ,color:"#9FDAF7"}, 
+{symbol: "Eu", position:153 ,color:"#9FDAF7"}, 
+{symbol: "Gd", position:154 ,color:"#9FDAF7"}, 
+{symbol: "Tb", position:155 ,color:"#9FDAF7"}, 
+{symbol: "Dy", position:156 ,color:"#9FDAF7"}, 
+{symbol: "Ho", position:157 ,color:"#9FDAF7"}, 
+{symbol: "Er", position:158 ,color:"#9FDAF7"}, 
+{symbol: "Tm", position:159 ,color:"#9FDAF7"}, 
+{symbol: "Yb", position:160 ,color:"#9FDAF7"}, 
+{symbol: "Lu", position:161 ,color:"#9FDAF7"}, 
+{symbol: "Ac", position:165 ,color:"#9FDAF7"}, 
+{symbol: "Th", position:166 ,color:"#9FDAF7"}, 
+{symbol: "Pa", position:167 ,color:"#9FDAF7"}, 
+{symbol: "U" , position:168 ,color:"#9FDAF7"}, 
+{symbol: "Np", position:169 ,color:"#9FDAF7"}, 
+{symbol: "Pu", position:170 ,color:"#9FDAF7"}, 
+{symbol: "Am", position:171 ,color:"#9FDAF7"}, 
+{symbol: "Cm", position:172 ,color:"#9FDAF7"}, 
+{symbol: "Bk", position:173 ,color:"#9FDAF7"}, 
+{symbol: "Cf", position:174 ,color:"#9FDAF7"}, 
+{symbol: "Es", position:175 ,color:"#9FDAF7"}, 
+{symbol: "Fm", position:176 ,color:"#9FDAF7"}, 
+{symbol: "Md", position:177 ,color:"#9FDAF7"}, 
+{symbol: "No", position:178 ,color:"#9FDAF7"}, 
+{symbol: "Lr", position:179 ,color:"#9FDAF7"}, 
 ];
+
+
+const legend = [ 
+{symbol: "Metal", position:25 ,color:"#9FDAF7"}, 
+{symbol: "Non-Metal", position:26 ,color:"#F9B3AD"}, 
+{symbol: "Noble-Gas", position:27 ,color:"#D9DEE7"}, 
+]
 
 
 const positions = [
@@ -148,16 +155,32 @@ function displayElement(element, index) {
 
 
 function scrollToPlot() {
-  const plotAnchor = document.getElementById('plot-anchor');
-  plotAnchor.scrollIntoView({ behavior: 'instant' }); //smooth//
+  const img = document.getElementById('png-viewer-img');
+  const imgRect = img.getBoundingClientRect();
+  const offset = (window.innerHeight - imgRect.height) / 2;
+  window.scrollTo({
+    top: imgRect.top + window.scrollY - offset,
+    behavior: 'smooth'
+  });
 }
 
 
 function displayPlot() {
   const img = document.getElementById("png-viewer-img");
   if (selected.ele1 && selected.ele2) {
-    img.src = `./redefined_length_png/Threshold of ${selected.ele1.symbol} and ${selected.ele2.symbol}.svg`;
-    scrollToPlot()
+    const fileName1 = `./distance_distribution/${selected.ele1.symbol}_${selected.ele2.symbol}.png`;
+    const fileName2 = `./distance_distribution/${selected.ele2.symbol}_${selected.ele1.symbol}.png`;
+
+    img.onload = function() {
+      scrollToPlot(); // Scroll to plot after the image is loaded
+    };
+
+    img.onerror = function() {
+      img.onerror = null; // Prevent infinite loop if both images are missing
+      img.src = fileName2;
+    };
+
+    img.src = fileName1;
   } else {
     img.src = "";
   }
@@ -185,9 +208,9 @@ function createTable() {
         const cell = document.createElement("div");
         cell.classList.add("element");
 
-        cell.innerHTML =  `<span class="element-symbol">${element.symbol}<span>`;
+        cell.innerHTML = `<span class="element-symbol">${element.symbol}</span>`;
 
-        cell.style.backgroundColor = element.color;    //color here!!!!!!!!!!!!!!!!.toFixed(2)
+        cell.style.backgroundColor = element.color; // Set the element's background color
         cell.addEventListener("click", () => {
           toggleElement(element);
           cell.classList.toggle("selected");
@@ -195,12 +218,20 @@ function createTable() {
           displayElement(selected.ele2, 2);
           displayPlot();
         });
+
+
+        if (["Tc","Re","Os","Ir","Pm","Ac","Th","Pa","U","Np","Pu"].includes(element.symbol)) {
+          const triangle = document.createElement("div");
+          triangle.classList.add("triangle");
+          cell.appendChild(triangle);
+        }
+
         element.domElement = cell;
         table.appendChild(cell);
       } else {
         const emptyCell = document.createElement("div");
         emptyCell.style.width = "40px";
-        emptyCell.style.height = "30px";
+        emptyCell.style.height = "40px";
         table.appendChild(emptyCell);
       }
     }
