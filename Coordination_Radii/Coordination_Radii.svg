@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2024-06-12T20:07:43.718575</dc:date>
+    <dc:date>2024-06-12T21:57:51.306222</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -855,7 +855,7 @@ z
     <path d="M 1732.583554 423.732057 
 L 1938.843501 423.732057 
 L 1938.843501 217.033493 
-" clip-path="url(#pda0301983c)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+" clip-path="url(#p31c049e9a7)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_3"/>
    <g id="matplotlib.axis_4"/>
@@ -1143,7 +1143,7 @@ z
    <g id="matplotlib.axis_6"/>
    <g id="text_13">
     <!-- H -->
-    <g transform="translate(57.397729 103.349282)scale(0.6 -0.6)">
+    <g transform="translate(78.023723 103.349282)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-48" d="M 588 4666 
 L 1791 4666 
@@ -1311,7 +1311,7 @@ z
    <g id="matplotlib.axis_10"/>
    <g id="text_20">
     <!-- Li -->
-    <g transform="translate(53.103979 320.382775)scale(0.6 -0.6)">
+    <g transform="translate(73.729973 320.382775)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-4c" d="M 588 4666 
 L 1791 4666 
@@ -1414,7 +1414,7 @@ z
    <g id="matplotlib.axis_12"/>
    <g id="text_24">
     <!-- Be -->
-    <g transform="translate(255.862861 320.382775)scale(0.6 -0.6)">
+    <g transform="translate(276.488855 320.382775)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-42" d="M 2456 2859 
 Q 2741 2859 2887 2984 
@@ -1513,7 +1513,7 @@ z
    <g id="matplotlib.axis_14"/>
    <g id="text_28">
     <!-- B -->
-    <g transform="translate(2658.513685 320.382775)scale(0.6 -0.6)">
+    <g transform="translate(2679.13968 320.382775)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-42"/>
     </g>
    </g>
@@ -1584,7 +1584,7 @@ z
    <g id="matplotlib.axis_16"/>
    <g id="text_32">
     <!-- C -->
-    <g transform="translate(2875.935067 320.382775)scale(0.6 -0.6)">
+    <g transform="translate(2896.561062 320.382775)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-43" d="M 4288 256 
 Q 3956 84 3597 -3 
@@ -1710,7 +1710,7 @@ z
    <g id="matplotlib.axis_18"/>
    <g id="text_36">
     <!-- N -->
-    <g transform="translate(3089.418949 320.382775)scale(0.6 -0.6)">
+    <g transform="translate(3110.044944 320.382775)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-4e" d="M 588 4666 
 L 1931 4666 
@@ -1769,7 +1769,7 @@ z
    <g id="matplotlib.axis_20"/>
    <g id="text_40">
     <!-- O -->
-    <g transform="translate(3305.593456 320.382775)scale(0.6 -0.6)">
+    <g transform="translate(3326.21945 320.382775)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4f"/>
     </g>
    </g>
@@ -1812,7 +1812,7 @@ z
    <g id="matplotlib.axis_22"/>
    <g id="text_44">
     <!-- F -->
-    <g transform="translate(3527.177338 320.382775)scale(0.6 -0.6)">
+    <g transform="translate(3547.803332 320.382775)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-46" d="M 588 4666 
 L 3834 4666 
@@ -1964,7 +1964,7 @@ z
    <g id="matplotlib.axis_26"/>
    <g id="text_51">
     <!-- Na -->
-    <g transform="translate(37.152416 537.416268)scale(0.6 -0.6)">
+    <g transform="translate(57.778411 537.416268)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-61" d="M 2106 1575 
 Q 1756 1575 1579 1456 
@@ -2045,7 +2045,7 @@ z
    <g id="matplotlib.axis_28"/>
    <g id="text_55">
     <!-- Mg -->
-    <g transform="translate(247.748798 537.416268)scale(0.6 -0.6)">
+    <g transform="translate(268.374793 537.416268)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-4d" d="M 588 4666 
 L 2119 4666 
@@ -2143,7 +2143,7 @@ z
    <g id="matplotlib.axis_30"/>
    <g id="text_59">
     <!-- Al -->
-    <g transform="translate(2647.877748 537.416268)scale(0.6 -0.6)">
+    <g transform="translate(2668.503743 537.416268)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-41" d="M 3419 850 
 L 1538 850 
@@ -2213,7 +2213,7 @@ z
    <g id="matplotlib.axis_32"/>
    <g id="text_63">
     <!-- Si -->
-    <g transform="translate(2866.063192 537.416268)scale(0.6 -0.6)">
+    <g transform="translate(2886.689187 537.416268)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-53" d="M 3834 4519 
 L 3834 3531 
@@ -2292,7 +2292,7 @@ z
    <g id="matplotlib.axis_34"/>
    <g id="text_67">
     <!-- P -->
-    <g transform="translate(3092.536136 537.416268)scale(0.6 -0.6)">
+    <g transform="translate(3113.162131 537.416268)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-50" d="M 588 4666 
 L 2584 4666 
@@ -2359,7 +2359,7 @@ z
    <g id="matplotlib.axis_36"/>
    <g id="text_71">
     <!-- S -->
-    <g transform="translate(3309.493456 537.416268)scale(0.6 -0.6)">
+    <g transform="translate(3330.11945 537.416268)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-53"/>
     </g>
    </g>
@@ -2404,7 +2404,7 @@ z
    <g id="matplotlib.axis_38"/>
    <g id="text_75">
     <!-- Cl -->
-    <g transform="translate(3515.369525 537.416268)scale(0.6 -0.6)">
+    <g transform="translate(3535.99552 537.416268)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-43"/>
      <use xlink:href="#DejaVuSans-Bold-6c" x="73.388672"/>
     </g>
@@ -2488,7 +2488,7 @@ z
    <g id="matplotlib.axis_42"/>
    <g id="text_82">
     <!-- K -->
-    <g transform="translate(59.258666 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(79.884661 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-4b" d="M 588 4666 
 L 1791 4666 
@@ -2549,7 +2549,7 @@ z
    <g id="matplotlib.axis_44"/>
    <g id="text_86">
     <!-- Ca -->
-    <g transform="translate(256.814423 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(277.440418 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-43"/>
      <use xlink:href="#DejaVuSans-Bold-61" x="73.388672"/>
     </g>
@@ -2595,7 +2595,7 @@ z
    <g id="matplotlib.axis_46"/>
    <g id="text_90">
     <!-- Sc -->
-    <g transform="translate(476.260805 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(496.8868 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-63" d="M 3366 3391 
 L 3366 2478 
@@ -2664,7 +2664,7 @@ z
    <g id="matplotlib.axis_48"/>
    <g id="text_94">
     <!-- Ti -->
-    <g transform="translate(701.472812 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(722.098806 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-54" d="M 31 4666 
 L 4331 4666 
@@ -2723,7 +2723,7 @@ z
    <g id="matplotlib.axis_50"/>
    <g id="text_98">
     <!-- V -->
-    <g transform="translate(925.578568 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(946.204563 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-56" d="M 31 4666 
 L 1241 4666 
@@ -2780,7 +2780,7 @@ z
    <g id="matplotlib.axis_52"/>
    <g id="text_102">
     <!-- Cr -->
-    <g transform="translate(1128.557763 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(1149.183757 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-43"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="73.388672"/>
     </g>
@@ -2826,7 +2826,7 @@ z
    <g id="matplotlib.axis_54"/>
    <g id="text_106">
     <!-- Mn -->
-    <g transform="translate(1330.730707 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(1351.356702 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-6e" d="M 4056 2131 
 L 4056 0 
@@ -2896,7 +2896,7 @@ z
    <g id="matplotlib.axis_56"/>
    <g id="text_110">
     <!-- Fe -->
-    <g transform="translate(1558.872401 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(1579.498396 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-46"/>
      <use xlink:href="#DejaVuSans-Bold-65" x="64.310547"/>
     </g>
@@ -2942,7 +2942,7 @@ z
    <g id="matplotlib.axis_58"/>
    <g id="text_114">
     <!-- Co -->
-    <g transform="translate(1772.459408 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(1793.085403 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-6f" d="M 2203 2784 
 Q 1831 2784 1636 2517 
@@ -3011,7 +3011,7 @@ z
    <g id="matplotlib.axis_60"/>
    <g id="text_118">
     <!-- Ni -->
-    <g transform="translate(1996.269852 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(2016.895847 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4e"/>
      <use xlink:href="#DejaVuSans-Bold-69" x="83.691406"/>
     </g>
@@ -3056,7 +3056,7 @@ z
    <g id="matplotlib.axis_62"/>
    <g id="text_122">
     <!-- Cu -->
-    <g transform="translate(2204.859984 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(2225.485979 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-75" d="M 500 1363 
 L 500 3500 
@@ -3127,7 +3127,7 @@ z
    <g id="matplotlib.axis_64"/>
    <g id="text_126">
     <!-- Zn -->
-    <g transform="translate(2421.695429 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(2442.321423 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-5a" d="M 359 4666 
 L 4281 4666 
@@ -3188,7 +3188,7 @@ z
    <g id="matplotlib.axis_66"/>
    <g id="text_130">
     <!-- Ga -->
-    <g transform="translate(2636.51056 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(2657.136555 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-47" d="M 4781 347 
 Q 4331 128 3847 18 
@@ -3261,7 +3261,7 @@ z
    <g id="matplotlib.axis_68"/>
    <g id="text_134">
     <!-- Ge -->
-    <g transform="translate(2852.98038 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(2873.606374 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-47"/>
      <use xlink:href="#DejaVuSans-Bold-65" x="82.080078"/>
     </g>
@@ -3306,7 +3306,7 @@ z
    <g id="matplotlib.axis_70"/>
    <g id="text_138">
     <!-- As -->
-    <g transform="translate(3073.453324 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(3094.079319 754.449761)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-73" d="M 3272 3391 
 L 3272 2541 
@@ -3385,7 +3385,7 @@ z
    <g id="matplotlib.axis_72"/>
    <g id="text_142">
     <!-- Se -->
-    <g transform="translate(3289.145018 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(3309.771013 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-53"/>
      <use xlink:href="#DejaVuSans-Bold-65" x="72.021484"/>
     </g>
@@ -3431,7 +3431,7 @@ z
    <g id="matplotlib.axis_74"/>
    <g id="text_146">
     <!-- Br -->
-    <g transform="translate(3510.011713 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(3530.637707 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-42"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="76.220703"/>
     </g>
@@ -3473,11 +3473,17 @@ L 3681.740053 651.100478
 z
 " style="fill: #f9b3ad"/>
    </g>
+   <g id="patch_53">
+    <path d="M 3681.740053 857.799043 
+L 3888 857.799043 
+L 3888 651.100478 
+" clip-path="url(#paed12513c3)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_75"/>
    <g id="matplotlib.axis_76"/>
    <g id="text_150">
     <!-- Kr -->
-    <g transform="translate(3726.204969 754.449761)scale(0.6 -0.6)">
+    <g transform="translate(3746.830964 754.449761)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4b"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="77.490234"/>
     </g>
@@ -3511,7 +3517,7 @@ z
    </g>
   </g>
   <g id="axes_40">
-   <g id="patch_53">
+   <g id="patch_54">
     <path d="M 0 1074.832536 
 L 206.259947 1074.832536 
 L 206.259947 868.133971 
@@ -3523,7 +3529,7 @@ z
    <g id="matplotlib.axis_78"/>
    <g id="text_154">
     <!-- Rb -->
-    <g transform="translate(37.930541 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(58.556536 971.483254)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-52" d="M 2297 2597 
 Q 2675 2597 2839 2737 
@@ -3613,7 +3619,7 @@ z
    </g>
   </g>
   <g id="axes_41">
-   <g id="patch_54">
+   <g id="patch_55">
     <path d="M 216.572944 1074.832536 
 L 422.832891 1074.832536 
 L 422.832891 868.133971 
@@ -3625,7 +3631,7 @@ z
    <g id="matplotlib.axis_80"/>
    <g id="text_158">
     <!-- Sr -->
-    <g transform="translate(262.678486 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(283.30448 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-53"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="72.021484"/>
     </g>
@@ -3659,7 +3665,7 @@ z
    </g>
   </g>
   <g id="axes_42">
-   <g id="patch_55">
+   <g id="patch_56">
     <path d="M 433.145889 1074.832536 
 L 639.405836 1074.832536 
 L 639.405836 868.133971 
@@ -3671,7 +3677,7 @@ z
    <g id="matplotlib.axis_82"/>
    <g id="text_162">
     <!-- Y -->
-    <g transform="translate(493.927992 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(514.553987 971.483254)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-59" d="M -63 4666 
 L 1253 4666 
@@ -3718,7 +3724,7 @@ z
    </g>
   </g>
   <g id="axes_43">
-   <g id="patch_56">
+   <g id="patch_57">
     <path d="M 649.718833 1074.832536 
 L 855.97878 1074.832536 
 L 855.97878 868.133971 
@@ -3730,7 +3736,7 @@ z
    <g id="matplotlib.axis_84"/>
    <g id="text_166">
     <!-- Zr -->
-    <g transform="translate(695.674374 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(716.300369 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-5a"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="72.509766"/>
     </g>
@@ -3764,7 +3770,7 @@ z
    </g>
   </g>
   <g id="axes_44">
-   <g id="patch_57">
+   <g id="patch_58">
     <path d="M 866.291777 1074.832536 
 L 1072.551724 1074.832536 
 L 1072.551724 868.133971 
@@ -3776,7 +3782,7 @@ z
    <g id="matplotlib.axis_86"/>
    <g id="text_170">
     <!-- Nb -->
-    <g transform="translate(902.216068 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(922.842063 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4e"/>
      <use xlink:href="#DejaVuSans-Bold-62" x="83.691406"/>
     </g>
@@ -3810,7 +3816,7 @@ z
    </g>
   </g>
   <g id="axes_45">
-   <g id="patch_58">
+   <g id="patch_59">
     <path d="M 1082.864721 1074.832536 
 L 1289.124668 1074.832536 
 L 1289.124668 868.133971 
@@ -3822,7 +3828,7 @@ z
    <g id="matplotlib.axis_88"/>
    <g id="text_174">
     <!-- Mo -->
-    <g transform="translate(1114.903075 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(1135.52907 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4d"/>
      <use xlink:href="#DejaVuSans-Bold-6f" x="99.511719"/>
     </g>
@@ -3856,7 +3862,7 @@ z
    </g>
   </g>
   <g id="axes_46">
-   <g id="patch_59">
+   <g id="patch_60">
     <path d="M 1299.437666 1074.832536 
 L 1505.697613 1074.832536 
 L 1505.697613 868.133971 
@@ -3868,7 +3874,7 @@ z
    <g id="matplotlib.axis_90"/>
    <g id="text_178">
     <!-- Tc -->
-    <g transform="translate(1347.666645 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(1368.292639 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-54"/>
      <use xlink:href="#DejaVuSans-Bold-63" x="54.962891"/>
     </g>
@@ -3902,7 +3908,7 @@ z
    </g>
   </g>
   <g id="axes_47">
-   <g id="patch_60">
+   <g id="patch_61">
     <path d="M 1516.01061 1074.832536 
 L 1722.270557 1074.832536 
 L 1722.270557 868.133971 
@@ -3914,7 +3920,7 @@ z
    <g id="matplotlib.axis_92"/>
    <g id="text_182">
     <!-- Ru -->
-    <g transform="translate(1554.058339 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(1574.684334 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-52"/>
      <use xlink:href="#DejaVuSans-Bold-75" x="77.001953"/>
     </g>
@@ -3948,7 +3954,7 @@ z
    </g>
   </g>
   <g id="axes_48">
-   <g id="patch_61">
+   <g id="patch_62">
     <path d="M 1732.583554 1074.832536 
 L 1938.843501 1074.832536 
 L 1938.843501 868.133971 
@@ -3960,7 +3966,7 @@ z
    <g id="matplotlib.axis_94"/>
    <g id="text_186">
     <!-- Rh -->
-    <g transform="translate(1770.631283 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(1791.257278 971.483254)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-68" d="M 4056 2131 
 L 4056 0 
@@ -4018,7 +4024,7 @@ z
    </g>
   </g>
   <g id="axes_49">
-   <g id="patch_62">
+   <g id="patch_63">
     <path d="M 1949.156499 1074.832536 
 L 2155.416446 1074.832536 
 L 2155.416446 868.133971 
@@ -4030,7 +4036,7 @@ z
    <g id="matplotlib.axis_96"/>
    <g id="text_190">
     <!-- Pd -->
-    <g transform="translate(1988.197977 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(2008.823972 971.483254)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-64" d="M 2919 2988 
 L 2919 4863 
@@ -4092,7 +4098,7 @@ z
    </g>
   </g>
   <g id="axes_50">
-   <g id="patch_63">
+   <g id="patch_64">
     <path d="M 2165.729443 1074.832536 
 L 2371.98939 1074.832536 
 L 2371.98939 868.133971 
@@ -4104,7 +4110,7 @@ z
    <g id="matplotlib.axis_98"/>
    <g id="text_194">
     <!-- Ag -->
-    <g transform="translate(2203.542797 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(2224.168791 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-41"/>
      <use xlink:href="#DejaVuSans-Bold-67" x="77.392578"/>
     </g>
@@ -4138,7 +4144,7 @@ z
    </g>
   </g>
   <g id="axes_51">
-   <g id="patch_64">
+   <g id="patch_65">
     <path d="M 2382.302387 1074.832536 
 L 2588.562334 1074.832536 
 L 2588.562334 868.133971 
@@ -4150,7 +4156,7 @@ z
    <g id="matplotlib.axis_100"/>
    <g id="text_198">
     <!-- Cd -->
-    <g transform="translate(2421.315741 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(2441.941736 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-43"/>
      <use xlink:href="#DejaVuSans-Bold-64" x="73.388672"/>
     </g>
@@ -4184,7 +4190,7 @@ z
    </g>
   </g>
   <g id="axes_52">
-   <g id="patch_65">
+   <g id="patch_66">
     <path d="M 2598.875332 1074.832536 
 L 2805.135279 1074.832536 
 L 2805.135279 868.133971 
@@ -4196,7 +4202,7 @@ z
    <g id="matplotlib.axis_102"/>
    <g id="text_202">
     <!-- In -->
-    <g transform="translate(2648.862123 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(2669.488118 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-49"/>
      <use xlink:href="#DejaVuSans-Bold-6e" x="37.207031"/>
     </g>
@@ -4230,7 +4236,7 @@ z
    </g>
   </g>
   <g id="axes_53">
-   <g id="patch_66">
+   <g id="patch_67">
     <path d="M 2815.448276 1074.832536 
 L 3021.708223 1074.832536 
 L 3021.708223 868.133971 
@@ -4242,7 +4248,7 @@ z
    <g id="matplotlib.axis_104"/>
    <g id="text_206">
     <!-- Sn -->
-    <g transform="translate(2854.991317 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(2875.617312 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-53"/>
      <use xlink:href="#DejaVuSans-Bold-6e" x="72.021484"/>
     </g>
@@ -4275,7 +4281,7 @@ z
    </g>
   </g>
   <g id="axes_54">
-   <g id="patch_67">
+   <g id="patch_68">
     <path d="M 3032.02122 1074.832536 
 L 3238.281167 1074.832536 
 L 3238.281167 868.133971 
@@ -4287,7 +4293,7 @@ z
    <g id="matplotlib.axis_106"/>
    <g id="text_210">
     <!-- Sb -->
-    <g transform="translate(3071.447074 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(3092.073069 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-53"/>
      <use xlink:href="#DejaVuSans-Bold-62" x="72.021484"/>
     </g>
@@ -4321,7 +4327,7 @@ z
    </g>
   </g>
   <g id="axes_55">
-   <g id="patch_68">
+   <g id="patch_69">
     <path d="M 3248.594164 1074.832536 
 L 3454.854111 1074.832536 
 L 3454.854111 868.133971 
@@ -4333,7 +4339,7 @@ z
    <g id="matplotlib.axis_108"/>
    <g id="text_214">
     <!-- Te -->
-    <g transform="translate(3294.259081 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(3314.885075 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-54"/>
      <use xlink:href="#DejaVuSans-Bold-65" x="54.962891"/>
     </g>
@@ -4367,7 +4373,7 @@ z
    </g>
   </g>
   <g id="axes_56">
-   <g id="patch_69">
+   <g id="patch_70">
     <path d="M 3465.167109 1074.832536 
 L 3671.427056 1074.832536 
 L 3671.427056 868.133971 
@@ -4379,7 +4385,7 @@ z
    <g id="matplotlib.axis_110"/>
    <g id="text_218">
     <!-- I -->
-    <g transform="translate(3536.51015 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(3557.136145 971.483254)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-49"/>
     </g>
    </g>
@@ -4412,7 +4418,7 @@ z
    </g>
   </g>
   <g id="axes_57">
-   <g id="patch_70">
+   <g id="patch_71">
     <path d="M 3681.740053 1074.832536 
 L 3888 1074.832536 
 L 3888 868.133971 
@@ -4420,11 +4426,17 @@ L 3681.740053 868.133971
 z
 " style="fill: #f9b3ad"/>
    </g>
+   <g id="patch_72">
+    <path d="M 3681.740053 1074.832536 
+L 3888 1074.832536 
+L 3888 868.133971 
+" clip-path="url(#p0fe1b02334)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_111"/>
    <g id="matplotlib.axis_112"/>
    <g id="text_222">
     <!-- Xe -->
-    <g transform="translate(3721.554969 971.483254)scale(0.6 -0.6)">
+    <g transform="translate(3742.180964 971.483254)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-58" d="M 3188 2381 
 L 4806 0 
@@ -4475,7 +4487,7 @@ z
    </g>
   </g>
   <g id="axes_58">
-   <g id="patch_71">
+   <g id="patch_73">
     <path d="M 0 1291.866029 
 L 206.259947 1291.866029 
 L 206.259947 1085.167464 
@@ -4487,7 +4499,7 @@ z
    <g id="matplotlib.axis_114"/>
    <g id="text_226">
     <!-- Cs -->
-    <g transform="translate(42.632104 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(63.258098 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-43"/>
      <use xlink:href="#DejaVuSans-Bold-73" x="73.388672"/>
     </g>
@@ -4521,7 +4533,7 @@ z
    </g>
   </g>
   <g id="axes_59">
-   <g id="patch_72">
+   <g id="patch_74">
     <path d="M 216.572944 1291.866029 
 L 422.832891 1291.866029 
 L 422.832891 1085.167464 
@@ -4533,7 +4545,7 @@ z
    <g id="matplotlib.axis_116"/>
    <g id="text_230">
     <!-- Ba -->
-    <g transform="translate(255.965986 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(276.59198 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-42"/>
      <use xlink:href="#DejaVuSans-Bold-61" x="76.220703"/>
     </g>
@@ -4567,7 +4579,7 @@ z
    </g>
   </g>
   <g id="axes_60">
-   <g id="patch_73">
+   <g id="patch_75">
     <path d="M 649.718833 1291.866029 
 L 855.97878 1291.866029 
 L 855.97878 1085.167464 
@@ -4579,7 +4591,7 @@ z
    <g id="matplotlib.axis_118"/>
    <g id="text_234">
     <!-- Hf -->
-    <g transform="translate(694.066562 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(714.692556 1188.516746)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-66" d="M 2841 4863 
 L 2841 4128 
@@ -4636,7 +4648,7 @@ z
    </g>
   </g>
   <g id="axes_61">
-   <g id="patch_74">
+   <g id="patch_76">
     <path d="M 866.291777 1291.866029 
 L 1072.551724 1291.866029 
 L 1072.551724 1085.167464 
@@ -4648,7 +4660,7 @@ z
    <g id="matplotlib.axis_120"/>
    <g id="text_238">
     <!-- Ta -->
-    <g transform="translate(911.947318 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(932.573313 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-54"/>
      <use xlink:href="#DejaVuSans-Bold-61" x="55.337891"/>
     </g>
@@ -4682,7 +4694,7 @@ z
    </g>
   </g>
   <g id="axes_62">
-   <g id="patch_75">
+   <g id="patch_77">
     <path d="M 1082.864721 1291.866029 
 L 1289.124668 1291.866029 
 L 1289.124668 1085.167464 
@@ -4694,7 +4706,7 @@ z
    <g id="matplotlib.axis_122"/>
    <g id="text_242">
     <!-- W -->
-    <g transform="translate(1132.279638 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(1152.905632 1188.516746)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-57" d="M 191 4666 
 L 1344 4666 
@@ -4745,7 +4757,7 @@ z
    </g>
   </g>
   <g id="axes_63">
-   <g id="patch_76">
+   <g id="patch_78">
     <path d="M 1299.437666 1291.866029 
 L 1505.697613 1291.866029 
 L 1505.697613 1085.167464 
@@ -4757,7 +4769,7 @@ z
    <g id="matplotlib.axis_124"/>
    <g id="text_246">
     <!-- Re -->
-    <g transform="translate(1338.493207 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(1359.119202 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-52"/>
      <use xlink:href="#DejaVuSans-Bold-65" x="77.001953"/>
     </g>
@@ -4790,7 +4802,7 @@ z
    </g>
   </g>
   <g id="axes_64">
-   <g id="patch_77">
+   <g id="patch_79">
     <path d="M 1516.01061 1291.866029 
 L 1722.270557 1291.866029 
 L 1722.270557 1085.167464 
@@ -4802,7 +4814,7 @@ z
    <g id="matplotlib.axis_126"/>
    <g id="text_250">
     <!-- Os -->
-    <g transform="translate(1555.155214 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(1575.781209 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4f"/>
      <use xlink:href="#DejaVuSans-Bold-73" x="85.009766"/>
     </g>
@@ -4836,7 +4848,7 @@ z
    </g>
   </g>
   <g id="axes_65">
-   <g id="patch_78">
+   <g id="patch_80">
     <path d="M 1732.583554 1291.866029 
 L 1938.843501 1291.866029 
 L 1938.843501 1085.167464 
@@ -4848,7 +4860,7 @@ z
    <g id="matplotlib.axis_128"/>
    <g id="text_254">
     <!-- Ir -->
-    <g transform="translate(1789.132846 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(1809.75884 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-49"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="37.207031"/>
     </g>
@@ -4881,7 +4893,7 @@ z
    </g>
   </g>
   <g id="axes_66">
-   <g id="patch_79">
+   <g id="patch_81">
     <path d="M 1949.156499 1291.866029 
 L 2155.416446 1291.866029 
 L 2155.416446 1085.167464 
@@ -4893,7 +4905,7 @@ z
    <g id="matplotlib.axis_130"/>
    <g id="text_258">
     <!-- Pt -->
-    <g transform="translate(1995.332352 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(2015.958347 1188.516746)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-74" d="M 1759 4494 
 L 1759 3500 
@@ -4950,7 +4962,7 @@ z
    </g>
   </g>
   <g id="axes_67">
-   <g id="patch_80">
+   <g id="patch_82">
     <path d="M 2165.729443 1291.866029 
 L 2371.98939 1291.866029 
 L 2371.98939 1085.167464 
@@ -4962,7 +4974,7 @@ z
    <g id="matplotlib.axis_132"/>
    <g id="text_262">
     <!-- Au -->
-    <g transform="translate(2203.659984 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(2224.285979 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-41"/>
      <use xlink:href="#DejaVuSans-Bold-75" x="77.392578"/>
     </g>
@@ -4996,7 +5008,7 @@ z
    </g>
   </g>
   <g id="axes_68">
-   <g id="patch_81">
+   <g id="patch_83">
     <path d="M 2382.302387 1291.866029 
 L 2588.562334 1291.866029 
 L 2588.562334 1085.167464 
@@ -5008,7 +5020,7 @@ z
    <g id="matplotlib.axis_134"/>
    <g id="text_266">
     <!-- Hg -->
-    <g transform="translate(2418.226679 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(2438.852673 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-48"/>
      <use xlink:href="#DejaVuSans-Bold-67" x="83.691406"/>
     </g>
@@ -5042,7 +5054,7 @@ z
    </g>
   </g>
   <g id="axes_69">
-   <g id="patch_82">
+   <g id="patch_84">
     <path d="M 2598.875332 1291.866029 
 L 2805.135279 1291.866029 
 L 2805.135279 1085.167464 
@@ -5054,7 +5066,7 @@ z
    <g id="matplotlib.axis_136"/>
    <g id="text_270">
     <!-- Tl -->
-    <g transform="translate(2650.62931 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(2671.255305 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-54"/>
      <use xlink:href="#DejaVuSans-Bold-6c" x="68.212891"/>
     </g>
@@ -5088,7 +5100,7 @@ z
    </g>
   </g>
   <g id="axes_70">
-   <g id="patch_83">
+   <g id="patch_85">
     <path d="M 2815.448276 1291.866029 
 L 3021.708223 1291.866029 
 L 3021.708223 1085.167464 
@@ -5100,7 +5112,7 @@ z
    <g id="matplotlib.axis_138"/>
    <g id="text_274">
     <!-- Pb -->
-    <g transform="translate(2854.489755 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(2875.115749 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-50"/>
      <use xlink:href="#DejaVuSans-Bold-62" x="73.291016"/>
     </g>
@@ -5134,7 +5146,7 @@ z
    </g>
   </g>
   <g id="axes_71">
-   <g id="patch_84">
+   <g id="patch_86">
     <path d="M 3032.02122 1291.866029 
 L 3238.281167 1291.866029 
 L 3238.281167 1085.167464 
@@ -5146,7 +5158,7 @@ z
    <g id="matplotlib.axis_140"/>
    <g id="text_278">
     <!-- Bi -->
-    <g transform="translate(3081.375199 1188.516746)scale(0.6 -0.6)">
+    <g transform="translate(3102.001194 1188.516746)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-42"/>
      <use xlink:href="#DejaVuSans-Bold-69" x="76.220703"/>
     </g>
@@ -5180,7 +5192,7 @@ z
    </g>
   </g>
   <g id="axes_72">
-   <g id="patch_85">
+   <g id="patch_87">
     <path d="M 3248.594164 1291.866029 
 L 3454.854111 1291.866029 
 L 3454.854111 1085.167464 
@@ -5218,7 +5230,7 @@ z
    </g>
   </g>
   <g id="axes_73">
-   <g id="patch_86">
+   <g id="patch_88">
     <path d="M 3465.167109 1291.866029 
 L 3671.427056 1291.866029 
 L 3671.427056 1085.167464 
@@ -5256,7 +5268,7 @@ z
    </g>
   </g>
   <g id="axes_74">
-   <g id="patch_87">
+   <g id="patch_89">
     <path d="M 3681.740053 1291.866029 
 L 3888 1291.866029 
 L 3888 1085.167464 
@@ -5294,7 +5306,7 @@ z
    </g>
   </g>
   <g id="axes_75">
-   <g id="patch_88">
+   <g id="patch_90">
     <path d="M 0 1508.899522 
 L 206.259947 1508.899522 
 L 206.259947 1302.200957 
@@ -5332,7 +5344,7 @@ z
    </g>
   </g>
   <g id="axes_76">
-   <g id="patch_89">
+   <g id="patch_91">
     <path d="M 216.572944 1508.899522 
 L 422.832891 1508.899522 
 L 422.832891 1302.200957 
@@ -5370,7 +5382,7 @@ z
    </g>
   </g>
   <g id="axes_77">
-   <g id="patch_90">
+   <g id="patch_92">
     <path d="M 649.718833 1508.899522 
 L 855.97878 1508.899522 
 L 855.97878 1302.200957 
@@ -5409,7 +5421,7 @@ z
    </g>
   </g>
   <g id="axes_78">
-   <g id="patch_91">
+   <g id="patch_93">
     <path d="M 866.291777 1508.899522 
 L 1072.551724 1508.899522 
 L 1072.551724 1302.200957 
@@ -5473,7 +5485,7 @@ z
    </g>
   </g>
   <g id="axes_79">
-   <g id="patch_92">
+   <g id="patch_94">
     <path d="M 1082.864721 1508.899522 
 L 1289.124668 1508.899522 
 L 1289.124668 1302.200957 
@@ -5512,7 +5524,7 @@ z
    </g>
   </g>
   <g id="axes_80">
-   <g id="patch_93">
+   <g id="patch_95">
     <path d="M 1299.437666 1508.899522 
 L 1505.697613 1508.899522 
 L 1505.697613 1302.200957 
@@ -5551,7 +5563,7 @@ z
    </g>
   </g>
   <g id="axes_81">
-   <g id="patch_94">
+   <g id="patch_96">
     <path d="M 1516.01061 1508.899522 
 L 1722.270557 1508.899522 
 L 1722.270557 1302.200957 
@@ -5590,7 +5602,7 @@ z
    </g>
   </g>
   <g id="axes_82">
-   <g id="patch_95">
+   <g id="patch_97">
     <path d="M 1732.583554 1508.899522 
 L 1938.843501 1508.899522 
 L 1938.843501 1302.200957 
@@ -5629,7 +5641,7 @@ z
    </g>
   </g>
   <g id="axes_83">
-   <g id="patch_96">
+   <g id="patch_98">
     <path d="M 1949.156499 1508.899522 
 L 2155.416446 1508.899522 
 L 2155.416446 1302.200957 
@@ -5668,7 +5680,7 @@ z
    </g>
   </g>
   <g id="axes_84">
-   <g id="patch_97">
+   <g id="patch_99">
     <path d="M 2165.729443 1508.899522 
 L 2371.98939 1508.899522 
 L 2371.98939 1302.200957 
@@ -5707,7 +5719,7 @@ z
    </g>
   </g>
   <g id="axes_85">
-   <g id="patch_98">
+   <g id="patch_100">
     <path d="M 2382.302387 1508.899522 
 L 2588.562334 1508.899522 
 L 2588.562334 1302.200957 
@@ -5746,7 +5758,7 @@ z
    </g>
   </g>
   <g id="axes_86">
-   <g id="patch_99">
+   <g id="patch_101">
     <path d="M 2598.875332 1508.899522 
 L 2805.135279 1508.899522 
 L 2805.135279 1302.200957 
@@ -5785,7 +5797,7 @@ z
    </g>
   </g>
   <g id="axes_87">
-   <g id="patch_100">
+   <g id="patch_102">
     <path d="M 2815.448276 1508.899522 
 L 3021.708223 1508.899522 
 L 3021.708223 1302.200957 
@@ -5824,7 +5836,7 @@ z
    </g>
   </g>
   <g id="axes_88">
-   <g id="patch_101">
+   <g id="patch_103">
     <path d="M 3032.02122 1508.899522 
 L 3238.281167 1508.899522 
 L 3238.281167 1302.200957 
@@ -5863,7 +5875,7 @@ z
    </g>
   </g>
   <g id="axes_89">
-   <g id="patch_102">
+   <g id="patch_104">
     <path d="M 3248.594164 1508.899522 
 L 3454.854111 1508.899522 
 L 3454.854111 1302.200957 
@@ -5914,7 +5926,7 @@ z
    </g>
   </g>
   <g id="axes_90">
-   <g id="patch_103">
+   <g id="patch_105">
     <path d="M 3465.167109 1508.899522 
 L 3671.427056 1508.899522 
 L 3671.427056 1302.200957 
@@ -5953,7 +5965,7 @@ z
    </g>
   </g>
   <g id="axes_91">
-   <g id="patch_104">
+   <g id="patch_106">
     <path d="M 3681.740053 1508.899522 
 L 3888 1508.899522 
 L 3888 1302.200957 
@@ -5992,7 +6004,7 @@ z
    </g>
   </g>
   <g id="axes_92">
-   <g id="patch_105">
+   <g id="patch_107">
     <path d="M 433.145889 1942.966507 
 L 639.405836 1942.966507 
 L 639.405836 1736.267943 
@@ -6004,7 +6016,7 @@ z
    <g id="matplotlib.axis_182"/>
    <g id="text_342">
     <!-- La -->
-    <g transform="translate(476.28893 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(496.914925 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4c"/>
      <use xlink:href="#DejaVuSans-Bold-61" x="63.720703"/>
     </g>
@@ -6038,7 +6050,7 @@ z
    </g>
   </g>
   <g id="axes_93">
-   <g id="patch_106">
+   <g id="patch_108">
     <path d="M 649.718833 1942.966507 
 L 855.97878 1942.966507 
 L 855.97878 1736.267943 
@@ -6050,7 +6062,7 @@ z
    <g id="matplotlib.axis_184"/>
    <g id="text_346">
     <!-- Ce -->
-    <g transform="translate(689.857187 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(710.483181 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-43"/>
      <use xlink:href="#DejaVuSans-Bold-65" x="73.388672"/>
     </g>
@@ -6084,7 +6096,7 @@ z
    </g>
   </g>
   <g id="axes_94">
-   <g id="patch_107">
+   <g id="patch_109">
     <path d="M 866.291777 1942.966507 
 L 1072.551724 1942.966507 
 L 1072.551724 1736.267943 
@@ -6096,7 +6108,7 @@ z
    <g id="matplotlib.axis_186"/>
    <g id="text_350">
     <!-- Pr -->
-    <g transform="translate(912.012943 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(932.638938 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-50"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="73.291016"/>
     </g>
@@ -6130,7 +6142,7 @@ z
    </g>
   </g>
   <g id="axes_95">
-   <g id="patch_108">
+   <g id="patch_110">
     <path d="M 1082.864721 1942.966507 
 L 1289.124668 1942.966507 
 L 1289.124668 1736.267943 
@@ -6142,7 +6154,7 @@ z
    <g id="matplotlib.axis_188"/>
    <g id="text_354">
     <!-- Nd -->
-    <g transform="translate(1118.789013 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(1139.415007 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4e"/>
      <use xlink:href="#DejaVuSans-Bold-64" x="83.691406"/>
     </g>
@@ -6176,7 +6188,7 @@ z
    </g>
   </g>
   <g id="axes_96">
-   <g id="patch_109">
+   <g id="patch_111">
     <path d="M 1299.437666 1942.966507 
 L 1505.697613 1942.966507 
 L 1505.697613 1736.267943 
@@ -6184,11 +6196,17 @@ L 1299.437666 1736.267943
 z
 " style="fill: #9fdaf7"/>
    </g>
+   <g id="patch_112">
+    <path d="M 1299.437666 1942.966507 
+L 1505.697613 1942.966507 
+L 1505.697613 1736.267943 
+" clip-path="url(#pf2b879af95)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_189"/>
    <g id="matplotlib.axis_190"/>
    <g id="text_358">
     <!-- Pm -->
-    <g transform="translate(1328.691645 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(1349.317639 1839.617225)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-6d" d="M 3781 2919 
 Q 3994 3244 4286 3414 
@@ -6256,7 +6274,7 @@ z
    </g>
   </g>
   <g id="axes_97">
-   <g id="patch_110">
+   <g id="patch_113">
     <path d="M 1516.01061 1942.966507 
 L 1722.270557 1942.966507 
 L 1722.270557 1736.267943 
@@ -6268,7 +6286,7 @@ z
    <g id="matplotlib.axis_192"/>
    <g id="text_362">
     <!-- Sm -->
-    <g transform="translate(1545.648964 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(1566.274959 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-53"/>
      <use xlink:href="#DejaVuSans-Bold-6d" x="72.021484"/>
     </g>
@@ -6300,7 +6318,7 @@ z
    </g>
   </g>
   <g id="axes_98">
-   <g id="patch_111">
+   <g id="patch_114">
     <path d="M 1732.583554 1942.966507 
 L 1938.843501 1942.966507 
 L 1938.843501 1736.267943 
@@ -6312,7 +6330,7 @@ z
    <g id="matplotlib.axis_194"/>
    <g id="text_366">
     <!-- Eu -->
-    <g transform="translate(1773.237533 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(1793.863528 1839.617225)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-45" d="M 588 4666 
 L 3834 4666 
@@ -6363,7 +6381,7 @@ z
    </g>
   </g>
   <g id="axes_99">
-   <g id="patch_112">
+   <g id="patch_115">
     <path d="M 1949.156499 1942.966507 
 L 2155.416446 1942.966507 
 L 2155.416446 1736.267943 
@@ -6375,7 +6393,7 @@ z
    <g id="matplotlib.axis_196"/>
    <g id="text_370">
     <!-- Gd -->
-    <g transform="translate(1985.563602 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(2006.189597 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-47"/>
      <use xlink:href="#DejaVuSans-Bold-64" x="82.080078"/>
     </g>
@@ -6409,7 +6427,7 @@ z
    </g>
   </g>
   <g id="axes_100">
-   <g id="patch_113">
+   <g id="patch_116">
     <path d="M 2165.729443 1942.966507 
 L 2371.98939 1942.966507 
 L 2371.98939 1736.267943 
@@ -6421,7 +6439,7 @@ z
    <g id="matplotlib.axis_198"/>
    <g id="text_374">
     <!-- Tb -->
-    <g transform="translate(2206.294359 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(2226.920354 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-54"/>
      <use xlink:href="#DejaVuSans-Bold-62" x="68.212891"/>
     </g>
@@ -6455,7 +6473,7 @@ z
    </g>
   </g>
   <g id="axes_101">
-   <g id="patch_114">
+   <g id="patch_117">
     <path d="M 2382.302387 1942.966507 
 L 2588.562334 1942.966507 
 L 2588.562334 1736.267943 
@@ -6467,7 +6485,7 @@ z
    <g id="matplotlib.axis_200"/>
    <g id="text_378">
     <!-- Dy -->
-    <g transform="translate(2420.345429 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(2440.971423 1839.617225)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-79" d="M 78 3500 
 L 1197 3500 
@@ -6520,7 +6538,7 @@ z
    </g>
   </g>
   <g id="axes_102">
-   <g id="patch_115">
+   <g id="patch_118">
     <path d="M 2598.875332 1942.966507 
 L 2805.135279 1942.966507 
 L 2805.135279 1736.267943 
@@ -6532,7 +6550,7 @@ z
    <g id="matplotlib.axis_202"/>
    <g id="text_382">
     <!-- Ho -->
-    <g transform="translate(2635.662123 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(2656.288118 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-48"/>
      <use xlink:href="#DejaVuSans-Bold-6f" x="83.691406"/>
     </g>
@@ -6566,7 +6584,7 @@ z
    </g>
   </g>
   <g id="axes_103">
-   <g id="patch_116">
+   <g id="patch_119">
     <path d="M 2815.448276 1942.966507 
 L 3021.708223 1942.966507 
 L 3021.708223 1736.267943 
@@ -6578,7 +6596,7 @@ z
    <g id="matplotlib.axis_204"/>
    <g id="text_386">
     <!-- Er -->
-    <g transform="translate(2862.664755 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(2883.290749 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-45"/>
      <use xlink:href="#DejaVuSans-Bold-72" x="68.310547"/>
     </g>
@@ -6612,7 +6630,7 @@ z
    </g>
   </g>
   <g id="axes_104">
-   <g id="patch_117">
+   <g id="patch_120">
     <path d="M 3032.02122 1942.966507 
 L 3238.281167 1942.966507 
 L 3238.281167 1736.267943 
@@ -6624,7 +6642,7 @@ z
    <g id="matplotlib.axis_206"/>
    <g id="text_390">
     <!-- Tm -->
-    <g transform="translate(3062.798636 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(3083.424631 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-54"/>
      <use xlink:href="#DejaVuSans-Bold-6d" x="68.212891"/>
     </g>
@@ -6658,7 +6676,7 @@ z
    </g>
   </g>
   <g id="axes_105">
-   <g id="patch_118">
+   <g id="patch_121">
     <path d="M 3248.594164 1942.966507 
 L 3454.854111 1942.966507 
 L 3454.854111 1736.267943 
@@ -6670,7 +6688,7 @@ z
    <g id="matplotlib.axis_208"/>
    <g id="text_394">
     <!-- Yb -->
-    <g transform="translate(3287.902831 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(3308.528825 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-59"/>
      <use xlink:href="#DejaVuSans-Bold-62" x="72.412109"/>
     </g>
@@ -6704,7 +6722,7 @@ z
    </g>
   </g>
   <g id="axes_106">
-   <g id="patch_119">
+   <g id="patch_122">
     <path d="M 3465.167109 1942.966507 
 L 3671.427056 1942.966507 
 L 3671.427056 1736.267943 
@@ -6716,7 +6734,7 @@ z
    <g id="matplotlib.axis_210"/>
    <g id="text_398">
     <!-- Lu -->
-    <g transform="translate(3507.199213 1839.617225)scale(0.6 -0.6)">
+    <g transform="translate(3527.825207 1839.617225)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-4c"/>
      <use xlink:href="#DejaVuSans-Bold-75" x="63.720703"/>
     </g>
@@ -6750,7 +6768,7 @@ z
    </g>
   </g>
   <g id="axes_107">
-   <g id="patch_120">
+   <g id="patch_123">
     <path d="M 433.145889 2160 
 L 639.405836 2160 
 L 639.405836 1953.301435 
@@ -6758,11 +6776,17 @@ L 433.145889 1953.301435
 z
 " style="fill: #9fdaf7"/>
    </g>
+   <g id="patch_124">
+    <path d="M 433.145889 2160 
+L 639.405836 2160 
+L 639.405836 1953.301435 
+" clip-path="url(#p84448b94ec)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_211"/>
    <g id="matplotlib.axis_212"/>
    <g id="text_402">
     <!-- Ac -->
-    <g transform="translate(474.648305 2056.650718)scale(0.6 -0.6)">
+    <g transform="translate(495.2743 2056.650718)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-41"/>
      <use xlink:href="#DejaVuSans-Bold-63" x="77.392578"/>
     </g>
@@ -6796,7 +6820,7 @@ z
    </g>
   </g>
   <g id="axes_108">
-   <g id="patch_121">
+   <g id="patch_125">
     <path d="M 649.718833 2160 
 L 855.97878 2160 
 L 855.97878 1953.301435 
@@ -6804,11 +6828,17 @@ L 649.718833 1953.301435
 z
 " style="fill: #9fdaf7"/>
    </g>
+   <g id="patch_126">
+    <path d="M 649.718833 2160 
+L 855.97878 2160 
+L 855.97878 1953.301435 
+" clip-path="url(#pacd7a68093)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_213"/>
    <g id="matplotlib.axis_214"/>
    <g id="text_406">
     <!-- Th -->
-    <g transform="translate(690.400937 2056.650718)scale(0.6 -0.6)">
+    <g transform="translate(711.026931 2056.650718)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-54"/>
      <use xlink:href="#DejaVuSans-Bold-68" x="68.212891"/>
     </g>
@@ -6842,7 +6872,7 @@ z
    </g>
   </g>
   <g id="axes_109">
-   <g id="patch_122">
+   <g id="patch_127">
     <path d="M 866.291777 2160 
 L 1072.551724 2160 
 L 1072.551724 1953.301435 
@@ -6850,11 +6880,17 @@ L 866.291777 1953.301435
 z
 " style="fill: #9fdaf7"/>
    </g>
+   <g id="patch_128">
+    <path d="M 866.291777 2160 
+L 1072.551724 2160 
+L 1072.551724 1953.301435 
+" clip-path="url(#p739613ba8f)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_215"/>
    <g id="matplotlib.axis_216"/>
    <g id="text_410">
     <!-- Pa -->
-    <g transform="translate(907.348881 2056.650718)scale(0.6 -0.6)">
+    <g transform="translate(927.974876 2056.650718)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-50"/>
      <use xlink:href="#DejaVuSans-Bold-61" x="70.666016"/>
     </g>
@@ -6888,7 +6924,7 @@ z
    </g>
   </g>
   <g id="axes_110">
-   <g id="patch_123">
+   <g id="patch_129">
     <path d="M 1082.864721 2160 
 L 1289.124668 2160 
 L 1289.124668 1953.301435 
@@ -6896,11 +6932,17 @@ L 1082.864721 1953.301435
 z
 " style="fill: #9fdaf7"/>
    </g>
+   <g id="patch_130">
+    <path d="M 1082.864721 2160 
+L 1289.124668 2160 
+L 1289.124668 1953.301435 
+" clip-path="url(#p75e6929dac)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_217"/>
    <g id="matplotlib.axis_218"/>
    <g id="text_414">
     <!-- U -->
-    <g transform="translate(1141.007763 2056.650718)scale(0.6 -0.6)">
+    <g transform="translate(1161.633757 2056.650718)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-55" d="M 588 4666 
 L 1791 4666 
@@ -6952,7 +6994,7 @@ z
    </g>
   </g>
   <g id="axes_111">
-   <g id="patch_124">
+   <g id="patch_131">
     <path d="M 1299.437666 2160 
 L 1505.697613 2160 
 L 1505.697613 1953.301435 
@@ -6960,11 +7002,17 @@ L 1299.437666 1953.301435
 z
 " style="fill: #9fdaf7"/>
    </g>
+   <g id="patch_132">
+    <path d="M 1299.437666 2160 
+L 1505.697613 2160 
+L 1505.697613 1953.301435 
+" clip-path="url(#p1bd367dfb8)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_219"/>
    <g id="matplotlib.axis_220"/>
    <g id="text_418">
     <!-- Np -->
-    <g transform="translate(1335.361957 2056.650718)scale(0.6 -0.6)">
+    <g transform="translate(1355.987952 2056.650718)scale(0.6 -0.6)">
      <defs>
       <path id="DejaVuSans-Bold-70" d="M 1656 506 
 L 1656 -1331 
@@ -7026,7 +7074,7 @@ z
    </g>
   </g>
   <g id="axes_112">
-   <g id="patch_125">
+   <g id="patch_133">
     <path d="M 1516.01061 2160 
 L 1722.270557 2160 
 L 1722.270557 1953.301435 
@@ -7034,11 +7082,17 @@ L 1516.01061 1953.301435
 z
 " style="fill: #9fdaf7"/>
    </g>
+   <g id="patch_134">
+    <path d="M 1516.01061 2160 
+L 1722.270557 2160 
+L 1722.270557 1953.301435 
+" clip-path="url(#p64370649d5)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
    <g id="matplotlib.axis_221"/>
    <g id="matplotlib.axis_222"/>
    <g id="text_422">
     <!-- Pu -->
-    <g transform="translate(1555.169276 2056.650718)scale(0.6 -0.6)">
+    <g transform="translate(1575.795271 2056.650718)scale(0.6 -0.6)">
      <use xlink:href="#DejaVuSans-Bold-50"/>
      <use xlink:href="#DejaVuSans-Bold-75" x="73.291016"/>
     </g>
@@ -7072,7 +7126,7 @@ z
    </g>
   </g>
   <g id="axes_113">
-   <g id="patch_126">
+   <g id="patch_135">
     <path d="M 1732.583554 2160 
 L 1938.843501 2160 
 L 1938.843501 1953.301435 
@@ -7110,7 +7164,7 @@ z
    </g>
   </g>
   <g id="axes_114">
-   <g id="patch_127">
+   <g id="patch_136">
     <path d="M 1949.156499 2160 
 L 2155.416446 2160 
 L 2155.416446 1953.301435 
@@ -7148,7 +7202,7 @@ z
    </g>
   </g>
   <g id="axes_115">
-   <g id="patch_128">
+   <g id="patch_137">
     <path d="M 2165.729443 2160 
 L 2371.98939 2160 
 L 2371.98939 1953.301435 
@@ -7202,7 +7256,7 @@ z
    </g>
   </g>
   <g id="axes_116">
-   <g id="patch_129">
+   <g id="patch_138">
     <path d="M 2382.302387 2160 
 L 2588.562334 2160 
 L 2588.562334 1953.301435 
@@ -7240,7 +7294,7 @@ z
    </g>
   </g>
   <g id="axes_117">
-   <g id="patch_130">
+   <g id="patch_139">
     <path d="M 2598.875332 2160 
 L 2805.135279 2160 
 L 2805.135279 1953.301435 
@@ -7278,7 +7332,7 @@ z
    </g>
   </g>
   <g id="axes_118">
-   <g id="patch_131">
+   <g id="patch_140">
     <path d="M 2815.448276 2160 
 L 3021.708223 2160 
 L 3021.708223 1953.301435 
@@ -7317,7 +7371,7 @@ z
    </g>
   </g>
   <g id="axes_119">
-   <g id="patch_132">
+   <g id="patch_141">
     <path d="M 3032.02122 2160 
 L 3238.281167 2160 
 L 3238.281167 1953.301435 
@@ -7356,7 +7410,7 @@ z
    </g>
   </g>
   <g id="axes_120">
-   <g id="patch_133">
+   <g id="patch_142">
     <path d="M 3248.594164 2160 
 L 3454.854111 2160 
 L 3454.854111 1953.301435 
@@ -7395,7 +7449,7 @@ z
    </g>
   </g>
   <g id="axes_121">
-   <g id="patch_134">
+   <g id="patch_143">
     <path d="M 3465.167109 2160 
 L 3671.427056 2160 
 L 3671.427056 1953.301435 
@@ -7435,8 +7489,35 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pda0301983c">
+  <clipPath id="p31c049e9a7">
    <rect x="1732.583554" y="217.033493" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="paed12513c3">
+   <rect x="3681.740053" y="651.100478" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="p0fe1b02334">
+   <rect x="3681.740053" y="868.133971" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="pf2b879af95">
+   <rect x="1299.437666" y="1736.267943" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="p84448b94ec">
+   <rect x="433.145889" y="1953.301435" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="pacd7a68093">
+   <rect x="649.718833" y="1953.301435" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="p739613ba8f">
+   <rect x="866.291777" y="1953.301435" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="p75e6929dac">
+   <rect x="1082.864721" y="1953.301435" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="p1bd367dfb8">
+   <rect x="1299.437666" y="1953.301435" width="206.259947" height="206.698565"/>
+  </clipPath>
+  <clipPath id="p64370649d5">
+   <rect x="1516.01061" y="1953.301435" width="206.259947" height="206.698565"/>
   </clipPath>
  </defs>
 </svg>
