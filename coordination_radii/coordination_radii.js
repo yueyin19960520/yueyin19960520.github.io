@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const img = document.getElementById("svg-viewer-img");
   // Set your desired SVG source here
-  img.src = "Coordination_Radii.svg";
+  img.src = "coordination_radii.svg";
 
   function resizeSVG() {
     const svgViewer = document.getElementById('svg-viewer');
