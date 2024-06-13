@@ -220,7 +220,7 @@ function createTable() {
         });
 
 
-        if (["Tc","Re","Os","Ir","Pm","Ac","Th","Pa","U","Np","Pu"].includes(element.symbol)) {
+        if (["Pm","Ac","Th","Pa","U","Np","Pu","Xe","Kr"].includes(element.symbol)) {
           const triangle = document.createElement("div");
           triangle.classList.add("triangle");
           cell.appendChild(triangle);
