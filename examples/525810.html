@@ -1,0 +1,210 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Visualization with Data Table</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            }
+            .viewer-container {
+                width: 800px;
+                height: 500px;
+                margin: 20px 0;
+            }
+            .table-container {
+                width: 80%;
+                margin-top: 20px;
+                overflow-x: auto;
+            }
+            table.dataframe {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            table.dataframe th, table.dataframe td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            table.dataframe th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>3D Visualization and Data Table</h1>
+        <div class="viewer-container">
+            <div id="3dmolviewer_17326206149992585"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17326206149992585" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
+}
+
+var viewer_17326206149992585 = null;
+var warn = document.getElementById("3dmolwarning_17326206149992585");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17326206149992585 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17326206149992585"),{backgroundColor:"white"});
+viewer_17326206149992585.zoomTo();
+	viewer_17326206149992585.addModel("51\nXYZ file generated with PBC expansion\nLi 3.203198965501116 2.265003709995573 5.548103355000001\nLi 3.203198965501116 2.265003709995573 9.246838925000002\nLi 4.2709319540014885 5.285008656656338 7.397471140000002\nLi 4.2709319540014885 5.285008656656338 11.09620671\nLi 6.406397931002232 2.265003709995573 7.397471140000001\nLi 6.406397931002232 2.265003709995573 11.09620671\nLi 7.474130919502604 5.285008656656338 9.246838925000002\nLi 7.474130919502604 5.285008656656338 12.945574495000002\nFe 0.0 0.0 0.0\nFe 0.0 0.0 7.39747114\nFe 2.1354659770007443 6.040009893321528 3.698735570000001\nFe 2.1354659770007443 6.040009893321528 11.09620671\nFe 6.406397931002232 0.0 3.698735570000001\nFe 6.406397931002232 0.0 11.09620671\nFe 8.541863908002977 6.040009893321528 7.397471140000002\nFe 8.541863908002977 6.040009893321528 14.794942280000003\nFe 0.0 0.0 3.69873557\nFe 2.1354659770007443 6.040009893321528 7.397471140000001\nFe 6.406397931002232 0.0 7.397471140000001\nFe 8.541863908002977 6.040009893321528 11.096206710000002\nFe 1.0677329885003721 3.020004946660764 1.8493677850000005\nFe 1.0677329885003721 3.020004946660764 9.246838925\nFe 7.474130919502604 3.020004946660764 5.548103355000002\nFe 7.474130919502604 3.020004946660764 12.945574495000002\nFe 1.0677329885003721 3.020004946660764 5.548103355\nFe 7.474130919502604 3.020004946660764 9.246838925000002\nFe 3.203198965501116 0.0 1.8493677850000005\nFe 3.203198965501116 0.0 9.246838925\nFe 5.33866494250186 6.040009893321528 5.548103355000002\nFe 5.33866494250186 6.040009893321528 12.945574495000002\nFe 3.203198965501116 0.0 5.548103355\nFe 5.33866494250186 6.040009893321528 9.246838925000002\nFe 4.2709319540014885 3.020004946660764 3.6987355700000015\nFe 4.2709319540014885 3.020004946660764 11.096206710000002\nFe 4.2709319540014885 3.020004946660764 7.397471140000002\nFe 2.1354659770007443 1.510002473330382 3.6987355700000006\nFe 2.1354659770007443 1.510002473330382 7.39747114\nFe 3.203198965501116 4.530007419991146 5.548103355000001\nFe 3.203198965501116 4.530007419991146 9.246838925\nFe 5.33866494250186 1.510002473330382 5.548103355000001\nFe 5.33866494250186 1.510002473330382 9.246838925\nFe 6.406397931002232 4.530007419991146 7.397471140000002\nFe 6.406397931002232 4.530007419991146 11.096206710000002\nB 1.0677329885003721 0.755001236665191 1.8493677850000003\nB 1.0677329885003721 0.755001236665191 5.548103354999999\nB 2.1354659770007443 3.775006183325955 3.698735570000001\nB 2.1354659770007443 3.775006183325955 7.39747114\nB 4.2709319540014885 0.755001236665191 3.698735570000001\nB 4.2709319540014885 0.755001236665191 7.3974711399999995\nB 5.338664942501861 3.775006183325955 5.548103355000002\nB 5.338664942501861 3.775006183325955 9.246838925000002","xyz");
+	viewer_17326206149992585.setStyle({},{"stick": {}, "sphere": {"scale": 0.3}});
+	viewer_17326206149992585.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 6.406397931002232, "y": 0.0, "z": 3.698735570000001}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 2.1354659770007443, "y": 6.040009893321528, "z": 3.698735570000001}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 7.39747114}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 6.406397931002232, "y": 0.0, "z": 3.698735570000001}, "end": {"x": 8.541863908002977, "y": 6.040009893321528, "z": 7.397471140000002}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 6.406397931002232, "y": 0.0, "z": 3.698735570000001}, "end": {"x": 6.406397931002232, "y": 0.0, "z": 11.09620671}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 2.1354659770007443, "y": 6.040009893321528, "z": 3.698735570000001}, "end": {"x": 8.541863908002977, "y": 6.040009893321528, "z": 7.397471140000002}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 2.1354659770007443, "y": 6.040009893321528, "z": 3.698735570000001}, "end": {"x": 2.1354659770007443, "y": 6.040009893321528, "z": 11.09620671}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 0.0, "y": 0.0, "z": 7.39747114}, "end": {"x": 6.406397931002232, "y": 0.0, "z": 11.09620671}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 0.0, "y": 0.0, "z": 7.39747114}, "end": {"x": 2.1354659770007443, "y": 6.040009893321528, "z": 11.09620671}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 8.541863908002977, "y": 6.040009893321528, "z": 7.397471140000002}, "end": {"x": 8.541863908002977, "y": 6.040009893321528, "z": 14.794942280000003}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 6.406397931002232, "y": 0.0, "z": 11.09620671}, "end": {"x": 8.541863908002977, "y": 6.040009893321528, "z": 14.794942280000003}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.addLine({"start": {"x": 2.1354659770007443, "y": 6.040009893321528, "z": 11.09620671}, "end": {"x": 8.541863908002977, "y": 6.040009893321528, "z": 14.794942280000003}, "color": "black", "linewidth": 2});
+	viewer_17326206149992585.zoomTo();
+viewer_17326206149992585.render();
+});
+</script>
+        </div>
+        <div class="table-container">
+            <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Element</th>
+      <th>Li</th>
+      <th>Li</th>
+      <th>Li</th>
+      <th>Li</th>
+      <th>Fe</th>
+      <th>Fe</th>
+      <th>Fe</th>
+      <th>Fe</th>
+      <th>Fe</th>
+      <th>Fe</th>
+      <th>Fe</th>
+      <th>Fe</th>
+      <th>B</th>
+      <th>B</th>
+      <th>B</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TOSS</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>BVS</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>-3</td>
+      <td>-3</td>
+      <td>-3</td>
+      <td>-3</td>
+    </tr>
+    <tr>
+      <th>Spin</th>
+      <td>-0.014</td>
+      <td>-0.014</td>
+      <td>-0.014</td>
+      <td>-0.014</td>
+      <td>1.800</td>
+      <td>1.800</td>
+      <td>1.800</td>
+      <td>1.800</td>
+      <td>1.800</td>
+      <td>1.800</td>
+      <td>1.800</td>
+      <td>1.800</td>
+      <td>-0.114</td>
+      <td>-0.114</td>
+      <td>-0.114</td>
+      <td>-0.114</td>
+    </tr>
+    <tr>
+      <th>Bader</th>
+      <td>2.228</td>
+      <td>2.228</td>
+      <td>2.228</td>
+      <td>2.228</td>
+      <td>7.782</td>
+      <td>7.959</td>
+      <td>7.841</td>
+      <td>7.959</td>
+      <td>7.841</td>
+      <td>7.782</td>
+      <td>7.841</td>
+      <td>7.959</td>
+      <td>4.031</td>
+      <td>4.031</td>
+      <td>4.031</td>
+      <td>4.031</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </body>
+    </html>
+    

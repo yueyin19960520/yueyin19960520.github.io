@@ -1,0 +1,175 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Visualization with Data Table</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            }
+            .viewer-container {
+                width: 800px;
+                height: 500px;
+                margin: 20px 0;
+            }
+            .table-container {
+                width: 80%;
+                margin-top: 20px;
+                overflow-x: auto;
+            }
+            table.dataframe {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            table.dataframe th, table.dataframe td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            table.dataframe th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>3D Visualization and Data Table</h1>
+        <div class="viewer-container">
+            <div id="3dmolviewer_17326206115844328"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17326206115844328" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
+}
+
+var viewer_17326206115844328 = null;
+var warn = document.getElementById("3dmolwarning_17326206115844328");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17326206115844328 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17326206115844328"),{backgroundColor:"white"});
+viewer_17326206115844328.zoomTo();
+	viewer_17326206115844328.addModel("43\nXYZ file generated with PBC expansion\nN 0.0 0.0 0.0\nN 0.0 0.0 12.11770606\nN 2.952844073869158 5.721312719521965 10.265772878717543\nN 2.952844073869158 5.721312719521965 22.383478938717545\nN 6.438377696217272 0.0 10.265772878717543\nN 6.438377696217272 0.0 22.383478938717545\nN 9.39122177008643 5.721312719521965 20.531545757435087\nN 9.39122177008643 5.721312719521965 32.649251817435086\nN 0.0 0.0 6.05885303\nN 2.952844073869158 5.721312719521965 16.324625908717543\nN 6.438377696217272 0.0 16.324625908717543\nN 9.39122177008643 5.721312719521965 26.590398787435085\nN 1.476422036934579 2.8606563597609824 5.132886439358772\nN 1.476422036934579 2.8606563597609824 17.25059249935877\nN 7.914799733151852 2.8606563597609824 15.398659318076316\nN 7.914799733151852 2.8606563597609824 27.516365378076316\nN 1.476422036934579 2.8606563597609824 11.191739469358772\nN 7.914799733151852 2.8606563597609824 21.457512348076314\nN 3.219188848108636 0.0 5.132886439358772\nN 3.219188848108636 0.0 17.25059249935877\nN 6.172032921977794 5.721312719521965 15.398659318076316\nN 6.172032921977794 5.721312719521965 27.516365378076316\nN 3.219188848108636 0.0 11.191739469358772\nN 6.172032921977794 5.721312719521965 21.457512348076317\nN 4.695610885043215 2.8606563597609824 10.265772878717543\nN 4.695610885043215 2.8606563597609824 22.383478938717545\nN 4.695610885043215 2.8606563597609824 16.324625908717543\nCl 1.220858830111236 0.7437706535378554 4.2444027362665615\nCl 1.220858830111236 0.7437706535378554 10.303255766266561\nCl 2.697280867045815 3.604427013298838 9.377289175625332\nCl 2.697280867045815 3.604427013298838 15.436142205625334\nCl 4.440047678219872 0.7437706535378554 9.377289175625332\nCl 4.440047678219872 0.7437706535378554 15.436142205625336\nCl 5.9164697151544505 3.604427013298838 14.510175614984105\nCl 5.9164697151544505 3.604427013298838 20.569028644984105\nCl 3.4747520549319786 2.116885706223127 12.08022317245098\nCl 3.4747520549319786 2.116885706223127 18.139076202450976\nCl 4.951174091866559 4.977542065984109 17.213109611809752\nCl 4.951174091866559 4.977542065984109 23.271962641809754\nCl 6.693940903040615 2.116885706223127 17.213109611809752\nCl 6.693940903040615 2.116885706223127 23.271962641809754\nCl 8.170362939975195 4.977542065984109 22.345996051168527\nCl 8.170362939975195 4.977542065984109 28.40484908116853","xyz");
+	viewer_17326206115844328.setStyle({},{"stick": {}, "sphere": {"scale": 0.3}});
+	viewer_17326206115844328.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 6.438377696217272, "y": 0.0, "z": 10.265772878717543}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 2.952844073869158, "y": 5.721312719521965, "z": 10.265772878717543}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 12.11770606}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 6.438377696217272, "y": 0.0, "z": 10.265772878717543}, "end": {"x": 9.39122177008643, "y": 5.721312719521965, "z": 20.531545757435087}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 6.438377696217272, "y": 0.0, "z": 10.265772878717543}, "end": {"x": 6.438377696217272, "y": 0.0, "z": 22.383478938717545}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 2.952844073869158, "y": 5.721312719521965, "z": 10.265772878717543}, "end": {"x": 9.39122177008643, "y": 5.721312719521965, "z": 20.531545757435087}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 2.952844073869158, "y": 5.721312719521965, "z": 10.265772878717543}, "end": {"x": 2.952844073869158, "y": 5.721312719521965, "z": 22.383478938717545}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 0.0, "y": 0.0, "z": 12.11770606}, "end": {"x": 6.438377696217272, "y": 0.0, "z": 22.383478938717545}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 0.0, "y": 0.0, "z": 12.11770606}, "end": {"x": 2.952844073869158, "y": 5.721312719521965, "z": 22.383478938717545}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 9.39122177008643, "y": 5.721312719521965, "z": 20.531545757435087}, "end": {"x": 9.39122177008643, "y": 5.721312719521965, "z": 32.649251817435086}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 6.438377696217272, "y": 0.0, "z": 22.383478938717545}, "end": {"x": 9.39122177008643, "y": 5.721312719521965, "z": 32.649251817435086}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.addLine({"start": {"x": 2.952844073869158, "y": 5.721312719521965, "z": 22.383478938717545}, "end": {"x": 9.39122177008643, "y": 5.721312719521965, "z": 32.649251817435086}, "color": "black", "linewidth": 2});
+	viewer_17326206115844328.zoomTo();
+viewer_17326206115844328.render();
+});
+</script>
+        </div>
+        <div class="table-container">
+            <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Element</th>
+      <th>N</th>
+      <th>N</th>
+      <th>N</th>
+      <th>Cl</th>
+      <th>Cl</th>
+      <th>Cl</th>
+      <th>Cl</th>
+      <th>Cl</th>
+      <th>Cl</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TOSS</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>BVS</th>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>Spin</th>
+      <td>0.517</td>
+      <td>0.533</td>
+      <td>0.525</td>
+      <td>0.090</td>
+      <td>0.090</td>
+      <td>0.090</td>
+      <td>0.089</td>
+      <td>0.089</td>
+      <td>0.089</td>
+    </tr>
+    <tr>
+      <th>Bader</th>
+      <td>5.009</td>
+      <td>5.007</td>
+      <td>5.008</td>
+      <td>6.994</td>
+      <td>6.997</td>
+      <td>6.999</td>
+      <td>6.995</td>
+      <td>6.995</td>
+      <td>6.996</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </body>
+    </html>
+    

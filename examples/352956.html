@@ -1,0 +1,155 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Visualization with Data Table</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            }
+            .viewer-container {
+                width: 800px;
+                height: 500px;
+                margin: 20px 0;
+            }
+            .table-container {
+                width: 80%;
+                margin-top: 20px;
+                overflow-x: auto;
+            }
+            table.dataframe {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            table.dataframe th, table.dataframe td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            table.dataframe th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>3D Visualization and Data Table</h1>
+        <div class="viewer-container">
+            <div id="3dmolviewer_17326206147582593"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17326206147582593" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
+}
+
+var viewer_17326206147582593 = null;
+var warn = document.getElementById("3dmolwarning_17326206147582593");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17326206147582593 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17326206147582593"),{backgroundColor:"white"});
+viewer_17326206147582593.zoomTo();
+	viewer_17326206147582593.addModel("71\nXYZ file generated with PBC expansion\nU 2.1587515000000006 2.1587515 2.1587515000000006\nU 2.1587515000000006 2.1587515 6.476254500000001\nU 2.158751500000001 6.4762545000000005 2.1587515000000006\nU 2.158751500000001 6.4762545000000005 6.476254500000001\nU 6.476254500000001 2.1587515 2.1587515000000006\nU 6.476254500000001 2.1587515 6.476254500000001\nU 6.476254500000001 6.4762545000000005 2.158751500000001\nU 6.476254500000001 6.4762545000000005 6.476254500000001\nAs 0.0 0.0 0.0\nAs 0.0 0.0 8.635006\nAs 1.3886148728693656e-15 8.635006 5.287416229259095e-16\nAs 1.3886148728693656e-15 8.635006 8.635006\nAs 8.635006 0.0 5.287416229259095e-16\nAs 8.635006 0.0 8.635006\nAs 8.635006000000002 8.635006 1.057483245851819e-15\nAs 8.635006000000002 8.635006 8.635006000000002\nAs 0.0 0.0 4.317503\nAs 1.3886148728693656e-15 8.635006 4.317503000000001\nAs 8.635006 0.0 4.317503000000001\nAs 8.635006000000002 8.635006 4.317503000000001\nAs 6.943074364346828e-16 4.317503 2.6437081146295477e-16\nAs 6.943074364346828e-16 4.317503 8.635006\nAs 8.635006 4.317503 7.931124343888643e-16\nAs 8.635006 4.317503 8.635006\nAs 6.943074364346828e-16 4.317503 4.317503\nAs 8.635006 4.317503 4.317503000000001\nAs 4.317503 0.0 2.6437081146295477e-16\nAs 4.317503 0.0 8.635006\nAs 4.317503000000002 8.635006 7.931124343888643e-16\nAs 4.317503000000002 8.635006 8.635006\nAs 4.317503 0.0 4.317503\nAs 4.317503000000002 8.635006 4.317503000000001\nAs 4.317503000000001 4.317503 5.287416229259095e-16\nAs 4.317503000000001 4.317503 8.635006\nAs 4.317503000000001 4.317503 4.317503000000001\nO 2.1587515000000006 2.1587515 2.6437081146295477e-16\nO 2.1587515000000006 2.1587515 8.635006\nO 2.1587515000000006 2.1587515 4.317503\nO 2.158751500000001 6.4762545000000005 5.287416229259095e-16\nO 2.158751500000001 6.4762545000000005 8.635006\nO 2.158751500000001 6.4762545000000005 4.317503000000001\nO 6.476254500000001 2.1587515 5.287416229259096e-16\nO 6.476254500000001 2.1587515 8.635006\nO 6.476254500000001 2.1587515 4.317503000000001\nO 6.476254500000001 6.4762545000000005 7.931124343888643e-16\nO 6.476254500000001 6.4762545000000005 8.635006\nO 6.476254500000001 6.4762545000000005 4.317503000000001\nO 2.1587515 0.0 2.1587515\nO 2.1587515000000015 8.635006 2.1587515000000006\nO 2.1587515 0.0 6.4762545000000005\nO 2.1587515000000015 8.635006 6.476254500000001\nO 2.158751500000001 4.317503 2.1587515000000006\nO 2.158751500000001 4.317503 6.4762545000000005\nO 6.4762545000000005 0.0 2.1587515000000006\nO 6.476254500000002 8.635006 2.158751500000001\nO 6.4762545000000005 0.0 6.4762545000000005\nO 6.476254500000002 8.635006 6.476254500000001\nO 6.476254500000001 4.317503 2.1587515000000006\nO 6.476254500000001 4.317503 6.476254500000001\nO 3.471537182173414e-16 2.1587515 2.1587515\nO 8.635006 2.1587515 2.1587515000000006\nO 3.471537182173414e-16 2.1587515 6.4762545000000005\nO 8.635006 2.1587515 6.476254500000001\nO 1.0414611546520241e-15 6.4762545000000005 2.1587515000000006\nO 8.635006000000002 6.4762545000000005 2.158751500000001\nO 1.0414611546520241e-15 6.4762545000000005 6.4762545000000005\nO 8.635006000000002 6.4762545000000005 6.476254500000001\nO 4.317503 2.1587515 2.1587515000000006\nO 4.317503 2.1587515 6.4762545000000005\nO 4.317503000000001 6.4762545000000005 2.1587515000000006\nO 4.317503000000001 6.4762545000000005 6.476254500000001","xyz");
+	viewer_17326206147582593.setStyle({},{"stick": {}, "sphere": {"scale": 0.3}});
+	viewer_17326206147582593.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 8.635006, "y": 0.0, "z": 5.287416229259095e-16}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 1.3886148728693656e-15, "y": 8.635006, "z": 5.287416229259095e-16}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 8.635006}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 8.635006, "y": 0.0, "z": 5.287416229259095e-16}, "end": {"x": 8.635006000000002, "y": 8.635006, "z": 1.057483245851819e-15}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 8.635006, "y": 0.0, "z": 5.287416229259095e-16}, "end": {"x": 8.635006, "y": 0.0, "z": 8.635006}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 1.3886148728693656e-15, "y": 8.635006, "z": 5.287416229259095e-16}, "end": {"x": 8.635006000000002, "y": 8.635006, "z": 1.057483245851819e-15}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 1.3886148728693656e-15, "y": 8.635006, "z": 5.287416229259095e-16}, "end": {"x": 1.3886148728693656e-15, "y": 8.635006, "z": 8.635006}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 0.0, "y": 0.0, "z": 8.635006}, "end": {"x": 8.635006, "y": 0.0, "z": 8.635006}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 0.0, "y": 0.0, "z": 8.635006}, "end": {"x": 1.3886148728693656e-15, "y": 8.635006, "z": 8.635006}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 8.635006000000002, "y": 8.635006, "z": 1.057483245851819e-15}, "end": {"x": 8.635006000000002, "y": 8.635006, "z": 8.635006000000002}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 8.635006, "y": 0.0, "z": 8.635006}, "end": {"x": 8.635006000000002, "y": 8.635006, "z": 8.635006000000002}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.addLine({"start": {"x": 1.3886148728693656e-15, "y": 8.635006, "z": 8.635006}, "end": {"x": 8.635006000000002, "y": 8.635006, "z": 8.635006000000002}, "color": "black", "linewidth": 2});
+	viewer_17326206147582593.zoomTo();
+viewer_17326206147582593.render();
+});
+</script>
+        </div>
+        <div class="table-container">
+            <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Element</th>
+      <th>U</th>
+      <th>As</th>
+      <th>O</th>
+      <th>O</th>
+      <th>O</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TOSS</th>
+      <td>3</td>
+      <td>3</td>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-2</td>
+    </tr>
+    <tr>
+      <th>BVS</th>
+      <td>4</td>
+      <td>2</td>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-2</td>
+    </tr>
+    <tr>
+      <th>Spin</th>
+      <td>0.037</td>
+      <td>0.123</td>
+      <td>0.009</td>
+      <td>0.012</td>
+      <td>0.012</td>
+    </tr>
+    <tr>
+      <th>Bader</th>
+      <td>11.267</td>
+      <td>4.554</td>
+      <td>7.089</td>
+      <td>7.045</td>
+      <td>7.044</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </body>
+    </html>
+    
