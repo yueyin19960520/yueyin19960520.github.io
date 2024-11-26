@@ -1,0 +1,160 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Visualization with Data Table</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+            }
+            .viewer-container {
+                width: 800px;
+                height: 500px;
+                margin: 20px 0;
+            }
+            .table-container {
+                width: 80%;
+                margin-top: 20px;
+                overflow-x: auto;
+            }
+            table.dataframe {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            table.dataframe th, table.dataframe td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            table.dataframe th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>3D Visualization and Data Table</h1>
+        <div class="viewer-container">
+            <div id="3dmolviewer_17326206127257886"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17326206127257886" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
+}
+
+var viewer_17326206127257886 = null;
+var warn = document.getElementById("3dmolwarning_17326206127257886");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17326206127257886 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17326206127257886"),{backgroundColor:"white"});
+viewer_17326206127257886.zoomTo();
+	viewer_17326206127257886.addModel("76\nXYZ file generated with PBC expansion\nNb 1.967084005 0.0 8.10267783392\nNb 1.9670840050000014 7.86833602 8.10267783392\nNb 1.967084005 0.0 16.27069984392\nNb 1.9670840050000014 7.86833602 16.27069984392\nNb 1.9670840050000007 3.93416801 8.10267783392\nNb 1.9670840050000007 3.93416801 16.27069984392\nNb 5.901252015 0.0 8.10267783392\nNb 5.901252015000001 7.86833602 8.10267783392\nNb 5.901252015 0.0 16.27069984392\nNb 5.901252015000001 7.86833602 16.27069984392\nNb 5.901252015000001 3.93416801 8.10267783392\nNb 5.901252015000001 3.93416801 16.27069984392\nNb 3.1633123422571303e-16 1.967084005 8.10267783392\nNb 7.86833602 1.967084005 8.10267783392\nNb 3.1633123422571303e-16 1.967084005 16.27069984392\nNb 7.86833602 1.967084005 16.27069984392\nNb 9.489937026771391e-16 5.901252015 8.10267783392\nNb 7.868336020000001 5.901252015 8.10267783392\nNb 9.489937026771391e-16 5.901252015 16.27069984392\nNb 7.868336020000001 5.901252015 16.27069984392\nNb 3.9341680100000014 1.967084005 8.10267783392\nNb 3.9341680100000014 1.967084005 16.27069984392\nNb 3.934168010000001 5.901252015 8.10267783392\nNb 3.934168010000001 5.901252015 16.27069984392\nSi 0.0 0.0 1.9276531943599997\nSi 1.2653249369028521e-15 7.86833602 1.9276531943600004\nSi 7.86833602 0.0 1.9276531943600004\nSi 7.868336020000001 7.86833602 1.9276531943600008\nSi 0.0 0.0 10.095675204359999\nSi 1.2653249369028521e-15 7.86833602 10.095675204359999\nSi 7.86833602 0.0 10.095675204359999\nSi 7.868336020000001 7.86833602 10.09567520436\nSi 6.326624684514261e-16 3.93416801 1.9276531943600002\nSi 7.868336020000001 3.93416801 1.9276531943600006\nSi 6.326624684514261e-16 3.93416801 10.095675204359999\nSi 7.868336020000001 3.93416801 10.09567520436\nSi 3.93416801 0.0 1.9276531943600002\nSi 3.9341680100000014 7.86833602 1.9276531943600006\nSi 3.93416801 0.0 10.095675204359999\nSi 3.9341680100000014 7.86833602 10.09567520436\nSi 3.9341680100000005 3.93416801 1.9276531943600004\nSi 3.9341680100000005 3.93416801 10.095675204359999\nSi 1.9670840050000002 1.967084005 6.003496177349999\nSi 1.9670840050000002 1.967084005 14.17151818735\nSi 1.967084005000001 5.901252015 6.003496177349999\nSi 1.967084005000001 5.901252015 14.17151818735\nSi 5.901252015000001 1.967084005 6.003496177349999\nSi 5.901252015000001 1.967084005 14.17151818735\nSi 5.901252015000001 5.901252015 6.00349617735\nSi 5.901252015000001 5.901252015 14.17151818735\nSb 1.9670840050000002 1.967084005 2.3523903388800003\nSb 1.9670840050000002 1.967084005 10.520412348879999\nSb 1.967084005000001 5.901252015 2.3523903388800007\nSb 1.967084005000001 5.901252015 10.520412348879999\nSb 5.901252015000001 1.967084005 2.3523903388800007\nSb 5.901252015000001 1.967084005 10.520412348879999\nSb 5.901252015000001 5.901252015 2.3523903388800007\nSb 5.901252015000001 5.901252015 10.520412348879999\nP 0.0 0.0 6.183192661570001\nP 1.2653249369028521e-15 7.86833602 6.1831926615700015\nP 7.86833602 0.0 6.1831926615700015\nP 7.868336020000001 7.86833602 6.1831926615700015\nP 0.0 0.0 14.351214671569998\nP 1.2653249369028521e-15 7.86833602 14.351214671569998\nP 7.86833602 0.0 14.351214671569998\nP 7.868336020000001 7.86833602 14.35121467157\nP 6.326624684514261e-16 3.93416801 6.183192661570001\nP 7.868336020000001 3.93416801 6.1831926615700015\nP 6.326624684514261e-16 3.93416801 14.351214671569998\nP 7.868336020000001 3.93416801 14.351214671569998\nP 3.93416801 0.0 6.183192661570001\nP 3.9341680100000014 7.86833602 6.1831926615700015\nP 3.93416801 0.0 14.351214671569998\nP 3.9341680100000014 7.86833602 14.351214671569998\nP 3.9341680100000005 3.93416801 6.1831926615700015\nP 3.9341680100000005 3.93416801 14.351214671569998","xyz");
+	viewer_17326206127257886.setStyle({},{"stick": {}, "sphere": {"scale": 0.3}});
+	viewer_17326206127257886.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 7.86833602, "y": 0.0, "z": 4.817966260754412e-16}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 1.2653249369028521e-15, "y": 7.86833602, "z": 4.817966260754412e-16}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 7.86833602, "y": 0.0, "z": 4.817966260754412e-16}, "end": {"x": 7.868336020000001, "y": 7.86833602, "z": 9.635932521508825e-16}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 7.86833602, "y": 0.0, "z": 4.817966260754412e-16}, "end": {"x": 7.86833602, "y": 0.0, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 1.2653249369028521e-15, "y": 7.86833602, "z": 4.817966260754412e-16}, "end": {"x": 7.868336020000001, "y": 7.86833602, "z": 9.635932521508825e-16}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 1.2653249369028521e-15, "y": 7.86833602, "z": 4.817966260754412e-16}, "end": {"x": 1.2653249369028521e-15, "y": 7.86833602, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 0.0, "y": 0.0, "z": 16.33604402}, "end": {"x": 7.86833602, "y": 0.0, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 0.0, "y": 0.0, "z": 16.33604402}, "end": {"x": 1.2653249369028521e-15, "y": 7.86833602, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 7.868336020000001, "y": 7.86833602, "z": 9.635932521508825e-16}, "end": {"x": 7.868336020000001, "y": 7.86833602, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 7.86833602, "y": 0.0, "z": 16.33604402}, "end": {"x": 7.868336020000001, "y": 7.86833602, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.addLine({"start": {"x": 1.2653249369028521e-15, "y": 7.86833602, "z": 16.33604402}, "end": {"x": 7.868336020000001, "y": 7.86833602, "z": 16.33604402}, "color": "black", "linewidth": 2});
+	viewer_17326206127257886.zoomTo();
+viewer_17326206127257886.render();
+});
+</script>
+        </div>
+        <div class="table-container">
+            <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Element</th>
+      <th>Nb</th>
+      <th>Nb</th>
+      <th>Si</th>
+      <th>Si</th>
+      <th>Sb</th>
+      <th>P</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TOSS</th>
+      <td>5</td>
+      <td>5</td>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-3</td>
+      <td>-3</td>
+    </tr>
+    <tr>
+      <th>BVS</th>
+      <td>5</td>
+      <td>5</td>
+      <td>-4</td>
+      <td>-4</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>Spin</th>
+      <td>0.000</td>
+      <td>-0.000</td>
+      <td>0.000</td>
+      <td>-0.000</td>
+      <td>-0.000</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <th>Bader</th>
+      <td>12.431</td>
+      <td>12.263</td>
+      <td>4.622</td>
+      <td>3.953</td>
+      <td>4.912</td>
+      <td>5.818</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </body>
+    </html>
+    
