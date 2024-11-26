@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr); /* 10 columns */
+            grid-template-rows: repeat(10, 1fr);   /* 10 rows */
+            gap: 10px;
+            width: 80%;
+            height: 80%;
+        }
+        button {
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #dcdcdc;
+            transform: scale(1.05);
+        }
+        button:active {
+            background-color: #bcbcbc;
+        }
+        .button-text {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container" id="button-container"></div>
+
+    <script>
+        // Array containing button data: [htmlFileName, firstRowText, secondRowText]
+        const buttonData = [
+            ["1016627", "1016627", "BaHgAs2"],
+            ["1026471", "1026471", "BaCrNO"],
+            ["1032439", "1032439", "NaReSbAs"],
+            ["1037501", "1037501", "ZnAgTeO"],
+            ["1043550", "1043550", "CoTe2W"],
+            ["1049472", "1049472", "GdCuSO"],
+            ["1049759", "1049759", "GdFeSO"],
+            ["1056668", "1056668", "HfBiNO"],
+            ["1056739", "1056739", "BeHgNO"],
+            ["1070711", "1070711", "SiBNO"],
+            ["1077637", "1077637", "MnNiPO"],
+            ["1079152", "1079152", "KSnPO"],
+            ["1079325", "1079325", "KTbPO"],
+            ["1083712", "1083712", "SbAsRuO"],
+            ["1091195", "1091195", "CdPRhO"],
+            ["1092137", "1092137", "HfSnPO"],
+            ["1093004", "1093004", "NaTbPO"],
+            ["1094029", "1094029", "AsPRhO"],
+            ["1099721", "1099721", "BeSnAsO"],
+            ["1113380", "1113380", "MnBTe2"],
+            ["1127850", "1127850", "B2MoRu"],
+            ["11613", "11613", "Sc2V3Si4"],
+            ["118179", "118179", "CuClF10"],
+            ["1218249", "1218249", "AgO"],
+            ["1308900", "1308900", "GdGaSnTe3"],
+            ["1353913", "1353913", "NdEuCuTe3"],
+            ["1365919", "1365919", "Sc2CdC"],
+            ["1431120", "1431120", "Na2NbCoH6"],
+            ["1431453", "1431453", "Cs2H6IrRh"],
+            ["1433025", "1433025", "Cs2ScHgI6"],
+            ["1435841", "1435841", "NCl2"],
+            ["1439210", "1439210", "BiSbTe"],
+            ["1441159", "1441159", "ReS2"],
+            ["1441834", "1441834", "SeS2"],
+            ["1452744", "1452744", "Y2TiIrC6"],
+            ["1461469", "1461469", "FeB4Ir"],
+            ["1461896", "1461896", "ZrMnB4"],
+            ["1462931", "1462931", "TlSnB4"],
+            ["1464168", "1464168", "TbThB4"],
+            ["1492450", "1492450", "LaPr2Si2Ge2(PdRh)2"],
+            ["1500288", "1500288", "Ho2Sc2CI3Br2"],
+            ["1500671", "1500671", "La2Dy2CBr5"],
+            ["1503217", "1503217", "DyYSiGeRh"],
+            ["1503811", "1503811", "Sm2SiGeRu"],
+            ["1515074", "1515074", "InMo3As5"],
+            ["1541243", "1541243", "K2AgSnBr6"],
+            ["1552851", "1552851", "Nb2Si2SbP"],
+            ["1553069", "1553069", "Na2FeAs2Rh"],
+            ["1589503", "1589503", "B2N"],
+            ["1615685", "1615685", "InIrI6"],
+            ["1635904", "1635904", "Ho3Hf(CS)2"],
+            ["1635990", "1635990", "GdZrCS"],
+            ["1666775", "1666775", "Rb2TlCuCl6"],
+            ["1711322", "1711322", "NdEu2NbO6"],
+            ["1711451", "1711451", "PrSm2RuO6"],
+            ["1717164", "1717164", "ScGe2RuO6"],
+            ["1718604", "1718604", "Dy2TaTeO6"],
+            ["1724982", "1724982", "AsS2Cl7"],
+            ["1730454", "1730454", "Eu2NbSbO6"],
+            ["1731863", "1731863", "SmCrSO6"],
+            ["1731960", "1731960", "YbCrNiO6"],
+            ["1735630", "1735630", "KP2IrS7"],
+            ["1751105", "1751105", "Sm2CrCuSO3"],
+            ["1756383", "1756383", "CrFeO2"],
+            ["1758632", "1758632", "CrNiO3"],
+            ["21766", "21766", "Cu4W(SCl)4"],
+            ["301588", "301588", "MoAs3"],
+            ["305492", "305492", "DyC"],
+            ["325651", "325651", "EuAs"],
+            ["352956", "352956", "UAsO3"],
+            ["354800", "354800", "LiCrO3"],
+            ["360435", "360435", "Cd2Rh2O5"],
+            ["381064", "381064", "SrFeAs2"],
+            ["486804", "486804", "SmSiSb2"],
+            ["525810", "525810", "LiFe2B"],
+            ["578247", "578247", "LaSmAs"],
+            ["678734", "678734", "EuHfO3"],
+            ["679831", "679831", "PrMgO3"],
+            ["774682", "774682", "ZrCoSiRh"],
+            ["780261", "780261", "ZrCrFeSi"],
+            ["827497", "827497", "Be3C3S"],
+            ["832074", "832074", "LaBiTe"],
+            ["966842", "966842", "NdBiAs"],
+            ["987410", "987410", "ZrVAs"],
+            ["mp-1030131", "mp-1030131", "MoWSeS3"],
+            ["mp-1099600", "mp-1099600", "Sr2Ca6Co7CuO24"],
+            ["mp-1176910", "mp-1176910", "Li7Mn4(P2O7)4"],
+            ["mp-1178435", "mp-1178435", "Co6O5F7"],
+            ["mp-1198602", "mp-1198602", "DyH2C2SNO9"],
+            ["mp-1220272", "mp-1220272", "Nd2Si3"],
+            ["mp-1224287", "mp-1224287", "Hg2CNCl5"],
+            ["mp-1245319", "mp-1245319", "ZnS"],
+            ["mp-20742", "mp-20742", "EuPSe3"],
+            ["mp-25082", "mp-25082", "Mo(CO)6"],
+            ["mp-542635", "mp-542635", "SeN"],
+            ["mp-554797", "mp-554797", "K3CrC3N3O4"],
+            ["mp-570254", "mp-570254", "ThBC"],
+            ["mp-6102", "mp-6102", "NdNi2B2C"],
+            ["mp-696127", "mp-696127", "Li10Ge(PSe6)2"],
+            ["mp-777440", "mp-777440", "V3OF11"],
+            ["mvc-6811", "mvc-6811", "Mg(AgO2)2"],
+            // Add more as needed (up to 100 items for 10x10 layout)
+        ];
+
+        const buttonContainer = document.getElementById('button-container');
+
+        buttonData.forEach(([fileName, firstRow, secondRow]) => {
+            const button = document.createElement('button');
+
+            // Add text for the first and second rows
+            button.innerHTML = `
+                <span class="button-text">${firstRow}</span>
+                <span class="button-text">${secondRow}</span>
+            `;
+
+            // Set onclick event to open the corresponding HTML file
+            button.onclick = () => {
+                window.open(`./examples/${fileName}.html`, '_blank');
+            };
+
+            buttonContainer.appendChild(button);
+        });
+
+        // Fill remaining buttons if less than 100 items
+        const totalButtons = 100;
+        const emptyButtonsNeeded = totalButtons - buttonData.length;
+        for (let i = 0; i < emptyButtonsNeeded; i++) {
+            const emptyButton = document.createElement('button');
+            emptyButton.disabled = true; // Disable empty buttons
+            buttonContainer.appendChild(emptyButton);
+        }
+    </script>
+</body>
+</html>
