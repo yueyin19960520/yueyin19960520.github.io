@@ -4,30 +4,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>3D Visualization with Data Table</title>
+        <title>3D Visualization with Styled Data Table and Legend</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin: 0;
-                padding: 0;
+                justify-content: center;
+                min-height: 100vh; /* Ensure the body takes the full height */
+            }
+            .top-content {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                margin: 20px 0;
             }
             .viewer-container {
                 width: 800px;
                 height: 500px;
-                margin: 20px 0;
+            }
+            .legend-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 20px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            .legend-item {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .legend-color {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 10px;
+                border: 1px solid #000;
+            }
+            .legend-label {
+                font-size: 14px;
             }
             .table-container {
                 width: 80%;
-                margin-top: 20px;
-                overflow-x: auto;
+                margin: 20px 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+            .scrollable-table {
+                overflow-x: auto; /* Enable horizontal scrolling */
+                max-width: 100%;  /* Prevent table from exceeding the container width */
             }
             table.dataframe {
-                width: 100%;
+                width: max-content; /* Adjust table width based on content */
                 border-collapse: collapse;
-                margin: 20px 0;
+                margin: 0 auto;
             }
             table.dataframe th, table.dataframe td {
                 border: 1px solid #ddd;
@@ -41,10 +82,11 @@
         </style>
     </head>
     <body>
-        <h1>3D Visualization and Data Table</h1>
-        <div class="viewer-container">
-            <div id="3dmolviewer_17326206103460424"  style="position: relative; width: 800px; height: 500px;">
-        <p id="3dmolwarning_17326206103460424" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        <h1>3D Visualization with Styled Data Table and Legend</h1>
+        <div class="top-content">
+            <div class="viewer-container">
+                <div id="3dmolviewer_17332198793160322"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17332198793160322" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
         </div>
 <script>
 
@@ -75,95 +117,108 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
 }
 
-var viewer_17326206103460424 = null;
-var warn = document.getElementById("3dmolwarning_17326206103460424");
+var viewer_17332198793160322 = null;
+var warn = document.getElementById("3dmolwarning_17332198793160322");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_17326206103460424 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17326206103460424"),{backgroundColor:"white"});
-viewer_17326206103460424.zoomTo();
-	viewer_17326206103460424.addModel("80\nXYZ file generated with PBC expansion\nAs 3.1753400440567596e-16 1.9745633485699994 0.3632172989830002\nAs 6.09229296 1.9745633485699994 0.3632172989830006\nAs 3.1753400440567596e-16 1.9745633485699994 6.193350508982999\nAs 6.09229296 1.9745633485699994 6.193350508983\nAs 1.4162675836640708e-15 8.80696247857 0.36321729898300065\nAs 6.092292960000002 8.80696247857 0.36321729898300104\nAs 1.4162675836640708e-15 8.80696247857 6.1933505089829985\nAs 6.092292960000002 8.80696247857 6.193350508982999\nAs 3.0461464800000013 1.9745633485699994 0.3632172989830004\nAs 3.0461464800000013 1.9745633485699994 6.193350508983\nAs 3.0461464800000013 8.80696247857 0.3632172989830008\nAs 3.0461464800000013 8.80696247857 6.193350508983\nAs 7.811995748527184e-16 4.857835781429999 3.2765348640200003\nAs 6.092292960000001 4.857835781429999 3.2765348640200007\nAs 7.811995748527184e-16 4.857835781429999 9.10666807402\nAs 6.092292960000001 4.857835781429999 9.10666807402\nAs 1.879933154111113e-15 11.69023491143 3.2765348640200007\nAs 6.092292960000002 11.69023491143 3.276534864020001\nAs 1.879933154111113e-15 11.69023491143 9.10666807402\nAs 6.092292960000002 11.69023491143 9.106668074020002\nAs 3.0461464800000018 4.857835781429999 3.2765348640199994\nAs 3.0461464800000018 4.857835781429999 9.10666807402\nAs 3.0461464800000018 11.69023491143 3.276534864020001\nAs 3.0461464800000018 11.69023491143 9.10666807402\nP 1.5230732400000009 6.08766762483 1.6790783644800005\nP 1.5230732400000009 6.08766762483 7.50921157448\nP 1.523073240000002 12.92006675483 1.679078364480001\nP 1.523073240000002 12.92006675483 7.509211574480001\nP 4.569219720000001 6.08766762483 1.6790783644800007\nP 4.569219720000001 6.08766762483 7.50921157448\nP 4.569219720000001 12.92006675483 1.6790783644800011\nP 4.569219720000001 12.92006675483 7.509211574480001\nP 1.5230732400000002 0.7447315051699999 4.59414496948\nP 1.5230732400000002 0.7447315051699999 10.42427817948\nP 1.523073240000001 7.57713063517 4.59414496948\nP 1.523073240000001 7.57713063517 10.42427817948\nP 4.56921972 0.7447315051699999 4.59414496948\nP 4.56921972 0.7447315051699999 10.42427817948\nP 4.56921972 7.57713063517 4.594144969480002\nP 4.56921972 7.57713063517 10.424278179480002\nRh 1.5230732400000002 1.3391502294799997 2.3903546160999998\nRh 1.5230732400000002 1.3391502294799997 8.2204878261\nRh 1.5230732400000013 8.17154935948 2.3903546160999998\nRh 1.5230732400000013 8.17154935948 8.2204878261\nRh 4.56921972 1.3391502294799997 2.3903546160999998\nRh 4.56921972 1.3391502294799997 8.2204878261\nRh 4.56921972 8.17154935948 2.3903546161\nRh 4.56921972 8.17154935948 8.220487826100001\nRh 1.5230732400000009 5.49324890052 5.3054212211000005\nRh 1.5230732400000009 5.49324890052 11.135554431100001\nRh 1.523073240000002 12.32564803052 5.305421221100001\nRh 1.523073240000002 12.32564803052 11.135554431100001\nRh 4.569219720000001 5.49324890052 5.305421221100001\nRh 4.569219720000001 5.49324890052 11.135554431100001\nRh 4.569219720000001 12.32564803052 5.305421221100001\nRh 4.569219720000001 12.32564803052 11.135554431100001\nO 5.120098479344121e-16 3.183897994580001 2.88008580574\nO 6.092292960000001 3.183897994580001 2.8800858057400003\nO 5.120098479344121e-16 3.183897994580001 8.71021901574\nO 6.092292960000001 3.183897994580001 8.71021901574\nO 1.6107434271928065e-15 10.01629712458 2.8800858057400003\nO 6.092292960000002 10.01629712458 2.8800858057400007\nO 1.6107434271928065e-15 10.01629712458 8.71021901574\nO 6.092292960000002 10.01629712458 8.71021901574\nO 3.0461464800000004 3.183897994580001 2.8800858057400003\nO 3.0461464800000004 3.183897994580001 8.71021901574\nO 3.0461464800000018 10.01629712458 2.8800858057400007\nO 3.0461464800000018 10.01629712458 8.71021901574\nO 5.867237313239827e-16 3.64850113542 5.79515241074\nO 6.092292960000001 3.64850113542 5.79515241074\nO 5.867237313239827e-16 3.64850113542 11.62528562074\nO 6.092292960000001 3.64850113542 11.62528562074\nO 1.6854573105823776e-15 10.48090026542 5.79515241074\nO 6.092292960000002 10.48090026542 5.795152410740001\nO 1.6854573105823776e-15 10.48090026542 11.62528562074\nO 6.092292960000002 10.48090026542 11.62528562074\nO 3.0461464800000004 3.64850113542 5.79515241074\nO 3.0461464800000004 3.64850113542 11.62528562074\nO 3.0461464800000018 10.48090026542 5.795152410740002\nO 3.0461464800000018 10.48090026542 11.625285620740001","xyz");
-	viewer_17326206103460424.setStyle({},{"stick": {}, "sphere": {"scale": 0.3}});
-	viewer_17326206103460424.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 6.09229296, "y": 0.0, "z": 3.730453536465977e-16}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 8.367275725051661e-16}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 11.66026642}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 6.09229296, "y": 0.0, "z": 3.730453536465977e-16}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 1.2097729261517637e-15}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 6.09229296, "y": 0.0, "z": 3.730453536465977e-16}, "end": {"x": 6.09229296, "y": 0.0, "z": 11.66026642}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 8.367275725051661e-16}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 1.2097729261517637e-15}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 8.367275725051661e-16}, "end": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 11.66026642}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 0.0, "y": 0.0, "z": 11.66026642}, "end": {"x": 6.09229296, "y": 0.0, "z": 11.66026642}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 0.0, "y": 0.0, "z": 11.66026642}, "end": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 11.66026642}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 6.092292960000002, "y": 13.66479826, "z": 1.2097729261517637e-15}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 11.660266420000001}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 6.09229296, "y": 0.0, "z": 11.66026642}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 11.660266420000001}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.addLine({"start": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 11.66026642}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 11.660266420000001}, "color": "black", "linewidth": 2});
-	viewer_17326206103460424.zoomTo();
-viewer_17326206103460424.render();
+viewer_17332198793160322 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17332198793160322"),{backgroundColor:"white"});
+viewer_17332198793160322.zoomTo();
+	viewer_17332198793160322.addModel("80\nXYZ file generated with PBC expansion\nAs 3.1753400440567596e-16 1.9745633485699994 0.3632172989830002\nAs 6.09229296 1.9745633485699994 0.3632172989830006\nAs 3.1753400440567596e-16 1.9745633485699994 6.193350508982999\nAs 6.09229296 1.9745633485699994 6.193350508983\nAs 1.4162675836640708e-15 8.80696247857 0.36321729898300065\nAs 6.092292960000002 8.80696247857 0.36321729898300104\nAs 1.4162675836640708e-15 8.80696247857 6.1933505089829985\nAs 6.092292960000002 8.80696247857 6.193350508982999\nAs 3.0461464800000013 1.9745633485699994 0.3632172989830004\nAs 3.0461464800000013 1.9745633485699994 6.193350508983\nAs 3.0461464800000013 8.80696247857 0.3632172989830008\nAs 3.0461464800000013 8.80696247857 6.193350508983\nAs 7.811995748527184e-16 4.857835781429999 3.2765348640200003\nAs 6.092292960000001 4.857835781429999 3.2765348640200007\nAs 7.811995748527184e-16 4.857835781429999 9.10666807402\nAs 6.092292960000001 4.857835781429999 9.10666807402\nAs 1.879933154111113e-15 11.69023491143 3.2765348640200007\nAs 6.092292960000002 11.69023491143 3.276534864020001\nAs 1.879933154111113e-15 11.69023491143 9.10666807402\nAs 6.092292960000002 11.69023491143 9.106668074020002\nAs 3.0461464800000018 4.857835781429999 3.2765348640199994\nAs 3.0461464800000018 4.857835781429999 9.10666807402\nAs 3.0461464800000018 11.69023491143 3.276534864020001\nAs 3.0461464800000018 11.69023491143 9.10666807402\nP 1.5230732400000009 6.08766762483 1.6790783644800005\nP 1.5230732400000009 6.08766762483 7.50921157448\nP 1.523073240000002 12.92006675483 1.679078364480001\nP 1.523073240000002 12.92006675483 7.509211574480001\nP 4.569219720000001 6.08766762483 1.6790783644800007\nP 4.569219720000001 6.08766762483 7.50921157448\nP 4.569219720000001 12.92006675483 1.6790783644800011\nP 4.569219720000001 12.92006675483 7.509211574480001\nP 1.5230732400000002 0.7447315051699999 4.59414496948\nP 1.5230732400000002 0.7447315051699999 10.42427817948\nP 1.523073240000001 7.57713063517 4.59414496948\nP 1.523073240000001 7.57713063517 10.42427817948\nP 4.56921972 0.7447315051699999 4.59414496948\nP 4.56921972 0.7447315051699999 10.42427817948\nP 4.56921972 7.57713063517 4.594144969480002\nP 4.56921972 7.57713063517 10.424278179480002\nRh 1.5230732400000002 1.3391502294799997 2.3903546160999998\nRh 1.5230732400000002 1.3391502294799997 8.2204878261\nRh 1.5230732400000013 8.17154935948 2.3903546160999998\nRh 1.5230732400000013 8.17154935948 8.2204878261\nRh 4.56921972 1.3391502294799997 2.3903546160999998\nRh 4.56921972 1.3391502294799997 8.2204878261\nRh 4.56921972 8.17154935948 2.3903546161\nRh 4.56921972 8.17154935948 8.220487826100001\nRh 1.5230732400000009 5.49324890052 5.3054212211000005\nRh 1.5230732400000009 5.49324890052 11.135554431100001\nRh 1.523073240000002 12.32564803052 5.305421221100001\nRh 1.523073240000002 12.32564803052 11.135554431100001\nRh 4.569219720000001 5.49324890052 5.305421221100001\nRh 4.569219720000001 5.49324890052 11.135554431100001\nRh 4.569219720000001 12.32564803052 5.305421221100001\nRh 4.569219720000001 12.32564803052 11.135554431100001\nO 5.120098479344121e-16 3.183897994580001 2.88008580574\nO 6.092292960000001 3.183897994580001 2.8800858057400003\nO 5.120098479344121e-16 3.183897994580001 8.71021901574\nO 6.092292960000001 3.183897994580001 8.71021901574\nO 1.6107434271928065e-15 10.01629712458 2.8800858057400003\nO 6.092292960000002 10.01629712458 2.8800858057400007\nO 1.6107434271928065e-15 10.01629712458 8.71021901574\nO 6.092292960000002 10.01629712458 8.71021901574\nO 3.0461464800000004 3.183897994580001 2.8800858057400003\nO 3.0461464800000004 3.183897994580001 8.71021901574\nO 3.0461464800000018 10.01629712458 2.8800858057400007\nO 3.0461464800000018 10.01629712458 8.71021901574\nO 5.867237313239827e-16 3.64850113542 5.79515241074\nO 6.092292960000001 3.64850113542 5.79515241074\nO 5.867237313239827e-16 3.64850113542 11.62528562074\nO 6.092292960000001 3.64850113542 11.62528562074\nO 1.6854573105823776e-15 10.48090026542 5.79515241074\nO 6.092292960000002 10.48090026542 5.795152410740001\nO 1.6854573105823776e-15 10.48090026542 11.62528562074\nO 6.092292960000002 10.48090026542 11.62528562074\nO 3.0461464800000004 3.64850113542 5.79515241074\nO 3.0461464800000004 3.64850113542 11.62528562074\nO 3.0461464800000018 10.48090026542 5.795152410740002\nO 3.0461464800000018 10.48090026542 11.625285620740001","xyz");
+	viewer_17332198793160322.setStyle({"elem": "O"},{"stick": {"radius": 0.15, "color": "#FF0300"}, "sphere": {"scale": 0.3, "color": "#FF0300"}});
+	viewer_17332198793160322.setStyle({"elem": "P"},{"stick": {"radius": 0.15, "color": "#C19CC3"}, "sphere": {"scale": 0.3, "color": "#C19CC3"}});
+	viewer_17332198793160322.setStyle({"elem": "As"},{"stick": {"radius": 0.15, "color": "#75D057"}, "sphere": {"scale": 0.3, "color": "#75D057"}});
+	viewer_17332198793160322.setStyle({"elem": "Rh"},{"stick": {"radius": 0.15, "color": "#CED2AB"}, "sphere": {"scale": 0.3, "color": "#CED2AB"}});
+	viewer_17332198793160322.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 6.09229296, "y": 0.0, "z": 3.730453536465977e-16}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 8.367275725051661e-16}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 11.66026642}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 6.09229296, "y": 0.0, "z": 3.730453536465977e-16}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 1.2097729261517637e-15}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 6.09229296, "y": 0.0, "z": 3.730453536465977e-16}, "end": {"x": 6.09229296, "y": 0.0, "z": 11.66026642}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 8.367275725051661e-16}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 1.2097729261517637e-15}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 8.367275725051661e-16}, "end": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 11.66026642}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 0.0, "y": 0.0, "z": 11.66026642}, "end": {"x": 6.09229296, "y": 0.0, "z": 11.66026642}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 0.0, "y": 0.0, "z": 11.66026642}, "end": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 11.66026642}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 6.092292960000002, "y": 13.66479826, "z": 1.2097729261517637e-15}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 11.660266420000001}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 6.09229296, "y": 0.0, "z": 11.66026642}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 11.660266420000001}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.addLine({"start": {"x": 2.197467158516789e-15, "y": 13.66479826, "z": 11.66026642}, "end": {"x": 6.092292960000002, "y": 13.66479826, "z": 11.660266420000001}, "color": "black", "linewidth": 2});
+	viewer_17332198793160322.zoomTo();
+viewer_17332198793160322.render();
 });
 </script>
+            </div>
+            <div class="legend-container">
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #FF0300;"></span>
+                <span class="legend-label">O</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #C19CC3;"></span>
+                <span class="legend-label">P</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #75D057;"></span>
+                <span class="legend-label">As</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #CED2AB;"></span>
+                <span class="legend-label">Rh</span>
+            </div>
+        </div>
         </div>
         <div class="table-container">
-            <table border="1" class="dataframe dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Element</th>
-      <th>As</th>
-      <th>As</th>
-      <th>P</th>
-      <th>P</th>
-      <th>Rh</th>
-      <th>Rh</th>
-      <th>O</th>
-      <th>O</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>TOSS</th>
-      <td>2</td>
-      <td>2</td>
-      <td>-3</td>
-      <td>-3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>-2</td>
-      <td>-2</td>
-    </tr>
-    <tr>
-      <th>BVS</th>
-      <td>2</td>
-      <td>2</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>-2</td>
-      <td>-2</td>
-    </tr>
-    <tr>
-      <th>Spin</th>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>-0.000</td>
-      <td>-0.000</td>
-      <td>0.000</td>
-      <td>-0.000</td>
-      <td>-0.000</td>
-      <td>0.000</td>
-    </tr>
-    <tr>
-      <th>Bader</th>
-      <td>3.540</td>
-      <td>3.537</td>
-      <td>4.887</td>
-      <td>4.884</td>
-      <td>14.923</td>
-      <td>14.924</td>
-      <td>7.652</td>
-      <td>7.652</td>
-    </tr>
-  </tbody>
-</table>
+            <div class="scrollable-table">
+                <style  type="text/css" >
+</style><table id="T_ea47d_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >As1</th>        <th class="col_heading level0 col1" >As2</th>        <th class="col_heading level0 col2" >P1</th>        <th class="col_heading level0 col3" >P2</th>        <th class="col_heading level0 col4" >Rh1</th>        <th class="col_heading level0 col5" >Rh2</th>        <th class="col_heading level0 col6" >O1</th>        <th class="col_heading level0 col7" >O2</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_ea47d_level0_row0" class="row_heading level0 row0" >TOSS</th>
+                        <td id="T_ea47d_row0_col0" class="data row0 col0" >2</td>
+                        <td id="T_ea47d_row0_col1" class="data row0 col1" >2</td>
+                        <td id="T_ea47d_row0_col2" class="data row0 col2" >-3</td>
+                        <td id="T_ea47d_row0_col3" class="data row0 col3" >-3</td>
+                        <td id="T_ea47d_row0_col4" class="data row0 col4" >3</td>
+                        <td id="T_ea47d_row0_col5" class="data row0 col5" >3</td>
+                        <td id="T_ea47d_row0_col6" class="data row0 col6" >-2</td>
+                        <td id="T_ea47d_row0_col7" class="data row0 col7" >-2</td>
+            </tr>
+            <tr>
+                        <th id="T_ea47d_level0_row1" class="row_heading level0 row1" >BVS</th>
+                        <td id="T_ea47d_row1_col0" class="data row1 col0" >2</td>
+                        <td id="T_ea47d_row1_col1" class="data row1 col1" >2</td>
+                        <td id="T_ea47d_row1_col2" class="data row1 col2" >-1</td>
+                        <td id="T_ea47d_row1_col3" class="data row1 col3" >-1</td>
+                        <td id="T_ea47d_row1_col4" class="data row1 col4" >1</td>
+                        <td id="T_ea47d_row1_col5" class="data row1 col5" >1</td>
+                        <td id="T_ea47d_row1_col6" class="data row1 col6" >-2</td>
+                        <td id="T_ea47d_row1_col7" class="data row1 col7" >-2</td>
+            </tr>
+            <tr>
+                        <th id="T_ea47d_level0_row2" class="row_heading level0 row2" >Spin</th>
+                        <td id="T_ea47d_row2_col0" class="data row2 col0" >0.000</td>
+                        <td id="T_ea47d_row2_col1" class="data row2 col1" >0.000</td>
+                        <td id="T_ea47d_row2_col2" class="data row2 col2" >-0.000</td>
+                        <td id="T_ea47d_row2_col3" class="data row2 col3" >-0.000</td>
+                        <td id="T_ea47d_row2_col4" class="data row2 col4" >0.000</td>
+                        <td id="T_ea47d_row2_col5" class="data row2 col5" >-0.000</td>
+                        <td id="T_ea47d_row2_col6" class="data row2 col6" >-0.000</td>
+                        <td id="T_ea47d_row2_col7" class="data row2 col7" >0.000</td>
+            </tr>
+            <tr>
+                        <th id="T_ea47d_level0_row3" class="row_heading level0 row3" >Bader</th>
+                        <td id="T_ea47d_row3_col0" class="data row3 col0" >3.540</td>
+                        <td id="T_ea47d_row3_col1" class="data row3 col1" >3.537</td>
+                        <td id="T_ea47d_row3_col2" class="data row3 col2" >4.887</td>
+                        <td id="T_ea47d_row3_col3" class="data row3 col3" >4.884</td>
+                        <td id="T_ea47d_row3_col4" class="data row3 col4" >14.923</td>
+                        <td id="T_ea47d_row3_col5" class="data row3 col5" >14.924</td>
+                        <td id="T_ea47d_row3_col6" class="data row3 col6" >7.652</td>
+                        <td id="T_ea47d_row3_col7" class="data row3 col7" >7.652</td>
+            </tr>
+    </tbody></table>
+            </div>
         </div>
     </body>
     </html>

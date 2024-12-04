@@ -4,30 +4,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>3D Visualization with Data Table</title>
+        <title>3D Visualization with Styled Data Table and Legend</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin: 0;
-                padding: 0;
+                justify-content: center;
+                min-height: 100vh; /* Ensure the body takes the full height */
+            }
+            .top-content {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                margin: 20px 0;
             }
             .viewer-container {
                 width: 800px;
                 height: 500px;
-                margin: 20px 0;
+            }
+            .legend-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 20px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            .legend-item {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .legend-color {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 10px;
+                border: 1px solid #000;
+            }
+            .legend-label {
+                font-size: 14px;
             }
             .table-container {
                 width: 80%;
-                margin-top: 20px;
-                overflow-x: auto;
+                margin: 20px 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+            .scrollable-table {
+                overflow-x: auto; /* Enable horizontal scrolling */
+                max-width: 100%;  /* Prevent table from exceeding the container width */
             }
             table.dataframe {
-                width: 100%;
+                width: max-content; /* Adjust table width based on content */
                 border-collapse: collapse;
-                margin: 20px 0;
+                margin: 0 auto;
             }
             table.dataframe th, table.dataframe td {
                 border: 1px solid #ddd;
@@ -41,10 +82,11 @@
         </style>
     </head>
     <body>
-        <h1>3D Visualization and Data Table</h1>
-        <div class="viewer-container">
-            <div id="3dmolviewer_1732620608924042"  style="position: relative; width: 800px; height: 500px;">
-        <p id="3dmolwarning_1732620608924042" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        <h1>3D Visualization with Styled Data Table and Legend</h1>
+        <div class="top-content">
+            <div class="viewer-container">
+                <div id="3dmolviewer_17332198779573874"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17332198779573874" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
         </div>
 <script>
 
@@ -75,135 +117,138 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
 }
 
-var viewer_1732620608924042 = null;
-var warn = document.getElementById("3dmolwarning_1732620608924042");
+var viewer_17332198779573874 = null;
+var warn = document.getElementById("3dmolwarning_17332198779573874");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_1732620608924042 = $3Dmol.createViewer(document.getElementById("3dmolviewer_1732620608924042"),{backgroundColor:"white"});
-viewer_1732620608924042.zoomTo();
-	viewer_1732620608924042.addModel("51\nXYZ file generated with PBC expansion\nBa 3.0918267851025742 2.1862516860002326 5.3552010800000005\nBa 3.0918267851025742 2.1862516860002326 10.710402160000001\nBa 4.637740177653861 6.558755058000696 8.032801619999999\nBa 4.637740177653861 6.558755058000696 13.3880027\nBa 7.7295669627564365 2.1862516860002326 8.03280162\nBa 7.7295669627564365 2.1862516860002326 13.388002700000001\nBa 9.275480355307723 6.558755058000696 10.710402160000001\nBa 9.275480355307723 6.558755058000696 16.06560324\nHg 1.5459133925512871 1.0931258430001163 2.6776005400000003\nHg 1.5459133925512871 1.0931258430001163 8.03280162\nHg 3.0918267851025747 5.465629215000582 5.3552010800000005\nHg 3.0918267851025747 5.465629215000582 10.710402160000001\nHg 6.1836535702051485 1.0931258430001163 5.3552010800000005\nHg 6.1836535702051485 1.0931258430001163 10.71040216\nHg 7.729566962756436 5.465629215000582 8.03280162\nHg 7.729566962756436 5.465629215000582 13.388002700000001\nAs 0.0 0.0 0.0\nAs 0.0 0.0 10.71040216\nAs 3.0918267851025747 8.74500674400093 5.3552010800000005\nAs 3.0918267851025747 8.74500674400093 16.06560324\nAs 9.275480355307723 0.0 5.3552010800000005\nAs 9.275480355307723 0.0 16.06560324\nAs 12.367307140410297 8.74500674400093 10.710402160000001\nAs 12.367307140410297 8.74500674400093 21.420804320000002\nAs 0.0 0.0 5.35520108\nAs 3.0918267851025747 8.74500674400093 10.710402160000001\nAs 9.275480355307723 0.0 10.710402160000001\nAs 12.367307140410297 8.74500674400093 16.06560324\nAs 1.5459133925512873 4.372503372000465 2.6776005400000003\nAs 1.5459133925512873 4.372503372000465 13.3880027\nAs 10.82139374785901 4.372503372000465 8.03280162\nAs 10.82139374785901 4.372503372000465 18.74320378\nAs 1.5459133925512873 4.372503372000465 8.03280162\nAs 10.82139374785901 4.372503372000465 13.388002700000001\nAs 4.637740177653861 0.0 2.6776005400000003\nAs 4.637740177653861 0.0 13.3880027\nAs 7.7295669627564365 8.74500674400093 8.03280162\nAs 7.7295669627564365 8.74500674400093 18.74320378\nAs 4.637740177653861 0.0 8.03280162\nAs 7.7295669627564365 8.74500674400093 13.388002700000001\nAs 6.1836535702051485 4.372503372000465 5.3552010800000005\nAs 6.1836535702051485 4.372503372000465 16.06560324\nAs 6.1836535702051485 4.372503372000465 10.710402160000001\nAs 4.637740177653861 3.2793775290003486 8.03280162\nAs 4.637740177653861 3.2793775290003486 13.388002700000001\nAs 6.183653570205149 7.651880901000814 10.710402160000001\nAs 6.183653570205149 7.651880901000814 16.06560324\nAs 9.275480355307723 3.2793775290003486 10.710402160000001\nAs 9.275480355307723 3.2793775290003486 16.06560324\nAs 10.821393747859009 7.651880901000814 13.388002700000001\nAs 10.821393747859009 7.651880901000814 18.74320378","xyz");
-	viewer_1732620608924042.setStyle({},{"stick": {}, "sphere": {"scale": 0.3}});
-	viewer_1732620608924042.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 9.275480355307723, "y": 0.0, "z": 5.3552010800000005}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 5.3552010800000005}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 10.71040216}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 9.275480355307723, "y": 0.0, "z": 5.3552010800000005}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 10.710402160000001}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 9.275480355307723, "y": 0.0, "z": 5.3552010800000005}, "end": {"x": 9.275480355307723, "y": 0.0, "z": 16.06560324}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 5.3552010800000005}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 10.710402160000001}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 5.3552010800000005}, "end": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 16.06560324}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.71040216}, "end": {"x": 9.275480355307723, "y": 0.0, "z": 16.06560324}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.71040216}, "end": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 16.06560324}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 10.710402160000001}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 21.420804320000002}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 9.275480355307723, "y": 0.0, "z": 16.06560324}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 21.420804320000002}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.addLine({"start": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 16.06560324}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 21.420804320000002}, "color": "black", "linewidth": 2});
-	viewer_1732620608924042.zoomTo();
-viewer_1732620608924042.render();
+viewer_17332198779573874 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17332198779573874"),{backgroundColor:"white"});
+viewer_17332198779573874.zoomTo();
+	viewer_17332198779573874.addModel("51\nXYZ file generated with PBC expansion\nBa 3.0918267851025742 2.1862516860002326 5.3552010800000005\nBa 3.0918267851025742 2.1862516860002326 10.710402160000001\nBa 4.637740177653861 6.558755058000696 8.032801619999999\nBa 4.637740177653861 6.558755058000696 13.3880027\nBa 7.7295669627564365 2.1862516860002326 8.03280162\nBa 7.7295669627564365 2.1862516860002326 13.388002700000001\nBa 9.275480355307723 6.558755058000696 10.710402160000001\nBa 9.275480355307723 6.558755058000696 16.06560324\nHg 1.5459133925512871 1.0931258430001163 2.6776005400000003\nHg 1.5459133925512871 1.0931258430001163 8.03280162\nHg 3.0918267851025747 5.465629215000582 5.3552010800000005\nHg 3.0918267851025747 5.465629215000582 10.710402160000001\nHg 6.1836535702051485 1.0931258430001163 5.3552010800000005\nHg 6.1836535702051485 1.0931258430001163 10.71040216\nHg 7.729566962756436 5.465629215000582 8.03280162\nHg 7.729566962756436 5.465629215000582 13.388002700000001\nAs 0.0 0.0 0.0\nAs 0.0 0.0 10.71040216\nAs 3.0918267851025747 8.74500674400093 5.3552010800000005\nAs 3.0918267851025747 8.74500674400093 16.06560324\nAs 9.275480355307723 0.0 5.3552010800000005\nAs 9.275480355307723 0.0 16.06560324\nAs 12.367307140410297 8.74500674400093 10.710402160000001\nAs 12.367307140410297 8.74500674400093 21.420804320000002\nAs 0.0 0.0 5.35520108\nAs 3.0918267851025747 8.74500674400093 10.710402160000001\nAs 9.275480355307723 0.0 10.710402160000001\nAs 12.367307140410297 8.74500674400093 16.06560324\nAs 1.5459133925512873 4.372503372000465 2.6776005400000003\nAs 1.5459133925512873 4.372503372000465 13.3880027\nAs 10.82139374785901 4.372503372000465 8.03280162\nAs 10.82139374785901 4.372503372000465 18.74320378\nAs 1.5459133925512873 4.372503372000465 8.03280162\nAs 10.82139374785901 4.372503372000465 13.388002700000001\nAs 4.637740177653861 0.0 2.6776005400000003\nAs 4.637740177653861 0.0 13.3880027\nAs 7.7295669627564365 8.74500674400093 8.03280162\nAs 7.7295669627564365 8.74500674400093 18.74320378\nAs 4.637740177653861 0.0 8.03280162\nAs 7.7295669627564365 8.74500674400093 13.388002700000001\nAs 6.1836535702051485 4.372503372000465 5.3552010800000005\nAs 6.1836535702051485 4.372503372000465 16.06560324\nAs 6.1836535702051485 4.372503372000465 10.710402160000001\nAs 4.637740177653861 3.2793775290003486 8.03280162\nAs 4.637740177653861 3.2793775290003486 13.388002700000001\nAs 6.183653570205149 7.651880901000814 10.710402160000001\nAs 6.183653570205149 7.651880901000814 16.06560324\nAs 9.275480355307723 3.2793775290003486 10.710402160000001\nAs 9.275480355307723 3.2793775290003486 16.06560324\nAs 10.821393747859009 7.651880901000814 13.388002700000001\nAs 10.821393747859009 7.651880901000814 18.74320378","xyz");
+	viewer_17332198779573874.setStyle({"elem": "As"},{"stick": {"radius": 0.15, "color": "#75D057"}, "sphere": {"scale": 0.3, "color": "#75D057"}});
+	viewer_17332198779573874.setStyle({"elem": "Ba"},{"stick": {"radius": 0.15, "color": "#1EF02D"}, "sphere": {"scale": 0.3, "color": "#1EF02D"}});
+	viewer_17332198779573874.setStyle({"elem": "Hg"},{"stick": {"radius": 0.15, "color": "#D3B8CC"}, "sphere": {"scale": 0.3, "color": "#D3B8CC"}});
+	viewer_17332198779573874.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 9.275480355307723, "y": 0.0, "z": 5.3552010800000005}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 5.3552010800000005}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 10.71040216}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 9.275480355307723, "y": 0.0, "z": 5.3552010800000005}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 10.710402160000001}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 9.275480355307723, "y": 0.0, "z": 5.3552010800000005}, "end": {"x": 9.275480355307723, "y": 0.0, "z": 16.06560324}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 5.3552010800000005}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 10.710402160000001}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 5.3552010800000005}, "end": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 16.06560324}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.71040216}, "end": {"x": 9.275480355307723, "y": 0.0, "z": 16.06560324}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.71040216}, "end": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 16.06560324}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 10.710402160000001}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 21.420804320000002}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 9.275480355307723, "y": 0.0, "z": 16.06560324}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 21.420804320000002}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.addLine({"start": {"x": 3.0918267851025747, "y": 8.74500674400093, "z": 16.06560324}, "end": {"x": 12.367307140410297, "y": 8.74500674400093, "z": 21.420804320000002}, "color": "black", "linewidth": 2});
+	viewer_17332198779573874.zoomTo();
+viewer_17332198779573874.render();
 });
 </script>
+            </div>
+            <div class="legend-container">
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #75D057;"></span>
+                <span class="legend-label">As</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #1EF02D;"></span>
+                <span class="legend-label">Ba</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #D3B8CC;"></span>
+                <span class="legend-label">Hg</span>
+            </div>
+        </div>
         </div>
         <div class="table-container">
-            <table border="1" class="dataframe dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Element</th>
-      <th>Ba</th>
-      <th>Ba</th>
-      <th>Ba</th>
-      <th>Ba</th>
-      <th>Hg</th>
-      <th>Hg</th>
-      <th>Hg</th>
-      <th>Hg</th>
-      <th>As</th>
-      <th>As</th>
-      <th>As</th>
-      <th>As</th>
-      <th>As</th>
-      <th>As</th>
-      <th>As</th>
-      <th>As</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>TOSS</th>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-    </tr>
-    <tr>
-      <th>BVS</th>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-      <td>-2</td>
-    </tr>
-    <tr>
-      <th>Spin</th>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>0.000</td>
-      <td>0.001</td>
-      <td>0.002</td>
-      <td>0.001</td>
-      <td>0.002</td>
-      <td>0.001</td>
-      <td>0.002</td>
-      <td>0.001</td>
-      <td>0.002</td>
-    </tr>
-    <tr>
-      <th>Bader</th>
-      <td>8.775</td>
-      <td>8.775</td>
-      <td>8.775</td>
-      <td>8.775</td>
-      <td>12.279</td>
-      <td>12.279</td>
-      <td>12.279</td>
-      <td>12.279</td>
-      <td>5.333</td>
-      <td>5.613</td>
-      <td>5.333</td>
-      <td>5.613</td>
-      <td>5.333</td>
-      <td>5.613</td>
-      <td>5.333</td>
-      <td>5.613</td>
-    </tr>
-  </tbody>
-</table>
+            <div class="scrollable-table">
+                <style  type="text/css" >
+#T_dcc07_row0_col4,#T_dcc07_row0_col5,#T_dcc07_row0_col6,#T_dcc07_row0_col7,#T_dcc07_row0_col8,#T_dcc07_row0_col9,#T_dcc07_row0_col10,#T_dcc07_row0_col11{
+            background-color:  lightgreen;
+        }#T_dcc07_row1_col4,#T_dcc07_row1_col5,#T_dcc07_row1_col6,#T_dcc07_row1_col7,#T_dcc07_row1_col8,#T_dcc07_row1_col9,#T_dcc07_row1_col10,#T_dcc07_row1_col11{
+            background-color:  lightcoral;
+        }</style><table id="T_dcc07_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Ba1</th>        <th class="col_heading level0 col1" >Ba2</th>        <th class="col_heading level0 col2" >Ba3</th>        <th class="col_heading level0 col3" >Ba4</th>        <th class="col_heading level0 col4" >Hg1</th>        <th class="col_heading level0 col5" >Hg2</th>        <th class="col_heading level0 col6" >Hg3</th>        <th class="col_heading level0 col7" >Hg4</th>        <th class="col_heading level0 col8" >As1</th>        <th class="col_heading level0 col9" >As2</th>        <th class="col_heading level0 col10" >As3</th>        <th class="col_heading level0 col11" >As4</th>        <th class="col_heading level0 col12" >As5</th>        <th class="col_heading level0 col13" >As6</th>        <th class="col_heading level0 col14" >As7</th>        <th class="col_heading level0 col15" >As8</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_dcc07_level0_row0" class="row_heading level0 row0" >TOSS</th>
+                        <td id="T_dcc07_row0_col0" class="data row0 col0" >2</td>
+                        <td id="T_dcc07_row0_col1" class="data row0 col1" >2</td>
+                        <td id="T_dcc07_row0_col2" class="data row0 col2" >2</td>
+                        <td id="T_dcc07_row0_col3" class="data row0 col3" >2</td>
+                        <td id="T_dcc07_row0_col4" class="data row0 col4" >2</td>
+                        <td id="T_dcc07_row0_col5" class="data row0 col5" >2</td>
+                        <td id="T_dcc07_row0_col6" class="data row0 col6" >2</td>
+                        <td id="T_dcc07_row0_col7" class="data row0 col7" >2</td>
+                        <td id="T_dcc07_row0_col8" class="data row0 col8" >-2</td>
+                        <td id="T_dcc07_row0_col9" class="data row0 col9" >-2</td>
+                        <td id="T_dcc07_row0_col10" class="data row0 col10" >-2</td>
+                        <td id="T_dcc07_row0_col11" class="data row0 col11" >-2</td>
+                        <td id="T_dcc07_row0_col12" class="data row0 col12" >-2</td>
+                        <td id="T_dcc07_row0_col13" class="data row0 col13" >-2</td>
+                        <td id="T_dcc07_row0_col14" class="data row0 col14" >-2</td>
+                        <td id="T_dcc07_row0_col15" class="data row0 col15" >-2</td>
+            </tr>
+            <tr>
+                        <th id="T_dcc07_level0_row1" class="row_heading level0 row1" >BVS</th>
+                        <td id="T_dcc07_row1_col0" class="data row1 col0" >2</td>
+                        <td id="T_dcc07_row1_col1" class="data row1 col1" >2</td>
+                        <td id="T_dcc07_row1_col2" class="data row1 col2" >2</td>
+                        <td id="T_dcc07_row1_col3" class="data row1 col3" >2</td>
+                        <td id="T_dcc07_row1_col4" class="data row1 col4" >1</td>
+                        <td id="T_dcc07_row1_col5" class="data row1 col5" >1</td>
+                        <td id="T_dcc07_row1_col6" class="data row1 col6" >1</td>
+                        <td id="T_dcc07_row1_col7" class="data row1 col7" >1</td>
+                        <td id="T_dcc07_row1_col8" class="data row1 col8" >-1</td>
+                        <td id="T_dcc07_row1_col9" class="data row1 col9" >-1</td>
+                        <td id="T_dcc07_row1_col10" class="data row1 col10" >-1</td>
+                        <td id="T_dcc07_row1_col11" class="data row1 col11" >-1</td>
+                        <td id="T_dcc07_row1_col12" class="data row1 col12" >-2</td>
+                        <td id="T_dcc07_row1_col13" class="data row1 col13" >-2</td>
+                        <td id="T_dcc07_row1_col14" class="data row1 col14" >-2</td>
+                        <td id="T_dcc07_row1_col15" class="data row1 col15" >-2</td>
+            </tr>
+            <tr>
+                        <th id="T_dcc07_level0_row2" class="row_heading level0 row2" >Spin</th>
+                        <td id="T_dcc07_row2_col0" class="data row2 col0" >0.000</td>
+                        <td id="T_dcc07_row2_col1" class="data row2 col1" >0.000</td>
+                        <td id="T_dcc07_row2_col2" class="data row2 col2" >0.000</td>
+                        <td id="T_dcc07_row2_col3" class="data row2 col3" >0.000</td>
+                        <td id="T_dcc07_row2_col4" class="data row2 col4" >0.000</td>
+                        <td id="T_dcc07_row2_col5" class="data row2 col5" >0.000</td>
+                        <td id="T_dcc07_row2_col6" class="data row2 col6" >0.000</td>
+                        <td id="T_dcc07_row2_col7" class="data row2 col7" >0.000</td>
+                        <td id="T_dcc07_row2_col8" class="data row2 col8" >0.001</td>
+                        <td id="T_dcc07_row2_col9" class="data row2 col9" >0.002</td>
+                        <td id="T_dcc07_row2_col10" class="data row2 col10" >0.001</td>
+                        <td id="T_dcc07_row2_col11" class="data row2 col11" >0.002</td>
+                        <td id="T_dcc07_row2_col12" class="data row2 col12" >0.001</td>
+                        <td id="T_dcc07_row2_col13" class="data row2 col13" >0.002</td>
+                        <td id="T_dcc07_row2_col14" class="data row2 col14" >0.001</td>
+                        <td id="T_dcc07_row2_col15" class="data row2 col15" >0.002</td>
+            </tr>
+            <tr>
+                        <th id="T_dcc07_level0_row3" class="row_heading level0 row3" >Bader</th>
+                        <td id="T_dcc07_row3_col0" class="data row3 col0" >8.775</td>
+                        <td id="T_dcc07_row3_col1" class="data row3 col1" >8.775</td>
+                        <td id="T_dcc07_row3_col2" class="data row3 col2" >8.775</td>
+                        <td id="T_dcc07_row3_col3" class="data row3 col3" >8.775</td>
+                        <td id="T_dcc07_row3_col4" class="data row3 col4" >12.279</td>
+                        <td id="T_dcc07_row3_col5" class="data row3 col5" >12.279</td>
+                        <td id="T_dcc07_row3_col6" class="data row3 col6" >12.279</td>
+                        <td id="T_dcc07_row3_col7" class="data row3 col7" >12.279</td>
+                        <td id="T_dcc07_row3_col8" class="data row3 col8" >5.333</td>
+                        <td id="T_dcc07_row3_col9" class="data row3 col9" >5.613</td>
+                        <td id="T_dcc07_row3_col10" class="data row3 col10" >5.333</td>
+                        <td id="T_dcc07_row3_col11" class="data row3 col11" >5.613</td>
+                        <td id="T_dcc07_row3_col12" class="data row3 col12" >5.333</td>
+                        <td id="T_dcc07_row3_col13" class="data row3 col13" >5.613</td>
+                        <td id="T_dcc07_row3_col14" class="data row3 col14" >5.333</td>
+                        <td id="T_dcc07_row3_col15" class="data row3 col15" >5.613</td>
+            </tr>
+    </tbody></table>
+            </div>
         </div>
     </body>
     </html>

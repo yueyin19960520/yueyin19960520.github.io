@@ -4,30 +4,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>3D Visualization with Data Table</title>
+        <title>3D Visualization with Styled Data Table and Legend</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin: 0;
-                padding: 0;
+                justify-content: center;
+                min-height: 100vh; /* Ensure the body takes the full height */
+            }
+            .top-content {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                margin: 20px 0;
             }
             .viewer-container {
                 width: 800px;
                 height: 500px;
-                margin: 20px 0;
+            }
+            .legend-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 20px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            .legend-item {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .legend-color {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 10px;
+                border: 1px solid #000;
+            }
+            .legend-label {
+                font-size: 14px;
             }
             .table-container {
                 width: 80%;
-                margin-top: 20px;
-                overflow-x: auto;
+                margin: 20px 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+            .scrollable-table {
+                overflow-x: auto; /* Enable horizontal scrolling */
+                max-width: 100%;  /* Prevent table from exceeding the container width */
             }
             table.dataframe {
-                width: 100%;
+                width: max-content; /* Adjust table width based on content */
                 border-collapse: collapse;
-                margin: 20px 0;
+                margin: 0 auto;
             }
             table.dataframe th, table.dataframe td {
                 border: 1px solid #ddd;
@@ -41,10 +82,11 @@
         </style>
     </head>
     <body>
-        <h1>3D Visualization and Data Table</h1>
-        <div class="viewer-container">
-            <div id="3dmolviewer_17326206113583858"  style="position: relative; width: 800px; height: 500px;">
-        <p id="3dmolwarning_17326206113583858" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        <h1>3D Visualization with Styled Data Table and Legend</h1>
+        <div class="top-content">
+            <div class="viewer-container">
+                <div id="3dmolviewer_17332198805988438"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17332198805988438" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
         </div>
 <script>
 
@@ -75,255 +117,240 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
 }
 
-var viewer_17326206113583858 = null;
-var warn = document.getElementById("3dmolwarning_17326206113583858");
+var viewer_17332198805988438 = null;
+var warn = document.getElementById("3dmolwarning_17332198805988438");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_17326206113583858 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17326206113583858"),{backgroundColor:"white"});
-viewer_17326206113583858.zoomTo();
-	viewer_17326206113583858.addModel("99\nXYZ file generated with PBC expansion\nNa 4.41413168754263 3.121262341982188 -2.5485009992173393\nNa 4.41413168754263 3.121262341982188 2.548499330782661\nNa 5.885509017914845 7.282945464625105 -5.097001720362233\nNa 5.885509017914845 7.282945464625105 -1.3903622315680764e-06\nNa 8.82826327389392 3.121262341982188 -5.097001720362234\nNa 8.82826327389392 3.121262341982188 -1.3903622326998377e-06\nNa 10.299640604266138 7.282945464625105 -7.6455024415071255\nNa 10.299640604266138 7.282945464625105 -2.548502111507126\nNa 1.4713772291808769 1.0404207806607293 2.5484998869275537\nNa 1.4713772291808769 1.0404207806607293 7.6455002169275526\nNa 2.942754559553092 5.202103903303645 -8.342173387632101e-07\nNa 2.942754559553092 5.202103903303645 5.096999495782661\nNa 5.885508815532168 1.0404207806607293 -8.342173387632101e-07\nNa 5.885508815532168 1.0404207806607293 5.096999495782661\nNa 7.356886145904385 5.202103903303645 -2.5485015553622326\nNa 7.356886145904385 5.202103903303645 2.5484987746377676\nNb 2.9427544583617538 2.0808415613214586 -5.561448928048662e-07\nNb 2.9427544583617538 2.0808415613214586 5.096999773855107\nNb 4.41413178873397 6.242524683964376 -2.5485012772897866\nNb 4.41413178873397 6.242524683964376 2.5484990527102136\nNb 7.356886044713044 2.0808415613214586 -2.5485012772897857\nNb 7.356886044713044 2.0808415613214586 2.548499052710213\nNb 8.828263375085259 6.242524683964376 -5.097001998434678\nNb 8.828263375085259 6.242524683964376 -1.6684346775264203e-06\nCo 0.0 0.0 0.0\nCo 0.0 0.0 10.19400066\nCo 2.9427546607444315 8.323366245285834 -5.097001442289786\nCo 2.9427546607444315 8.323366245285834 5.096999217710215\nCo 8.828263172702583 0.0 -5.097001442289786\nCo 8.828263172702583 0.0 5.096999217710215\nCo 11.771017833447015 8.323366245285834 -10.194002884579572\nCo 11.771017833447015 8.323366245285834 -2.224579571219465e-06\nCo 0.0 0.0 5.09700033\nCo 2.9427546607444315 8.323366245285834 -1.1122897856097325e-06\nCo 8.828263172702583 0.0 -1.1122897856097325e-06\nCo 11.771017833447015 8.323366245285834 -5.097002554579571\nCo 1.4713773303722157 4.161683122642917 -2.548500721144893\nCo 1.4713773303722157 4.161683122642917 7.6454999388551075\nCo 10.299640503074798 4.161683122642917 -7.645502163434679\nCo 10.299640503074798 4.161683122642917 2.5484984965653217\nCo 1.4713773303722157 4.161683122642917 2.5484996088551073\nCo 10.299640503074798 4.161683122642917 -2.5485018334346785\nCo 4.414131586351291 0.0 -2.548500721144893\nCo 4.414131586351291 0.0 7.6454999388551075\nCo 7.356886247095723 8.323366245285834 -7.645502163434679\nCo 7.356886247095723 8.323366245285834 2.5484984965653217\nCo 4.414131586351291 0.0 2.5484996088551073\nCo 7.356886247095723 8.323366245285834 -2.5485018334346785\nCo 5.8855089167235075 4.161683122642917 -5.097001442289786\nCo 5.8855089167235075 4.161683122642917 5.096999217710215\nCo 5.8855089167235075 4.161683122642917 -1.1122897856097325e-06\nH 3.752011878755999 0.9363787025946567 -1.4016756468948934\nH 3.752011878755999 0.9363787025946567 3.6953246831051065\nH 5.223389209128215 5.098061825237574 -3.9501763680397866\nH 5.223389209128215 5.098061825237574 1.1468239619602139\nH 8.166143465107291 0.9363787025946567 -3.9501763680397874\nH 8.166143465107291 0.9363787025946567 1.146823961960213\nH 9.637520795479505 5.098061825237574 -6.498677089184677\nH 9.637520795479505 5.098061825237574 -1.4016767591846782\nH 1.3242395062627896 0.9363787025946567 -2.5026520175357444e-07\nH 1.3242395062627896 0.9363787025946567 5.097000079734799\nH 2.7956168366350043 5.098061825237574 -2.5485009714100952\nH 2.7956168366350043 5.098061825237574 2.548499358589905\nH 5.738371092614081 0.9363787025946567 -2.5485009714100957\nH 5.738371092614081 0.9363787025946567 2.5484993585899045\nH 7.209748422986297 5.098061825237574 -5.097001692554987\nH 7.209748422986297 5.098061825237574 -1.3625549871412624e-06\nH 2.133497037967508 3.2253044200482606 -1.4016756468948923\nH 2.133497037967508 3.2253044200482606 3.695324683105108\nH 3.604874368339724 7.386987542691179 -3.950176368039786\nH 3.604874368339724 7.386987542691179 1.146823961960214\nH 6.547628624318798 3.2253044200482606 -3.9501763680397857\nH 6.547628624318798 3.2253044200482606 1.1468239619602147\nH 8.019005954691016 7.386987542691179 -6.498677089184679\nH 8.019005954691016 7.386987542691179 -1.4016767591846797\nH 2.133497037967508 3.2253044200482606 1.4016745346051078\nH 2.133497037967508 3.2253044200482606 6.498674864605108\nH 3.604874368339724 7.386987542691179 -1.146826186539786\nH 3.604874368339724 7.386987542691179 3.9501741434602144\nH 6.547628624318798 3.2253044200482606 -1.1468261865397853\nH 6.547628624318798 3.2253044200482606 3.950174143460215\nH 8.019005954691016 7.386987542691179 -3.6953269076846786\nH 8.019005954691016 7.386987542691179 1.4016734223153204\nH 4.561269410460717 3.2253044200482606 -8.620245836341134e-07\nH 4.561269410460717 3.2253044200482606 5.096999467975417\nH 6.032646740832933 7.386987542691179 -2.548501583169477\nH 6.032646740832933 7.386987542691179 2.548498746830523\nH 8.97540099681201 3.2253044200482606 -2.548501583169477\nH 8.97540099681201 3.2253044200482606 2.5484987468305222\nH 10.446778327184226 7.386987542691179 -5.097002304314372\nH 10.446778327184226 7.386987542691179 -1.9743143703325304e-06\nH 3.752011878755999 0.9363787025946567 1.4016745346051067\nH 3.752011878755999 0.9363787025946567 6.498674864605107\nH 5.223389209128215 5.098061825237574 -1.1468261865397862\nH 5.223389209128215 5.098061825237574 3.950174143460214\nH 8.166143465107291 0.9363787025946567 -1.146826186539787\nH 8.166143465107291 0.9363787025946567 3.950174143460213\nH 9.637520795479505 5.098061825237574 -3.695326907684678\nH 9.637520795479505 5.098061825237574 1.401673422315322","xyz");
-	viewer_17326206113583858.setStyle({},{"stick": {}, "sphere": {"scale": 0.3}});
-	viewer_17326206113583858.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 8.828263172702583, "y": 0.0, "z": -5.097001442289786}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": -5.097001442289786}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 10.19400066}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 8.828263172702583, "y": 0.0, "z": -5.097001442289786}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -10.194002884579572}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 8.828263172702583, "y": 0.0, "z": -5.097001442289786}, "end": {"x": 8.828263172702583, "y": 0.0, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": -5.097001442289786}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -10.194002884579572}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": -5.097001442289786}, "end": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.19400066}, "end": {"x": 8.828263172702583, "y": 0.0, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.19400066}, "end": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -10.194002884579572}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -2.224579571219465e-06}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 8.828263172702583, "y": 0.0, "z": 5.096999217710215}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -2.224579571219465e-06}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.addLine({"start": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": 5.096999217710215}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -2.224579571219465e-06}, "color": "black", "linewidth": 2});
-	viewer_17326206113583858.zoomTo();
-viewer_17326206113583858.render();
+viewer_17332198805988438 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17332198805988438"),{backgroundColor:"white"});
+viewer_17332198805988438.zoomTo();
+	viewer_17332198805988438.addModel("99\nXYZ file generated with PBC expansion\nNa 4.41413168754263 3.121262341982188 -2.5485009992173393\nNa 4.41413168754263 3.121262341982188 2.548499330782661\nNa 5.885509017914845 7.282945464625105 -5.097001720362233\nNa 5.885509017914845 7.282945464625105 -1.3903622315680764e-06\nNa 8.82826327389392 3.121262341982188 -5.097001720362234\nNa 8.82826327389392 3.121262341982188 -1.3903622326998377e-06\nNa 10.299640604266138 7.282945464625105 -7.6455024415071255\nNa 10.299640604266138 7.282945464625105 -2.548502111507126\nNa 1.4713772291808769 1.0404207806607293 2.5484998869275537\nNa 1.4713772291808769 1.0404207806607293 7.6455002169275526\nNa 2.942754559553092 5.202103903303645 -8.342173387632101e-07\nNa 2.942754559553092 5.202103903303645 5.096999495782661\nNa 5.885508815532168 1.0404207806607293 -8.342173387632101e-07\nNa 5.885508815532168 1.0404207806607293 5.096999495782661\nNa 7.356886145904385 5.202103903303645 -2.5485015553622326\nNa 7.356886145904385 5.202103903303645 2.5484987746377676\nNb 2.9427544583617538 2.0808415613214586 -5.561448928048662e-07\nNb 2.9427544583617538 2.0808415613214586 5.096999773855107\nNb 4.41413178873397 6.242524683964376 -2.5485012772897866\nNb 4.41413178873397 6.242524683964376 2.5484990527102136\nNb 7.356886044713044 2.0808415613214586 -2.5485012772897857\nNb 7.356886044713044 2.0808415613214586 2.548499052710213\nNb 8.828263375085259 6.242524683964376 -5.097001998434678\nNb 8.828263375085259 6.242524683964376 -1.6684346775264203e-06\nCo 0.0 0.0 0.0\nCo 0.0 0.0 10.19400066\nCo 2.9427546607444315 8.323366245285834 -5.097001442289786\nCo 2.9427546607444315 8.323366245285834 5.096999217710215\nCo 8.828263172702583 0.0 -5.097001442289786\nCo 8.828263172702583 0.0 5.096999217710215\nCo 11.771017833447015 8.323366245285834 -10.194002884579572\nCo 11.771017833447015 8.323366245285834 -2.224579571219465e-06\nCo 0.0 0.0 5.09700033\nCo 2.9427546607444315 8.323366245285834 -1.1122897856097325e-06\nCo 8.828263172702583 0.0 -1.1122897856097325e-06\nCo 11.771017833447015 8.323366245285834 -5.097002554579571\nCo 1.4713773303722157 4.161683122642917 -2.548500721144893\nCo 1.4713773303722157 4.161683122642917 7.6454999388551075\nCo 10.299640503074798 4.161683122642917 -7.645502163434679\nCo 10.299640503074798 4.161683122642917 2.5484984965653217\nCo 1.4713773303722157 4.161683122642917 2.5484996088551073\nCo 10.299640503074798 4.161683122642917 -2.5485018334346785\nCo 4.414131586351291 0.0 -2.548500721144893\nCo 4.414131586351291 0.0 7.6454999388551075\nCo 7.356886247095723 8.323366245285834 -7.645502163434679\nCo 7.356886247095723 8.323366245285834 2.5484984965653217\nCo 4.414131586351291 0.0 2.5484996088551073\nCo 7.356886247095723 8.323366245285834 -2.5485018334346785\nCo 5.8855089167235075 4.161683122642917 -5.097001442289786\nCo 5.8855089167235075 4.161683122642917 5.096999217710215\nCo 5.8855089167235075 4.161683122642917 -1.1122897856097325e-06\nH 3.752011878755999 0.9363787025946567 -1.4016756468948934\nH 3.752011878755999 0.9363787025946567 3.6953246831051065\nH 5.223389209128215 5.098061825237574 -3.9501763680397866\nH 5.223389209128215 5.098061825237574 1.1468239619602139\nH 8.166143465107291 0.9363787025946567 -3.9501763680397874\nH 8.166143465107291 0.9363787025946567 1.146823961960213\nH 9.637520795479505 5.098061825237574 -6.498677089184677\nH 9.637520795479505 5.098061825237574 -1.4016767591846782\nH 1.3242395062627896 0.9363787025946567 -2.5026520175357444e-07\nH 1.3242395062627896 0.9363787025946567 5.097000079734799\nH 2.7956168366350043 5.098061825237574 -2.5485009714100952\nH 2.7956168366350043 5.098061825237574 2.548499358589905\nH 5.738371092614081 0.9363787025946567 -2.5485009714100957\nH 5.738371092614081 0.9363787025946567 2.5484993585899045\nH 7.209748422986297 5.098061825237574 -5.097001692554987\nH 7.209748422986297 5.098061825237574 -1.3625549871412624e-06\nH 2.133497037967508 3.2253044200482606 -1.4016756468948923\nH 2.133497037967508 3.2253044200482606 3.695324683105108\nH 3.604874368339724 7.386987542691179 -3.950176368039786\nH 3.604874368339724 7.386987542691179 1.146823961960214\nH 6.547628624318798 3.2253044200482606 -3.9501763680397857\nH 6.547628624318798 3.2253044200482606 1.1468239619602147\nH 8.019005954691016 7.386987542691179 -6.498677089184679\nH 8.019005954691016 7.386987542691179 -1.4016767591846797\nH 2.133497037967508 3.2253044200482606 1.4016745346051078\nH 2.133497037967508 3.2253044200482606 6.498674864605108\nH 3.604874368339724 7.386987542691179 -1.146826186539786\nH 3.604874368339724 7.386987542691179 3.9501741434602144\nH 6.547628624318798 3.2253044200482606 -1.1468261865397853\nH 6.547628624318798 3.2253044200482606 3.950174143460215\nH 8.019005954691016 7.386987542691179 -3.6953269076846786\nH 8.019005954691016 7.386987542691179 1.4016734223153204\nH 4.561269410460717 3.2253044200482606 -8.620245836341134e-07\nH 4.561269410460717 3.2253044200482606 5.096999467975417\nH 6.032646740832933 7.386987542691179 -2.548501583169477\nH 6.032646740832933 7.386987542691179 2.548498746830523\nH 8.97540099681201 3.2253044200482606 -2.548501583169477\nH 8.97540099681201 3.2253044200482606 2.5484987468305222\nH 10.446778327184226 7.386987542691179 -5.097002304314372\nH 10.446778327184226 7.386987542691179 -1.9743143703325304e-06\nH 3.752011878755999 0.9363787025946567 1.4016745346051067\nH 3.752011878755999 0.9363787025946567 6.498674864605107\nH 5.223389209128215 5.098061825237574 -1.1468261865397862\nH 5.223389209128215 5.098061825237574 3.950174143460214\nH 8.166143465107291 0.9363787025946567 -1.146826186539787\nH 8.166143465107291 0.9363787025946567 3.950174143460213\nH 9.637520795479505 5.098061825237574 -3.695326907684678\nH 9.637520795479505 5.098061825237574 1.401673422315322","xyz");
+	viewer_17332198805988438.setStyle({"elem": "H"},{"stick": {"radius": 0.15, "color": "#FFCCCC"}, "sphere": {"scale": 0.3, "color": "#FFCCCC"}});
+	viewer_17332198805988438.setStyle({"elem": "Na"},{"stick": {"radius": 0.15, "color": "#FADD3D"}, "sphere": {"scale": 0.3, "color": "#FADD3D"}});
+	viewer_17332198805988438.setStyle({"elem": "Co"},{"stick": {"radius": 0.15, "color": "#0000AF"}, "sphere": {"scale": 0.3, "color": "#0000AF"}});
+	viewer_17332198805988438.setStyle({"elem": "Nb"},{"stick": {"radius": 0.15, "color": "#4CB376"}, "sphere": {"scale": 0.3, "color": "#4CB376"}});
+	viewer_17332198805988438.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 8.828263172702583, "y": 0.0, "z": -5.097001442289786}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": -5.097001442289786}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 10.19400066}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 8.828263172702583, "y": 0.0, "z": -5.097001442289786}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -10.194002884579572}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 8.828263172702583, "y": 0.0, "z": -5.097001442289786}, "end": {"x": 8.828263172702583, "y": 0.0, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": -5.097001442289786}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -10.194002884579572}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": -5.097001442289786}, "end": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.19400066}, "end": {"x": 8.828263172702583, "y": 0.0, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.19400066}, "end": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": 5.096999217710215}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -10.194002884579572}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -2.224579571219465e-06}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 8.828263172702583, "y": 0.0, "z": 5.096999217710215}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -2.224579571219465e-06}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.addLine({"start": {"x": 2.9427546607444315, "y": 8.323366245285834, "z": 5.096999217710215}, "end": {"x": 11.771017833447015, "y": 8.323366245285834, "z": -2.224579571219465e-06}, "color": "black", "linewidth": 2});
+	viewer_17332198805988438.zoomTo();
+viewer_17332198805988438.render();
 });
 </script>
+            </div>
+            <div class="legend-container">
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #FFCCCC;"></span>
+                <span class="legend-label">H</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #FADD3D;"></span>
+                <span class="legend-label">Na</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #0000AF;"></span>
+                <span class="legend-label">Co</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #4CB376;"></span>
+                <span class="legend-label">Nb</span>
+            </div>
+        </div>
         </div>
         <div class="table-container">
-            <table border="1" class="dataframe dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Element</th>
-      <th>Na</th>
-      <th>Na</th>
-      <th>Na</th>
-      <th>Na</th>
-      <th>Na</th>
-      <th>Na</th>
-      <th>Na</th>
-      <th>Na</th>
-      <th>Nb</th>
-      <th>Nb</th>
-      <th>Nb</th>
-      <th>Nb</th>
-      <th>Co</th>
-      <th>Co</th>
-      <th>Co</th>
-      <th>Co</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-      <th>H</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>TOSS</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>BVS</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>Spin</th>
-      <td>0.025</td>
-      <td>0.025</td>
-      <td>0.025</td>
-      <td>0.025</td>
-      <td>0.025</td>
-      <td>0.025</td>
-      <td>0.025</td>
-      <td>0.025</td>
-      <td>2.161</td>
-      <td>2.161</td>
-      <td>2.161</td>
-      <td>2.161</td>
-      <td>0.785</td>
-      <td>0.785</td>
-      <td>0.785</td>
-      <td>0.785</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-      <td>-0.009</td>
-    </tr>
-    <tr>
-      <th>Bader</th>
-      <td>6.178</td>
-      <td>6.178</td>
-      <td>6.178</td>
-      <td>6.178</td>
-      <td>6.178</td>
-      <td>6.178</td>
-      <td>6.178</td>
-      <td>6.178</td>
-      <td>12.060</td>
-      <td>12.060</td>
-      <td>12.060</td>
-      <td>12.060</td>
-      <td>8.392</td>
-      <td>8.391</td>
-      <td>8.391</td>
-      <td>8.391</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.533</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.533</td>
-      <td>1.533</td>
-      <td>1.532</td>
-      <td>1.533</td>
-      <td>1.533</td>
-      <td>1.532</td>
-      <td>1.533</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-      <td>1.532</td>
-    </tr>
-  </tbody>
-</table>
+            <div class="scrollable-table">
+                <style  type="text/css" >
+#T_86aac_row0_col8,#T_86aac_row0_col9,#T_86aac_row0_col10,#T_86aac_row0_col11,#T_86aac_row0_col12,#T_86aac_row0_col13,#T_86aac_row0_col14,#T_86aac_row0_col15{
+            background-color:  lightgreen;
+        }#T_86aac_row1_col8,#T_86aac_row1_col9,#T_86aac_row1_col10,#T_86aac_row1_col11,#T_86aac_row1_col12,#T_86aac_row1_col13,#T_86aac_row1_col14,#T_86aac_row1_col15{
+            background-color:  lightcoral;
+        }</style><table id="T_86aac_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Na1</th>        <th class="col_heading level0 col1" >Na2</th>        <th class="col_heading level0 col2" >Na3</th>        <th class="col_heading level0 col3" >Na4</th>        <th class="col_heading level0 col4" >Na5</th>        <th class="col_heading level0 col5" >Na6</th>        <th class="col_heading level0 col6" >Na7</th>        <th class="col_heading level0 col7" >Na8</th>        <th class="col_heading level0 col8" >Nb1</th>        <th class="col_heading level0 col9" >Nb2</th>        <th class="col_heading level0 col10" >Nb3</th>        <th class="col_heading level0 col11" >Nb4</th>        <th class="col_heading level0 col12" >Co1</th>        <th class="col_heading level0 col13" >Co2</th>        <th class="col_heading level0 col14" >Co3</th>        <th class="col_heading level0 col15" >Co4</th>        <th class="col_heading level0 col16" >H1</th>        <th class="col_heading level0 col17" >H2</th>        <th class="col_heading level0 col18" >H3</th>        <th class="col_heading level0 col19" >H4</th>        <th class="col_heading level0 col20" >H5</th>        <th class="col_heading level0 col21" >H6</th>        <th class="col_heading level0 col22" >H7</th>        <th class="col_heading level0 col23" >H8</th>        <th class="col_heading level0 col24" >H9</th>        <th class="col_heading level0 col25" >H10</th>        <th class="col_heading level0 col26" >H11</th>        <th class="col_heading level0 col27" >H12</th>        <th class="col_heading level0 col28" >H13</th>        <th class="col_heading level0 col29" >H14</th>        <th class="col_heading level0 col30" >H15</th>        <th class="col_heading level0 col31" >H16</th>        <th class="col_heading level0 col32" >H17</th>        <th class="col_heading level0 col33" >H18</th>        <th class="col_heading level0 col34" >H19</th>        <th class="col_heading level0 col35" >H20</th>        <th class="col_heading level0 col36" >H21</th>        <th class="col_heading level0 col37" >H22</th>        <th class="col_heading level0 col38" >H23</th>        <th class="col_heading level0 col39" >H24</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_86aac_level0_row0" class="row_heading level0 row0" >TOSS</th>
+                        <td id="T_86aac_row0_col0" class="data row0 col0" >1</td>
+                        <td id="T_86aac_row0_col1" class="data row0 col1" >1</td>
+                        <td id="T_86aac_row0_col2" class="data row0 col2" >1</td>
+                        <td id="T_86aac_row0_col3" class="data row0 col3" >1</td>
+                        <td id="T_86aac_row0_col4" class="data row0 col4" >1</td>
+                        <td id="T_86aac_row0_col5" class="data row0 col5" >1</td>
+                        <td id="T_86aac_row0_col6" class="data row0 col6" >1</td>
+                        <td id="T_86aac_row0_col7" class="data row0 col7" >1</td>
+                        <td id="T_86aac_row0_col8" class="data row0 col8" >2</td>
+                        <td id="T_86aac_row0_col9" class="data row0 col9" >2</td>
+                        <td id="T_86aac_row0_col10" class="data row0 col10" >2</td>
+                        <td id="T_86aac_row0_col11" class="data row0 col11" >2</td>
+                        <td id="T_86aac_row0_col12" class="data row0 col12" >2</td>
+                        <td id="T_86aac_row0_col13" class="data row0 col13" >2</td>
+                        <td id="T_86aac_row0_col14" class="data row0 col14" >2</td>
+                        <td id="T_86aac_row0_col15" class="data row0 col15" >2</td>
+                        <td id="T_86aac_row0_col16" class="data row0 col16" >-1</td>
+                        <td id="T_86aac_row0_col17" class="data row0 col17" >-1</td>
+                        <td id="T_86aac_row0_col18" class="data row0 col18" >-1</td>
+                        <td id="T_86aac_row0_col19" class="data row0 col19" >-1</td>
+                        <td id="T_86aac_row0_col20" class="data row0 col20" >-1</td>
+                        <td id="T_86aac_row0_col21" class="data row0 col21" >-1</td>
+                        <td id="T_86aac_row0_col22" class="data row0 col22" >-1</td>
+                        <td id="T_86aac_row0_col23" class="data row0 col23" >-1</td>
+                        <td id="T_86aac_row0_col24" class="data row0 col24" >-1</td>
+                        <td id="T_86aac_row0_col25" class="data row0 col25" >-1</td>
+                        <td id="T_86aac_row0_col26" class="data row0 col26" >-1</td>
+                        <td id="T_86aac_row0_col27" class="data row0 col27" >-1</td>
+                        <td id="T_86aac_row0_col28" class="data row0 col28" >-1</td>
+                        <td id="T_86aac_row0_col29" class="data row0 col29" >-1</td>
+                        <td id="T_86aac_row0_col30" class="data row0 col30" >-1</td>
+                        <td id="T_86aac_row0_col31" class="data row0 col31" >-1</td>
+                        <td id="T_86aac_row0_col32" class="data row0 col32" >-1</td>
+                        <td id="T_86aac_row0_col33" class="data row0 col33" >-1</td>
+                        <td id="T_86aac_row0_col34" class="data row0 col34" >-1</td>
+                        <td id="T_86aac_row0_col35" class="data row0 col35" >-1</td>
+                        <td id="T_86aac_row0_col36" class="data row0 col36" >-1</td>
+                        <td id="T_86aac_row0_col37" class="data row0 col37" >-1</td>
+                        <td id="T_86aac_row0_col38" class="data row0 col38" >-1</td>
+                        <td id="T_86aac_row0_col39" class="data row0 col39" >-1</td>
+            </tr>
+            <tr>
+                        <th id="T_86aac_level0_row1" class="row_heading level0 row1" >BVS</th>
+                        <td id="T_86aac_row1_col0" class="data row1 col0" >1</td>
+                        <td id="T_86aac_row1_col1" class="data row1 col1" >1</td>
+                        <td id="T_86aac_row1_col2" class="data row1 col2" >1</td>
+                        <td id="T_86aac_row1_col3" class="data row1 col3" >1</td>
+                        <td id="T_86aac_row1_col4" class="data row1 col4" >1</td>
+                        <td id="T_86aac_row1_col5" class="data row1 col5" >1</td>
+                        <td id="T_86aac_row1_col6" class="data row1 col6" >1</td>
+                        <td id="T_86aac_row1_col7" class="data row1 col7" >1</td>
+                        <td id="T_86aac_row1_col8" class="data row1 col8" >3</td>
+                        <td id="T_86aac_row1_col9" class="data row1 col9" >3</td>
+                        <td id="T_86aac_row1_col10" class="data row1 col10" >3</td>
+                        <td id="T_86aac_row1_col11" class="data row1 col11" >3</td>
+                        <td id="T_86aac_row1_col12" class="data row1 col12" >1</td>
+                        <td id="T_86aac_row1_col13" class="data row1 col13" >1</td>
+                        <td id="T_86aac_row1_col14" class="data row1 col14" >1</td>
+                        <td id="T_86aac_row1_col15" class="data row1 col15" >1</td>
+                        <td id="T_86aac_row1_col16" class="data row1 col16" >-1</td>
+                        <td id="T_86aac_row1_col17" class="data row1 col17" >-1</td>
+                        <td id="T_86aac_row1_col18" class="data row1 col18" >-1</td>
+                        <td id="T_86aac_row1_col19" class="data row1 col19" >-1</td>
+                        <td id="T_86aac_row1_col20" class="data row1 col20" >-1</td>
+                        <td id="T_86aac_row1_col21" class="data row1 col21" >-1</td>
+                        <td id="T_86aac_row1_col22" class="data row1 col22" >-1</td>
+                        <td id="T_86aac_row1_col23" class="data row1 col23" >-1</td>
+                        <td id="T_86aac_row1_col24" class="data row1 col24" >-1</td>
+                        <td id="T_86aac_row1_col25" class="data row1 col25" >-1</td>
+                        <td id="T_86aac_row1_col26" class="data row1 col26" >-1</td>
+                        <td id="T_86aac_row1_col27" class="data row1 col27" >-1</td>
+                        <td id="T_86aac_row1_col28" class="data row1 col28" >-1</td>
+                        <td id="T_86aac_row1_col29" class="data row1 col29" >-1</td>
+                        <td id="T_86aac_row1_col30" class="data row1 col30" >-1</td>
+                        <td id="T_86aac_row1_col31" class="data row1 col31" >-1</td>
+                        <td id="T_86aac_row1_col32" class="data row1 col32" >-1</td>
+                        <td id="T_86aac_row1_col33" class="data row1 col33" >-1</td>
+                        <td id="T_86aac_row1_col34" class="data row1 col34" >-1</td>
+                        <td id="T_86aac_row1_col35" class="data row1 col35" >-1</td>
+                        <td id="T_86aac_row1_col36" class="data row1 col36" >-1</td>
+                        <td id="T_86aac_row1_col37" class="data row1 col37" >-1</td>
+                        <td id="T_86aac_row1_col38" class="data row1 col38" >-1</td>
+                        <td id="T_86aac_row1_col39" class="data row1 col39" >-1</td>
+            </tr>
+            <tr>
+                        <th id="T_86aac_level0_row2" class="row_heading level0 row2" >Spin</th>
+                        <td id="T_86aac_row2_col0" class="data row2 col0" >0.025</td>
+                        <td id="T_86aac_row2_col1" class="data row2 col1" >0.025</td>
+                        <td id="T_86aac_row2_col2" class="data row2 col2" >0.025</td>
+                        <td id="T_86aac_row2_col3" class="data row2 col3" >0.025</td>
+                        <td id="T_86aac_row2_col4" class="data row2 col4" >0.025</td>
+                        <td id="T_86aac_row2_col5" class="data row2 col5" >0.025</td>
+                        <td id="T_86aac_row2_col6" class="data row2 col6" >0.025</td>
+                        <td id="T_86aac_row2_col7" class="data row2 col7" >0.025</td>
+                        <td id="T_86aac_row2_col8" class="data row2 col8" >2.161</td>
+                        <td id="T_86aac_row2_col9" class="data row2 col9" >2.161</td>
+                        <td id="T_86aac_row2_col10" class="data row2 col10" >2.161</td>
+                        <td id="T_86aac_row2_col11" class="data row2 col11" >2.161</td>
+                        <td id="T_86aac_row2_col12" class="data row2 col12" >0.785</td>
+                        <td id="T_86aac_row2_col13" class="data row2 col13" >0.785</td>
+                        <td id="T_86aac_row2_col14" class="data row2 col14" >0.785</td>
+                        <td id="T_86aac_row2_col15" class="data row2 col15" >0.785</td>
+                        <td id="T_86aac_row2_col16" class="data row2 col16" >-0.009</td>
+                        <td id="T_86aac_row2_col17" class="data row2 col17" >-0.009</td>
+                        <td id="T_86aac_row2_col18" class="data row2 col18" >-0.009</td>
+                        <td id="T_86aac_row2_col19" class="data row2 col19" >-0.009</td>
+                        <td id="T_86aac_row2_col20" class="data row2 col20" >-0.009</td>
+                        <td id="T_86aac_row2_col21" class="data row2 col21" >-0.009</td>
+                        <td id="T_86aac_row2_col22" class="data row2 col22" >-0.009</td>
+                        <td id="T_86aac_row2_col23" class="data row2 col23" >-0.009</td>
+                        <td id="T_86aac_row2_col24" class="data row2 col24" >-0.009</td>
+                        <td id="T_86aac_row2_col25" class="data row2 col25" >-0.009</td>
+                        <td id="T_86aac_row2_col26" class="data row2 col26" >-0.009</td>
+                        <td id="T_86aac_row2_col27" class="data row2 col27" >-0.009</td>
+                        <td id="T_86aac_row2_col28" class="data row2 col28" >-0.009</td>
+                        <td id="T_86aac_row2_col29" class="data row2 col29" >-0.009</td>
+                        <td id="T_86aac_row2_col30" class="data row2 col30" >-0.009</td>
+                        <td id="T_86aac_row2_col31" class="data row2 col31" >-0.009</td>
+                        <td id="T_86aac_row2_col32" class="data row2 col32" >-0.009</td>
+                        <td id="T_86aac_row2_col33" class="data row2 col33" >-0.009</td>
+                        <td id="T_86aac_row2_col34" class="data row2 col34" >-0.009</td>
+                        <td id="T_86aac_row2_col35" class="data row2 col35" >-0.009</td>
+                        <td id="T_86aac_row2_col36" class="data row2 col36" >-0.009</td>
+                        <td id="T_86aac_row2_col37" class="data row2 col37" >-0.009</td>
+                        <td id="T_86aac_row2_col38" class="data row2 col38" >-0.009</td>
+                        <td id="T_86aac_row2_col39" class="data row2 col39" >-0.009</td>
+            </tr>
+            <tr>
+                        <th id="T_86aac_level0_row3" class="row_heading level0 row3" >Bader</th>
+                        <td id="T_86aac_row3_col0" class="data row3 col0" >6.178</td>
+                        <td id="T_86aac_row3_col1" class="data row3 col1" >6.178</td>
+                        <td id="T_86aac_row3_col2" class="data row3 col2" >6.178</td>
+                        <td id="T_86aac_row3_col3" class="data row3 col3" >6.178</td>
+                        <td id="T_86aac_row3_col4" class="data row3 col4" >6.178</td>
+                        <td id="T_86aac_row3_col5" class="data row3 col5" >6.178</td>
+                        <td id="T_86aac_row3_col6" class="data row3 col6" >6.178</td>
+                        <td id="T_86aac_row3_col7" class="data row3 col7" >6.178</td>
+                        <td id="T_86aac_row3_col8" class="data row3 col8" >12.060</td>
+                        <td id="T_86aac_row3_col9" class="data row3 col9" >12.060</td>
+                        <td id="T_86aac_row3_col10" class="data row3 col10" >12.060</td>
+                        <td id="T_86aac_row3_col11" class="data row3 col11" >12.060</td>
+                        <td id="T_86aac_row3_col12" class="data row3 col12" >8.392</td>
+                        <td id="T_86aac_row3_col13" class="data row3 col13" >8.391</td>
+                        <td id="T_86aac_row3_col14" class="data row3 col14" >8.391</td>
+                        <td id="T_86aac_row3_col15" class="data row3 col15" >8.391</td>
+                        <td id="T_86aac_row3_col16" class="data row3 col16" >1.532</td>
+                        <td id="T_86aac_row3_col17" class="data row3 col17" >1.532</td>
+                        <td id="T_86aac_row3_col18" class="data row3 col18" >1.532</td>
+                        <td id="T_86aac_row3_col19" class="data row3 col19" >1.532</td>
+                        <td id="T_86aac_row3_col20" class="data row3 col20" >1.533</td>
+                        <td id="T_86aac_row3_col21" class="data row3 col21" >1.532</td>
+                        <td id="T_86aac_row3_col22" class="data row3 col22" >1.532</td>
+                        <td id="T_86aac_row3_col23" class="data row3 col23" >1.532</td>
+                        <td id="T_86aac_row3_col24" class="data row3 col24" >1.532</td>
+                        <td id="T_86aac_row3_col25" class="data row3 col25" >1.533</td>
+                        <td id="T_86aac_row3_col26" class="data row3 col26" >1.533</td>
+                        <td id="T_86aac_row3_col27" class="data row3 col27" >1.532</td>
+                        <td id="T_86aac_row3_col28" class="data row3 col28" >1.533</td>
+                        <td id="T_86aac_row3_col29" class="data row3 col29" >1.533</td>
+                        <td id="T_86aac_row3_col30" class="data row3 col30" >1.532</td>
+                        <td id="T_86aac_row3_col31" class="data row3 col31" >1.533</td>
+                        <td id="T_86aac_row3_col32" class="data row3 col32" >1.532</td>
+                        <td id="T_86aac_row3_col33" class="data row3 col33" >1.532</td>
+                        <td id="T_86aac_row3_col34" class="data row3 col34" >1.532</td>
+                        <td id="T_86aac_row3_col35" class="data row3 col35" >1.532</td>
+                        <td id="T_86aac_row3_col36" class="data row3 col36" >1.532</td>
+                        <td id="T_86aac_row3_col37" class="data row3 col37" >1.532</td>
+                        <td id="T_86aac_row3_col38" class="data row3 col38" >1.532</td>
+                        <td id="T_86aac_row3_col39" class="data row3 col39" >1.532</td>
+            </tr>
+    </tbody></table>
+            </div>
         </div>
     </body>
     </html>
