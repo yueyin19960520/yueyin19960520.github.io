@@ -1,0 +1,225 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Visualization with Styled Data Table and Legend</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh; /* Ensure the body takes the full height */
+            }
+            .top-content {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                margin: 20px 0;
+            }
+            .viewer-container {
+                width: 800px;
+                height: 500px;
+            }
+            .legend-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 20px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            .legend-item {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .legend-color {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 10px;
+                border: 1px solid #000;
+            }
+            .legend-label {
+                font-size: 14px;
+            }
+            .table-container {
+                width: 80%;
+                margin: 20px 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+            .scrollable-table {
+                overflow-x: auto; /* Enable horizontal scrolling */
+                max-width: 100%;  /* Prevent table from exceeding the container width */
+            }
+            table.dataframe {
+                width: max-content; /* Adjust table width based on content */
+                border-collapse: collapse;
+                margin: 0 auto;
+            }
+            table.dataframe th, table.dataframe td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            table.dataframe th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>3D Visualization with Styled Data Table and Legend</h1>
+        <div class="top-content">
+            <div class="viewer-container">
+                <div id="3dmolviewer_17332198789793036"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17332198789793036" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
+}
+
+var viewer_17332198789793036 = null;
+var warn = document.getElementById("3dmolwarning_17332198789793036");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17332198789793036 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17332198789793036"),{backgroundColor:"white"});
+viewer_17332198789793036.zoomTo();
+	viewer_17332198789793036.addModel("72\nXYZ file generated with PBC expansion\nK 4.301456415000001 4.3014564150000005 0.0071066548000008715\nK 4.301456415000001 4.3014564150000005 5.0832886548\nK 4.301456415000002 10.036731635 0.007106654800001223\nK 4.301456415000002 10.036731635 5.0832886548000005\nK 10.036731635 4.3014564150000005 0.007106654800001223\nK 10.036731635 4.3014564150000005 5.0832886548000005\nK 10.036731635000002 10.036731635 0.007106654800001574\nK 10.036731635000002 10.036731635 5.083288654800001\nK 1.4338188050000003 1.433818805 5.071105818000001\nK 1.4338188050000003 1.433818805 10.147287818\nK 1.4338188050000011 7.169094025 5.071105818\nK 1.4338188050000011 7.169094025 10.147287818\nK 7.169094025 1.433818805 5.071105818\nK 7.169094025 1.433818805 10.147287818\nK 7.169094025000001 7.169094025 5.071105818000001\nK 7.169094025000001 7.169094025 10.147287818000002\nTb 4.3014564150000005 1.433818805 2.5380910000000005\nTb 4.3014564150000005 1.433818805 7.614273000000001\nTb 4.301456415000001 7.169094025 2.538091000000001\nTb 4.301456415000001 7.169094025 7.614273000000001\nTb 10.036731635 1.433818805 2.538091000000001\nTb 10.036731635 1.433818805 7.614273000000001\nTb 10.036731635000002 7.169094025 2.538091000000001\nTb 10.036731635000002 7.169094025 7.614273000000002\nTb 1.4338188050000007 4.3014564150000005 2.5380910000000005\nTb 1.4338188050000007 4.3014564150000005 7.614273000000001\nTb 1.4338188050000016 10.036731635 2.538091000000001\nTb 1.4338188050000016 10.036731635 7.614273000000001\nTb 7.169094025 4.3014564150000005 2.538091000000001\nTb 7.169094025 4.3014564150000005 7.614273000000001\nTb 7.1690940250000015 10.036731635 2.538091000000001\nTb 7.1690940250000015 10.036731635 7.614273000000002\nP 1.4338188050000003 1.433818805 2.5330148180000007\nP 1.4338188050000003 1.433818805 7.609196818000001\nP 1.4338188050000011 7.169094025 2.533014818000001\nP 1.4338188050000011 7.169094025 7.609196818\nP 7.169094025 1.433818805 2.533014818000001\nP 7.169094025 1.433818805 7.609196818\nP 7.169094025000001 7.169094025 2.5330148180000016\nP 7.169094025000001 7.169094025 7.609196818000001\nP 4.301456415000001 4.3014564150000005 2.543167182\nP 4.301456415000001 4.3014564150000005 7.6193491820000006\nP 4.301456415000002 10.036731635 2.5431671820000004\nP 4.301456415000002 10.036731635 7.6193491820000006\nP 10.036731635 4.3014564150000005 2.5431671820000004\nP 10.036731635 4.3014564150000005 7.6193491820000006\nP 10.036731635000002 10.036731635 2.5431671820000017\nP 10.036731635000002 10.036731635 7.619349182000002\nO 4.3014564150000005 1.433818805 3.511843220201066e-16\nO 4.3014564150000005 1.433818805 10.152364\nO 4.3014564150000005 1.433818805 5.076182\nO 4.301456415000001 7.169094025 7.023686440402132e-16\nO 4.301456415000001 7.169094025 10.152364\nO 4.301456415000001 7.169094025 5.076182000000001\nO 10.036731635 1.433818805 7.023686440402132e-16\nO 10.036731635 1.433818805 10.152364\nO 10.036731635 1.433818805 5.076182000000001\nO 10.036731635000002 7.169094025 1.05355296606032e-15\nO 10.036731635000002 7.169094025 10.152364000000002\nO 10.036731635000002 7.169094025 5.076182000000001\nO 1.4338188050000007 4.3014564150000005 3.511843220201066e-16\nO 1.4338188050000007 4.3014564150000005 10.152364\nO 1.4338188050000007 4.3014564150000005 5.076182\nO 1.4338188050000016 10.036731635 7.023686440402132e-16\nO 1.4338188050000016 10.036731635 10.152364\nO 1.4338188050000016 10.036731635 5.076182000000001\nO 7.169094025 4.3014564150000005 7.023686440402131e-16\nO 7.169094025 4.3014564150000005 10.152364\nO 7.169094025 4.3014564150000005 5.076182000000001\nO 7.1690940250000015 10.036731635 1.0535529660603198e-15\nO 7.1690940250000015 10.036731635 10.152364000000002\nO 7.1690940250000015 10.036731635 5.076182000000001","xyz");
+	viewer_17332198789793036.setStyle({"elem": "O"},{"stick": {"radius": 0.15, "color": "#FF0300"}, "sphere": {"scale": 0.3, "color": "#FF0300"}});
+	viewer_17332198789793036.setStyle({"elem": "P"},{"stick": {"radius": 0.15, "color": "#C19CC3"}, "sphere": {"scale": 0.3, "color": "#C19CC3"}});
+	viewer_17332198789793036.setStyle({"elem": "K"},{"stick": {"radius": 0.15, "color": "#A122F7"}, "sphere": {"scale": 0.3, "color": "#A122F7"}});
+	viewer_17332198789793036.setStyle({"elem": "Tb"},{"stick": {"radius": 0.15, "color": "#7104FE"}, "sphere": {"scale": 0.3, "color": "#7104FE"}});
+	viewer_17332198789793036.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 11.47055044, "y": 0.0, "z": 7.023686440402132e-16}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 1.844605196682231e-15, "y": 11.47055044, "z": 7.023686440402132e-16}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 10.152364}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 11.47055044, "y": 0.0, "z": 7.023686440402132e-16}, "end": {"x": 11.470550440000002, "y": 11.47055044, "z": 1.4047372880804264e-15}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 11.47055044, "y": 0.0, "z": 7.023686440402132e-16}, "end": {"x": 11.47055044, "y": 0.0, "z": 10.152364}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 1.844605196682231e-15, "y": 11.47055044, "z": 7.023686440402132e-16}, "end": {"x": 11.470550440000002, "y": 11.47055044, "z": 1.4047372880804264e-15}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 1.844605196682231e-15, "y": 11.47055044, "z": 7.023686440402132e-16}, "end": {"x": 1.844605196682231e-15, "y": 11.47055044, "z": 10.152364}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.152364}, "end": {"x": 11.47055044, "y": 0.0, "z": 10.152364}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.152364}, "end": {"x": 1.844605196682231e-15, "y": 11.47055044, "z": 10.152364}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 11.470550440000002, "y": 11.47055044, "z": 1.4047372880804264e-15}, "end": {"x": 11.470550440000002, "y": 11.47055044, "z": 10.152364000000002}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 11.47055044, "y": 0.0, "z": 10.152364}, "end": {"x": 11.470550440000002, "y": 11.47055044, "z": 10.152364000000002}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.addLine({"start": {"x": 1.844605196682231e-15, "y": 11.47055044, "z": 10.152364}, "end": {"x": 11.470550440000002, "y": 11.47055044, "z": 10.152364000000002}, "color": "black", "linewidth": 2});
+	viewer_17332198789793036.zoomTo();
+viewer_17332198789793036.render();
+});
+</script>
+            </div>
+            <div class="legend-container">
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #FF0300;"></span>
+                <span class="legend-label">O</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #C19CC3;"></span>
+                <span class="legend-label">P</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #A122F7;"></span>
+                <span class="legend-label">K</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #7104FE;"></span>
+                <span class="legend-label">Tb</span>
+            </div>
+        </div>
+        </div>
+        <div class="table-container">
+            <div class="scrollable-table">
+                <style  type="text/css" >
+</style><table id="T_2edd0_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >K1</th>        <th class="col_heading level0 col1" >K2</th>        <th class="col_heading level0 col2" >Tb1</th>        <th class="col_heading level0 col3" >Tb2</th>        <th class="col_heading level0 col4" >P1</th>        <th class="col_heading level0 col5" >P2</th>        <th class="col_heading level0 col6" >O1</th>        <th class="col_heading level0 col7" >O2</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_2edd0_level0_row0" class="row_heading level0 row0" >TOSS</th>
+                        <td id="T_2edd0_row0_col0" class="data row0 col0" >1</td>
+                        <td id="T_2edd0_row0_col1" class="data row0 col1" >1</td>
+                        <td id="T_2edd0_row0_col2" class="data row0 col2" >3</td>
+                        <td id="T_2edd0_row0_col3" class="data row0 col3" >3</td>
+                        <td id="T_2edd0_row0_col4" class="data row0 col4" >-2</td>
+                        <td id="T_2edd0_row0_col5" class="data row0 col5" >-2</td>
+                        <td id="T_2edd0_row0_col6" class="data row0 col6" >-2</td>
+                        <td id="T_2edd0_row0_col7" class="data row0 col7" >-2</td>
+            </tr>
+            <tr>
+                        <th id="T_2edd0_level0_row1" class="row_heading level0 row1" >BVS</th>
+                        <td id="T_2edd0_row1_col0" class="data row1 col0" >1</td>
+                        <td id="T_2edd0_row1_col1" class="data row1 col1" >1</td>
+                        <td id="T_2edd0_row1_col2" class="data row1 col2" >3</td>
+                        <td id="T_2edd0_row1_col3" class="data row1 col3" >3</td>
+                        <td id="T_2edd0_row1_col4" class="data row1 col4" >-3</td>
+                        <td id="T_2edd0_row1_col5" class="data row1 col5" >-3</td>
+                        <td id="T_2edd0_row1_col6" class="data row1 col6" >-1</td>
+                        <td id="T_2edd0_row1_col7" class="data row1 col7" >-1</td>
+            </tr>
+            <tr>
+                        <th id="T_2edd0_level0_row2" class="row_heading level0 row2" >Spin</th>
+                        <td id="T_2edd0_row2_col0" class="data row2 col0" >0.042</td>
+                        <td id="T_2edd0_row2_col1" class="data row2 col1" >0.042</td>
+                        <td id="T_2edd0_row2_col2" class="data row2 col2" >-0.007</td>
+                        <td id="T_2edd0_row2_col3" class="data row2 col3" >-0.007</td>
+                        <td id="T_2edd0_row2_col4" class="data row2 col4" >0.183</td>
+                        <td id="T_2edd0_row2_col5" class="data row2 col5" >0.183</td>
+                        <td id="T_2edd0_row2_col6" class="data row2 col6" >0.101</td>
+                        <td id="T_2edd0_row2_col7" class="data row2 col7" >0.101</td>
+            </tr>
+            <tr>
+                        <th id="T_2edd0_level0_row3" class="row_heading level0 row3" >Bader</th>
+                        <td id="T_2edd0_row3_col0" class="data row3 col0" >8.325</td>
+                        <td id="T_2edd0_row3_col1" class="data row3 col1" >8.325</td>
+                        <td id="T_2edd0_row3_col2" class="data row3 col2" >7.193</td>
+                        <td id="T_2edd0_row3_col3" class="data row3 col3" >7.189</td>
+                        <td id="T_2edd0_row3_col4" class="data row3 col4" >6.206</td>
+                        <td id="T_2edd0_row3_col5" class="data row3 col5" >6.205</td>
+                        <td id="T_2edd0_row3_col6" class="data row3 col6" >7.278</td>
+                        <td id="T_2edd0_row3_col7" class="data row3 col7" >7.279</td>
+            </tr>
+    </tbody></table>
+            </div>
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,255 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Visualization with Styled Data Table and Legend</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh; /* Ensure the body takes the full height */
+            }
+            .top-content {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                margin: 20px 0;
+            }
+            .viewer-container {
+                width: 800px;
+                height: 500px;
+            }
+            .legend-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 20px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            .legend-item {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .legend-color {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 10px;
+                border: 1px solid #000;
+            }
+            .legend-label {
+                font-size: 14px;
+            }
+            .table-container {
+                width: 80%;
+                margin: 20px 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+            .scrollable-table {
+                overflow-x: auto; /* Enable horizontal scrolling */
+                max-width: 100%;  /* Prevent table from exceeding the container width */
+            }
+            table.dataframe {
+                width: max-content; /* Adjust table width based on content */
+                border-collapse: collapse;
+                margin: 0 auto;
+            }
+            table.dataframe th, table.dataframe td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            table.dataframe th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>3D Visualization with Styled Data Table and Legend</h1>
+        <div class="top-content">
+            <div class="viewer-container">
+                <div id="3dmolviewer_17332198823540545"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17332198823540545" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    //this is to ignore the existence of requirejs amd
+    var savedexports, savedmodule;
+    if (typeof exports !== 'undefined') savedexports = exports;
+    else exports = {}
+    if (typeof module !== 'undefined') savedmodule = module;
+    else module = {}
+
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+        exports = savedexports;
+        module = savedmodule;
+        resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
+}
+
+var viewer_17332198823540545 = null;
+var warn = document.getElementById("3dmolwarning_17332198823540545");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_17332198823540545 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17332198823540545"),{backgroundColor:"white"});
+viewer_17332198823540545.zoomTo();
+	viewer_17332198823540545.addModel("72\nXYZ file generated with PBC expansion\nIn 5.3459174973625405 1.0048975937516884 -1.1389455982737766\nIn 5.3459174973625405 1.0048975937516884 13.681359741726224\nIn 5.3459174973625405 1.0048975937516884 6.271207071726224\nIn 1.4896440418794332 7.058497556111259 -2.2778911965475532\nIn 1.4896440418794332 7.058497556111259 12.542414143452447\nIn 1.4896440418794332 7.058497556111259 5.132261473452447\nIn 12.523446143612823 1.0048975937516884 -2.2778911965475532\nIn 12.523446143612823 1.0048975937516884 12.542414143452447\nIn 12.523446143612823 1.0048975937516884 5.132261473452447\nIn 8.667172688129714 7.058497556111259 -3.4168367948213296\nIn 8.667172688129714 7.058497556111259 11.403468545178672\nIn 8.667172688129714 7.058497556111259 3.993315875178671\nIr -2.024662306595365 5.048702368607882 -1.1389455982737764\nIr -2.024662306595365 5.048702368607882 13.681359741726224\nIr -2.024662306595365 5.048702368607882 6.271207071726224\nIr -5.880935762078472 11.102302330967452 -2.277891196547553\nIr -5.880935762078472 11.102302330967452 12.542414143452447\nIr -5.880935762078472 11.102302330967452 5.132261473452448\nIr 5.152866339654918 5.048702368607882 -2.277891196547553\nIr 5.152866339654918 5.048702368607882 12.542414143452447\nIr 5.152866339654918 5.048702368607882 5.132261473452448\nIr 1.2965928841718106 11.102302330967452 -3.4168367948213296\nIr 1.2965928841718106 11.102302330967452 11.403468545178672\nIr 1.2965928841718106 11.102302330967452 3.993315875178671\nI 4.433112854185401 3.632159977415743 -0.10151217593161703\nI 4.433112854185401 3.632159977415743 7.308640494068383\nI 0.5768393987022943 9.685759939775313 -1.2404577742053933\nI 0.5768393987022943 9.685759939775313 6.169694895794607\nI 11.610641500435682 3.632159977415743 -1.2404577742053933\nI 11.610641500435682 3.632159977415743 6.169694895794607\nI 7.754368044952575 9.685759939775313 -2.3794033724791697\nI 7.754368044952575 9.685759939775313 5.030749297520831\nI 0.37329913486705996 5.520883165671928 0.011257450859929633\nI 0.37329913486705996 5.520883165671928 7.421410120859928\nI -3.482974320616049 11.574483128031499 -1.1276881474138485\nI -3.482974320616049 11.574483128031499 6.282464522586152\nI 7.550827781117343 5.520883165671928 -1.1276881474138472\nI 7.550827781117343 5.520883165671928 6.282464522586151\nI 3.6945543256342357 11.574483128031499 -2.266633745687625\nI 3.6945543256342357 11.574483128031499 5.143518924312375\nI 0.8795768975409437 1.2107199924719139 1.1849478961622761\nI 0.8795768975409437 1.2107199924719139 8.595100566162277\nI -2.9766965579421636 7.2643199548314845 0.046002297888499424\nI -2.9766965579421636 7.2643199548314845 7.4561549678885\nI 8.057105543791229 1.2107199924719139 0.0460022978884992\nI 8.057105543791229 1.2107199924719139 7.4561549678885\nI 4.200832088308119 7.2643199548314845 -1.092943300385277\nI 4.200832088308119 7.2643199548314845 6.317209369614723\nI 2.7726923562782355 4.66127197101687 3.947313577290171\nI 2.7726923562782355 4.66127197101687 11.35746624729017\nI -1.0835810992048722 10.71487193337644 2.8083679790163947\nI -1.0835810992048722 10.71487193337644 10.218520649016394\nI 9.950221002528519 4.66127197101687 2.8083679790163942\nI 9.950221002528519 4.66127197101687 10.218520649016392\nI 6.093947547045408 10.71487193337644 1.6694223807426183\nI 6.093947547045408 10.71487193337644 9.079575050742617\nI -1.1316797102827378 2.7725487827606834 5.120548444353208\nI -1.1316797102827378 2.7725487827606834 12.53070111435321\nI -4.9879531657658465 8.826148745120253 3.981602846079432\nI -4.9879531657658465 8.826148745120253 11.391755516079431\nI 6.045848935967546 2.7725487827606834 3.9816028460794315\nI 6.045848935967546 2.7725487827606834 11.39175551607943\nI 2.1895754804844367 8.826148745120253 2.8426572478056555\nI 2.1895754804844367 8.826148745120253 10.252809917805656\nI 2.640406305862224 0.3620052777491028 5.234001438503719\nI 2.640406305862224 0.3620052777491028 12.644154108503717\nI -1.2158671496208835 6.415605240108674 4.095055840229942\nI -1.2158671496208835 6.415605240108674 11.505208510229942\nI 9.817934952112505 0.3620052777491028 4.095055840229942\nI 9.817934952112505 0.3620052777491028 11.505208510229942\nI 5.9616614966294 6.415605240108674 2.9561102419561656\nI 5.9616614966294 6.415605240108674 10.366262911956165","xyz");
+	viewer_17332198823540545.setStyle({"elem": "In"},{"stick": {"radius": 0.15, "color": "#D781BB"}, "sphere": {"scale": 0.3, "color": "#D781BB"}});
+	viewer_17332198823540545.setStyle({"elem": "I"},{"stick": {"radius": 0.15, "color": "#8F1F8B"}, "sphere": {"scale": 0.3, "color": "#8F1F8B"}});
+	viewer_17332198823540545.setStyle({"elem": "Ir"},{"stick": {"radius": 0.15, "color": "#C9CF73"}, "sphere": {"scale": 0.3, "color": "#C9CF73"}});
+	viewer_17332198823540545.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 14.355057292500566, "y": 0.0, "z": -2.2778911965475532}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": -7.712546910966215, "y": 12.107199924719142, "z": -2.2778911965475532}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 14.82030534}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 14.355057292500566, "y": 0.0, "z": -2.2778911965475532}, "end": {"x": 6.642510381534351, "y": 12.107199924719142, "z": -4.5557823930951065}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 14.355057292500566, "y": 0.0, "z": -2.2778911965475532}, "end": {"x": 14.355057292500566, "y": 0.0, "z": 12.542414143452447}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": -7.712546910966215, "y": 12.107199924719142, "z": -2.2778911965475532}, "end": {"x": 6.642510381534351, "y": 12.107199924719142, "z": -4.5557823930951065}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": -7.712546910966215, "y": 12.107199924719142, "z": -2.2778911965475532}, "end": {"x": -7.712546910966215, "y": 12.107199924719142, "z": 12.542414143452447}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 0.0, "y": 0.0, "z": 14.82030534}, "end": {"x": 14.355057292500566, "y": 0.0, "z": 12.542414143452447}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 0.0, "y": 0.0, "z": 14.82030534}, "end": {"x": -7.712546910966215, "y": 12.107199924719142, "z": 12.542414143452447}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 6.642510381534351, "y": 12.107199924719142, "z": -4.5557823930951065}, "end": {"x": 6.642510381534351, "y": 12.107199924719142, "z": 10.264522946904894}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": 14.355057292500566, "y": 0.0, "z": 12.542414143452447}, "end": {"x": 6.642510381534351, "y": 12.107199924719142, "z": 10.264522946904894}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.addLine({"start": {"x": -7.712546910966215, "y": 12.107199924719142, "z": 12.542414143452447}, "end": {"x": 6.642510381534351, "y": 12.107199924719142, "z": 10.264522946904894}, "color": "black", "linewidth": 2});
+	viewer_17332198823540545.zoomTo();
+viewer_17332198823540545.render();
+});
+</script>
+            </div>
+            <div class="legend-container">
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #D781BB;"></span>
+                <span class="legend-label">In</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #8F1F8B;"></span>
+                <span class="legend-label">I</span>
+            </div>
+        
+            <div class="legend-item">
+                <span class="legend-color" style="background-color: #C9CF73;"></span>
+                <span class="legend-label">Ir</span>
+            </div>
+        </div>
+        </div>
+        <div class="table-container">
+            <div class="scrollable-table">
+                <style  type="text/css" >
+#T_c7773_row0_col0,#T_c7773_row0_col1,#T_c7773_row0_col2,#T_c7773_row0_col3{
+            background-color:  lightgreen;
+        }#T_c7773_row1_col0,#T_c7773_row1_col1,#T_c7773_row1_col2,#T_c7773_row1_col3{
+            background-color:  lightcoral;
+        }</style><table id="T_c7773_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >In1</th>        <th class="col_heading level0 col1" >In2</th>        <th class="col_heading level0 col2" >Ir1</th>        <th class="col_heading level0 col3" >Ir2</th>        <th class="col_heading level0 col4" >I1</th>        <th class="col_heading level0 col5" >I2</th>        <th class="col_heading level0 col6" >I3</th>        <th class="col_heading level0 col7" >I4</th>        <th class="col_heading level0 col8" >I5</th>        <th class="col_heading level0 col9" >I6</th>        <th class="col_heading level0 col10" >I7</th>        <th class="col_heading level0 col11" >I8</th>        <th class="col_heading level0 col12" >I9</th>        <th class="col_heading level0 col13" >I10</th>        <th class="col_heading level0 col14" >I11</th>        <th class="col_heading level0 col15" >I12</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_c7773_level0_row0" class="row_heading level0 row0" >TOSS</th>
+                        <td id="T_c7773_row0_col0" class="data row0 col0" >3</td>
+                        <td id="T_c7773_row0_col1" class="data row0 col1" >3</td>
+                        <td id="T_c7773_row0_col2" class="data row0 col2" >3</td>
+                        <td id="T_c7773_row0_col3" class="data row0 col3" >3</td>
+                        <td id="T_c7773_row0_col4" class="data row0 col4" >-1</td>
+                        <td id="T_c7773_row0_col5" class="data row0 col5" >-1</td>
+                        <td id="T_c7773_row0_col6" class="data row0 col6" >-1</td>
+                        <td id="T_c7773_row0_col7" class="data row0 col7" >-1</td>
+                        <td id="T_c7773_row0_col8" class="data row0 col8" >-1</td>
+                        <td id="T_c7773_row0_col9" class="data row0 col9" >-1</td>
+                        <td id="T_c7773_row0_col10" class="data row0 col10" >-1</td>
+                        <td id="T_c7773_row0_col11" class="data row0 col11" >-1</td>
+                        <td id="T_c7773_row0_col12" class="data row0 col12" >-1</td>
+                        <td id="T_c7773_row0_col13" class="data row0 col13" >-1</td>
+                        <td id="T_c7773_row0_col14" class="data row0 col14" >-1</td>
+                        <td id="T_c7773_row0_col15" class="data row0 col15" >-1</td>
+            </tr>
+            <tr>
+                        <th id="T_c7773_level0_row1" class="row_heading level0 row1" >BVS</th>
+                        <td id="T_c7773_row1_col0" class="data row1 col0" >2</td>
+                        <td id="T_c7773_row1_col1" class="data row1 col1" >2</td>
+                        <td id="T_c7773_row1_col2" class="data row1 col2" >4</td>
+                        <td id="T_c7773_row1_col3" class="data row1 col3" >4</td>
+                        <td id="T_c7773_row1_col4" class="data row1 col4" >-1</td>
+                        <td id="T_c7773_row1_col5" class="data row1 col5" >-1</td>
+                        <td id="T_c7773_row1_col6" class="data row1 col6" >-1</td>
+                        <td id="T_c7773_row1_col7" class="data row1 col7" >-1</td>
+                        <td id="T_c7773_row1_col8" class="data row1 col8" >-1</td>
+                        <td id="T_c7773_row1_col9" class="data row1 col9" >-1</td>
+                        <td id="T_c7773_row1_col10" class="data row1 col10" >-1</td>
+                        <td id="T_c7773_row1_col11" class="data row1 col11" >-1</td>
+                        <td id="T_c7773_row1_col12" class="data row1 col12" >-1</td>
+                        <td id="T_c7773_row1_col13" class="data row1 col13" >-1</td>
+                        <td id="T_c7773_row1_col14" class="data row1 col14" >-1</td>
+                        <td id="T_c7773_row1_col15" class="data row1 col15" >-1</td>
+            </tr>
+            <tr>
+                        <th id="T_c7773_level0_row2" class="row_heading level0 row2" >Spin</th>
+                        <td id="T_c7773_row2_col0" class="data row2 col0" >0.000</td>
+                        <td id="T_c7773_row2_col1" class="data row2 col1" >-0.000</td>
+                        <td id="T_c7773_row2_col2" class="data row2 col2" >0.000</td>
+                        <td id="T_c7773_row2_col3" class="data row2 col3" >0.000</td>
+                        <td id="T_c7773_row2_col4" class="data row2 col4" >0.000</td>
+                        <td id="T_c7773_row2_col5" class="data row2 col5" >-0.000</td>
+                        <td id="T_c7773_row2_col6" class="data row2 col6" >-0.000</td>
+                        <td id="T_c7773_row2_col7" class="data row2 col7" >-0.000</td>
+                        <td id="T_c7773_row2_col8" class="data row2 col8" >-0.000</td>
+                        <td id="T_c7773_row2_col9" class="data row2 col9" >0.000</td>
+                        <td id="T_c7773_row2_col10" class="data row2 col10" >0.000</td>
+                        <td id="T_c7773_row2_col11" class="data row2 col11" >-0.000</td>
+                        <td id="T_c7773_row2_col12" class="data row2 col12" >-0.000</td>
+                        <td id="T_c7773_row2_col13" class="data row2 col13" >-0.000</td>
+                        <td id="T_c7773_row2_col14" class="data row2 col14" >0.000</td>
+                        <td id="T_c7773_row2_col15" class="data row2 col15" >-0.000</td>
+            </tr>
+            <tr>
+                        <th id="T_c7773_level0_row3" class="row_heading level0 row3" >Bader</th>
+                        <td id="T_c7773_row3_col0" class="data row3 col0" >11.977</td>
+                        <td id="T_c7773_row3_col1" class="data row3 col1" >11.977</td>
+                        <td id="T_c7773_row3_col2" class="data row3 col2" >8.778</td>
+                        <td id="T_c7773_row3_col3" class="data row3 col3" >8.778</td>
+                        <td id="T_c7773_row3_col4" class="data row3 col4" >7.205</td>
+                        <td id="T_c7773_row3_col5" class="data row3 col5" >7.208</td>
+                        <td id="T_c7773_row3_col6" class="data row3 col6" >7.210</td>
+                        <td id="T_c7773_row3_col7" class="data row3 col7" >7.210</td>
+                        <td id="T_c7773_row3_col8" class="data row3 col8" >7.207</td>
+                        <td id="T_c7773_row3_col9" class="data row3 col9" >7.206</td>
+                        <td id="T_c7773_row3_col10" class="data row3 col10" >7.205</td>
+                        <td id="T_c7773_row3_col11" class="data row3 col11" >7.207</td>
+                        <td id="T_c7773_row3_col12" class="data row3 col12" >7.210</td>
+                        <td id="T_c7773_row3_col13" class="data row3 col13" >7.210</td>
+                        <td id="T_c7773_row3_col14" class="data row3 col14" >7.208</td>
+                        <td id="T_c7773_row3_col15" class="data row3 col15" >7.206</td>
+            </tr>
+    </tbody></table>
+            </div>
+        </div>
+    </body>
+    </html>
+    
