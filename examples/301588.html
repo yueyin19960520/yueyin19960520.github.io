@@ -85,8 +85,8 @@
         <h1>3D Visualization with Styled Data Table and Legend</h1>
         <div class="top-content">
             <div class="viewer-container">
-                <div id="3dmolviewer_17332198844629664"  style="position: relative; width: 800px; height: 500px;">
-        <p id="3dmolwarning_17332198844629664" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+                <div id="3dmolviewer_17338830890861993"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17338830890861993" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
         </div>
 <script>
 
@@ -117,31 +117,31 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
 }
 
-var viewer_17332198844629664 = null;
-var warn = document.getElementById("3dmolwarning_17332198844629664");
+var viewer_17338830890861993 = null;
+var warn = document.getElementById("3dmolwarning_17338830890861993");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_17332198844629664 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17332198844629664"),{backgroundColor:"white"});
-viewer_17332198844629664.zoomTo();
-	viewer_17332198844629664.addModel("52\nXYZ file generated with PBC expansion\nMo 0.0 0.0 0.0\nMo 0.0 0.0 10.05453656\nMo -1.4910776644121773 7.334447106435346 -6.7138869872801665\nMo -1.4910776644121773 7.334447106435346 3.340649572719834\nMo 7.484479070610505 0.0 -6.7138869872801665\nMo 7.484479070610505 0.0 3.340649572719834\nMo 5.993401406198328 7.334447106435346 -13.427773974560333\nMo 5.993401406198328 7.334447106435346 -3.3732374145603323\nMo 0.0 0.0 5.02726828\nMo -1.4910776644121773 7.334447106435346 -1.6866187072801662\nMo 7.484479070610505 0.0 -1.6866187072801662\nMo 5.993401406198328 7.334447106435346 -8.400505694560334\nMo -0.7455388322060886 3.667223553217673 -3.3569434936400833\nMo -0.7455388322060886 3.667223553217673 6.697593066359918\nMo 6.738940238404417 3.667223553217673 -10.07083048092025\nMo 6.738940238404417 3.667223553217673 -0.016293920920249505\nMo -0.7455388322060886 3.667223553217673 1.670324786359917\nMo 6.738940238404417 3.667223553217673 -5.04356220092025\nMo 3.7422395353052527 0.0 -3.3569434936400833\nMo 3.7422395353052527 0.0 6.697593066359918\nMo 2.2511618708930756 7.334447106435346 -10.07083048092025\nMo 2.2511618708930756 7.334447106435346 -0.016293920920249505\nMo 3.7422395353052527 0.0 1.670324786359917\nMo 2.2511618708930756 7.334447106435346 -5.04356220092025\nMo 2.996700703099164 3.667223553217673 3.340649572719833\nMo 2.996700703099164 3.667223553217673 -1.6866187072801684\nAs 2.6202949434274174 0.9168058883044182 -0.8433093536400831\nAs 2.6202949434274174 0.9168058883044182 4.183958926359916\nAs 1.874756111221329 4.584029441522091 -4.200252847280169\nAs 1.874756111221329 4.584029441522091 0.8270154327198318\nAs 6.36253447873267 0.9168058883044182 -4.200252847280168\nAs 6.36253447873267 0.9168058883044182 0.8270154327198329\nAs 5.616995646526582 4.584029441522091 -7.557196340920252\nAs 5.616995646526582 4.584029441522091 -2.529928060920252\nAs 0.3764057596717467 2.750417664913255 -0.8433093536400831\nAs 0.3764057596717467 2.750417664913255 4.183958926359916\nAs -0.3691330725343421 6.417641218130928 -4.200252847280169\nAs -0.3691330725343421 6.417641218130928 0.827015432719832\nAs 4.118645294977 2.750417664913255 -4.200252847280168\nAs 4.118645294977 2.750417664913255 0.8270154327198329\nAs 3.373106462770911 6.417641218130928 -7.557196340920252\nAs 3.373106462770911 6.417641218130928 -2.529928060920252\nAs 1.498350351549582 1.8336117766088365 6.697593066359916\nAs 1.498350351549582 1.8336117766088365 1.670324786359916\nAs 0.7528115193434934 5.50083532982651 -6.7138869872801665\nAs 0.7528115193434934 5.50083532982651 3.340649572719834\nAs 0.7528115193434934 5.50083532982651 -1.6866187072801662\nAs 5.240589886854836 1.8336117766088365 -6.713886987280167\nAs 5.240589886854836 1.8336117766088365 3.3406495727198333\nAs 5.240589886854836 1.8336117766088365 -1.686618707280167\nAs 4.495051054648746 5.50083532982651 -0.016293920920251736\nAs 4.495051054648746 5.50083532982651 -5.0435622009202525","xyz");
-	viewer_17332198844629664.setStyle({"elem": "As"},{"stick": {"radius": 0.15, "color": "#75D057"}, "sphere": {"scale": 0.3, "color": "#75D057"}});
-	viewer_17332198844629664.setStyle({"elem": "Mo"},{"stick": {"radius": 0.15, "color": "#B486B0"}, "sphere": {"scale": 0.3, "color": "#B486B0"}});
-	viewer_17332198844629664.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 7.484479070610505, "y": 0.0, "z": -6.7138869872801665}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": -6.7138869872801665}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 10.05453656}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 7.484479070610505, "y": 0.0, "z": -6.7138869872801665}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -13.427773974560333}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 7.484479070610505, "y": 0.0, "z": -6.7138869872801665}, "end": {"x": 7.484479070610505, "y": 0.0, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": -6.7138869872801665}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -13.427773974560333}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": -6.7138869872801665}, "end": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.05453656}, "end": {"x": 7.484479070610505, "y": 0.0, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.05453656}, "end": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -13.427773974560333}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -3.3732374145603323}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": 7.484479070610505, "y": 0.0, "z": 3.340649572719834}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -3.3732374145603323}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.addLine({"start": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": 3.340649572719834}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -3.3732374145603323}, "color": "black", "linewidth": 2});
-	viewer_17332198844629664.zoomTo();
-viewer_17332198844629664.render();
+viewer_17338830890861993 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17338830890861993"),{backgroundColor:"white"});
+viewer_17338830890861993.zoomTo();
+	viewer_17338830890861993.addModel("52\nXYZ file generated with PBC expansion\nMo 0.0 0.0 0.0\nMo 0.0 0.0 10.05453656\nMo -1.4910776644121773 7.334447106435346 -6.7138869872801665\nMo -1.4910776644121773 7.334447106435346 3.340649572719834\nMo 7.484479070610505 0.0 -6.7138869872801665\nMo 7.484479070610505 0.0 3.340649572719834\nMo 5.993401406198328 7.334447106435346 -13.427773974560333\nMo 5.993401406198328 7.334447106435346 -3.3732374145603323\nMo 0.0 0.0 5.02726828\nMo -1.4910776644121773 7.334447106435346 -1.6866187072801662\nMo 7.484479070610505 0.0 -1.6866187072801662\nMo 5.993401406198328 7.334447106435346 -8.400505694560334\nMo -0.7455388322060886 3.667223553217673 -3.3569434936400833\nMo -0.7455388322060886 3.667223553217673 6.697593066359918\nMo 6.738940238404417 3.667223553217673 -10.07083048092025\nMo 6.738940238404417 3.667223553217673 -0.016293920920249505\nMo -0.7455388322060886 3.667223553217673 1.670324786359917\nMo 6.738940238404417 3.667223553217673 -5.04356220092025\nMo 3.7422395353052527 0.0 -3.3569434936400833\nMo 3.7422395353052527 0.0 6.697593066359918\nMo 2.2511618708930756 7.334447106435346 -10.07083048092025\nMo 2.2511618708930756 7.334447106435346 -0.016293920920249505\nMo 3.7422395353052527 0.0 1.670324786359917\nMo 2.2511618708930756 7.334447106435346 -5.04356220092025\nMo 2.996700703099164 3.667223553217673 3.340649572719833\nMo 2.996700703099164 3.667223553217673 -1.6866187072801684\nAs 2.6202949434274174 0.9168058883044182 -0.8433093536400831\nAs 2.6202949434274174 0.9168058883044182 4.183958926359916\nAs 1.874756111221329 4.584029441522091 -4.200252847280169\nAs 1.874756111221329 4.584029441522091 0.8270154327198318\nAs 6.36253447873267 0.9168058883044182 -4.200252847280168\nAs 6.36253447873267 0.9168058883044182 0.8270154327198329\nAs 5.616995646526582 4.584029441522091 -7.557196340920252\nAs 5.616995646526582 4.584029441522091 -2.529928060920252\nAs 0.3764057596717467 2.750417664913255 -0.8433093536400831\nAs 0.3764057596717467 2.750417664913255 4.183958926359916\nAs -0.3691330725343421 6.417641218130928 -4.200252847280169\nAs -0.3691330725343421 6.417641218130928 0.827015432719832\nAs 4.118645294977 2.750417664913255 -4.200252847280168\nAs 4.118645294977 2.750417664913255 0.8270154327198329\nAs 3.373106462770911 6.417641218130928 -7.557196340920252\nAs 3.373106462770911 6.417641218130928 -2.529928060920252\nAs 1.498350351549582 1.8336117766088365 6.697593066359916\nAs 1.498350351549582 1.8336117766088365 1.670324786359916\nAs 0.7528115193434934 5.50083532982651 -6.7138869872801665\nAs 0.7528115193434934 5.50083532982651 3.340649572719834\nAs 0.7528115193434934 5.50083532982651 -1.6866187072801662\nAs 5.240589886854836 1.8336117766088365 -6.713886987280167\nAs 5.240589886854836 1.8336117766088365 3.3406495727198333\nAs 5.240589886854836 1.8336117766088365 -1.686618707280167\nAs 4.495051054648746 5.50083532982651 -0.016293920920251736\nAs 4.495051054648746 5.50083532982651 -5.0435622009202525","xyz");
+	viewer_17338830890861993.setStyle({"elem": "As"},{"stick": {"radius": 0.15, "color": "#75D057"}, "sphere": {"scale": 0.3, "color": "#75D057"}});
+	viewer_17338830890861993.setStyle({"elem": "Mo"},{"stick": {"radius": 0.15, "color": "#B486B0"}, "sphere": {"scale": 0.3, "color": "#B486B0"}});
+	viewer_17338830890861993.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 7.484479070610505, "y": 0.0, "z": -6.7138869872801665}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": -6.7138869872801665}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 10.05453656}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 7.484479070610505, "y": 0.0, "z": -6.7138869872801665}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -13.427773974560333}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 7.484479070610505, "y": 0.0, "z": -6.7138869872801665}, "end": {"x": 7.484479070610505, "y": 0.0, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": -6.7138869872801665}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -13.427773974560333}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": -6.7138869872801665}, "end": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.05453656}, "end": {"x": 7.484479070610505, "y": 0.0, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 0.0, "y": 0.0, "z": 10.05453656}, "end": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": 3.340649572719834}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -13.427773974560333}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -3.3732374145603323}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": 7.484479070610505, "y": 0.0, "z": 3.340649572719834}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -3.3732374145603323}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.addLine({"start": {"x": -1.4910776644121773, "y": 7.334447106435346, "z": 3.340649572719834}, "end": {"x": 5.993401406198328, "y": 7.334447106435346, "z": -3.3732374145603323}, "color": "black", "linewidth": 2});
+	viewer_17338830890861993.zoomTo();
+viewer_17338830890861993.render();
 });
 </script>
             </div>
@@ -160,50 +160,54 @@ viewer_17332198844629664.render();
         <div class="table-container">
             <div class="scrollable-table">
                 <style  type="text/css" >
-</style><table id="T_a716c_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Mo1</th>        <th class="col_heading level0 col1" >Mo2</th>        <th class="col_heading level0 col2" >As1</th>        <th class="col_heading level0 col3" >As2</th>        <th class="col_heading level0 col4" >As3</th>        <th class="col_heading level0 col5" >As4</th>        <th class="col_heading level0 col6" >As5</th>        <th class="col_heading level0 col7" >As6</th>    </tr></thead><tbody>
+#T_ab69d_row0_col0,#T_ab69d_row0_col1,#T_ab69d_row0_col2,#T_ab69d_row0_col3,#T_ab69d_row0_col4,#T_ab69d_row0_col5,#T_ab69d_row0_col6,#T_ab69d_row0_col7{
+            background-color:  lightgreen;
+        }#T_ab69d_row1_col0,#T_ab69d_row1_col1,#T_ab69d_row1_col2,#T_ab69d_row1_col3,#T_ab69d_row1_col4,#T_ab69d_row1_col5,#T_ab69d_row1_col6,#T_ab69d_row1_col7{
+            background-color:  lightcoral;
+        }</style><table id="T_ab69d_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Mo1</th>        <th class="col_heading level0 col1" >Mo2</th>        <th class="col_heading level0 col2" >As1</th>        <th class="col_heading level0 col3" >As2</th>        <th class="col_heading level0 col4" >As3</th>        <th class="col_heading level0 col5" >As4</th>        <th class="col_heading level0 col6" >As5</th>        <th class="col_heading level0 col7" >As6</th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_a716c_level0_row0" class="row_heading level0 row0" >TOSS</th>
-                        <td id="T_a716c_row0_col0" class="data row0 col0" >6</td>
-                        <td id="T_a716c_row0_col1" class="data row0 col1" >6</td>
-                        <td id="T_a716c_row0_col2" class="data row0 col2" >-2</td>
-                        <td id="T_a716c_row0_col3" class="data row0 col3" >-2</td>
-                        <td id="T_a716c_row0_col4" class="data row0 col4" >-2</td>
-                        <td id="T_a716c_row0_col5" class="data row0 col5" >-2</td>
-                        <td id="T_a716c_row0_col6" class="data row0 col6" >-2</td>
-                        <td id="T_a716c_row0_col7" class="data row0 col7" >-2</td>
+                        <th id="T_ab69d_level0_row0" class="row_heading level0 row0" >TOSS</th>
+                        <td id="T_ab69d_row0_col0" class="data row0 col0" >6</td>
+                        <td id="T_ab69d_row0_col1" class="data row0 col1" >6</td>
+                        <td id="T_ab69d_row0_col2" class="data row0 col2" >-2</td>
+                        <td id="T_ab69d_row0_col3" class="data row0 col3" >-2</td>
+                        <td id="T_ab69d_row0_col4" class="data row0 col4" >-2</td>
+                        <td id="T_ab69d_row0_col5" class="data row0 col5" >-2</td>
+                        <td id="T_ab69d_row0_col6" class="data row0 col6" >-2</td>
+                        <td id="T_ab69d_row0_col7" class="data row0 col7" >-2</td>
             </tr>
             <tr>
-                        <th id="T_a716c_level0_row1" class="row_heading level0 row1" >BVS</th>
-                        <td id="T_a716c_row1_col0" class="data row1 col0" >3</td>
-                        <td id="T_a716c_row1_col1" class="data row1 col1" >3</td>
-                        <td id="T_a716c_row1_col2" class="data row1 col2" >-1</td>
-                        <td id="T_a716c_row1_col3" class="data row1 col3" >-1</td>
-                        <td id="T_a716c_row1_col4" class="data row1 col4" >-1</td>
-                        <td id="T_a716c_row1_col5" class="data row1 col5" >-1</td>
-                        <td id="T_a716c_row1_col6" class="data row1 col6" >-1</td>
-                        <td id="T_a716c_row1_col7" class="data row1 col7" >-1</td>
+                        <th id="T_ab69d_level0_row1" class="row_heading level0 row1" >BVS</th>
+                        <td id="T_ab69d_row1_col0" class="data row1 col0" >3</td>
+                        <td id="T_ab69d_row1_col1" class="data row1 col1" >3</td>
+                        <td id="T_ab69d_row1_col2" class="data row1 col2" >-1</td>
+                        <td id="T_ab69d_row1_col3" class="data row1 col3" >-1</td>
+                        <td id="T_ab69d_row1_col4" class="data row1 col4" >-1</td>
+                        <td id="T_ab69d_row1_col5" class="data row1 col5" >-1</td>
+                        <td id="T_ab69d_row1_col6" class="data row1 col6" >-1</td>
+                        <td id="T_ab69d_row1_col7" class="data row1 col7" >-1</td>
             </tr>
             <tr>
-                        <th id="T_a716c_level0_row2" class="row_heading level0 row2" >Spin</th>
-                        <td id="T_a716c_row2_col0" class="data row2 col0" >0.885</td>
-                        <td id="T_a716c_row2_col1" class="data row2 col1" >0.886</td>
-                        <td id="T_a716c_row2_col2" class="data row2 col2" >-0.012</td>
-                        <td id="T_a716c_row2_col3" class="data row2 col3" >-0.012</td>
-                        <td id="T_a716c_row2_col4" class="data row2 col4" >-0.001</td>
-                        <td id="T_a716c_row2_col5" class="data row2 col5" >-0.012</td>
-                        <td id="T_a716c_row2_col6" class="data row2 col6" >-0.012</td>
-                        <td id="T_a716c_row2_col7" class="data row2 col7" >-0.001</td>
+                        <th id="T_ab69d_level0_row2" class="row_heading level0 row2" >Spin</th>
+                        <td id="T_ab69d_row2_col0" class="data row2 col0" >0.885</td>
+                        <td id="T_ab69d_row2_col1" class="data row2 col1" >0.886</td>
+                        <td id="T_ab69d_row2_col2" class="data row2 col2" >-0.012</td>
+                        <td id="T_ab69d_row2_col3" class="data row2 col3" >-0.012</td>
+                        <td id="T_ab69d_row2_col4" class="data row2 col4" >-0.001</td>
+                        <td id="T_ab69d_row2_col5" class="data row2 col5" >-0.012</td>
+                        <td id="T_ab69d_row2_col6" class="data row2 col6" >-0.012</td>
+                        <td id="T_ab69d_row2_col7" class="data row2 col7" >-0.001</td>
             </tr>
             <tr>
-                        <th id="T_a716c_level0_row3" class="row_heading level0 row3" >Bader</th>
-                        <td id="T_a716c_row3_col0" class="data row3 col0" >13.373</td>
-                        <td id="T_a716c_row3_col1" class="data row3 col1" >13.373</td>
-                        <td id="T_a716c_row3_col2" class="data row3 col2" >5.136</td>
-                        <td id="T_a716c_row3_col3" class="data row3 col3" >5.135</td>
-                        <td id="T_a716c_row3_col4" class="data row3 col4" >5.355</td>
-                        <td id="T_a716c_row3_col5" class="data row3 col5" >5.105</td>
-                        <td id="T_a716c_row3_col6" class="data row3 col6" >5.166</td>
-                        <td id="T_a716c_row3_col7" class="data row3 col7" >5.356</td>
+                        <th id="T_ab69d_level0_row3" class="row_heading level0 row3" >Bader</th>
+                        <td id="T_ab69d_row3_col0" class="data row3 col0" >13.373</td>
+                        <td id="T_ab69d_row3_col1" class="data row3 col1" >13.373</td>
+                        <td id="T_ab69d_row3_col2" class="data row3 col2" >5.136</td>
+                        <td id="T_ab69d_row3_col3" class="data row3 col3" >5.135</td>
+                        <td id="T_ab69d_row3_col4" class="data row3 col4" >5.355</td>
+                        <td id="T_ab69d_row3_col5" class="data row3 col5" >5.105</td>
+                        <td id="T_ab69d_row3_col6" class="data row3 col6" >5.166</td>
+                        <td id="T_ab69d_row3_col7" class="data row3 col7" >5.356</td>
             </tr>
     </tbody></table>
             </div>

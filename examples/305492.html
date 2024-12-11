@@ -85,8 +85,8 @@
         <h1>3D Visualization with Styled Data Table and Legend</h1>
         <div class="top-content">
             <div class="viewer-container">
-                <div id="3dmolviewer_17332198844859653"  style="position: relative; width: 800px; height: 500px;">
-        <p id="3dmolwarning_17332198844859653" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
+                <div id="3dmolviewer_17338830891121988"  style="position: relative; width: 800px; height: 500px;">
+        <p id="3dmolwarning_17338830891121988" style="background-color:#ffcccc;color:black">3Dmol.js failed to load for some reason.  Please check your browser console for error messages.<br></p>
         </div>
 <script>
 
@@ -117,31 +117,31 @@ $3Dmolpromise = null;
   $3Dmolpromise = loadScriptAsync('https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.4.2/3Dmol-min.js');
 }
 
-var viewer_17332198844859653 = null;
-var warn = document.getElementById("3dmolwarning_17332198844859653");
+var viewer_17338830891121988 = null;
+var warn = document.getElementById("3dmolwarning_17338830891121988");
 if(warn) {
     warn.parentNode.removeChild(warn);
 }
 $3Dmolpromise.then(function() {
-viewer_17332198844859653 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17332198844859653"),{backgroundColor:"white"});
-viewer_17332198844859653.zoomTo();
-	viewer_17332198844859653.addModel("35\nXYZ file generated with PBC expansion\nDy 1.5455165000000002 1.5455165 1.5455165000000002\nDy 1.5455165000000002 1.5455165 4.6365495\nDy 1.5455165000000006 4.6365495 1.5455165000000004\nDy 1.5455165000000006 4.6365495 4.6365495\nDy 4.6365495 1.5455165 1.5455165000000004\nDy 4.6365495 1.5455165 4.6365495\nDy 4.636549500000002 4.6365495 1.5455165000000006\nDy 4.636549500000002 4.6365495 4.636549500000001\nC 0.0 0.0 0.0\nC 0.0 0.0 6.182066\nC 9.941520356395846e-16 6.182066 3.7854236695088403e-16\nC 9.941520356395846e-16 6.182066 6.182066\nC 6.182066 0.0 3.7854236695088403e-16\nC 6.182066 0.0 6.182066\nC 6.182066000000001 6.182066 7.570847339017681e-16\nC 6.182066000000001 6.182066 6.182066000000001\nC 0.0 0.0 3.091033\nC 9.941520356395846e-16 6.182066 3.0910330000000004\nC 6.182066 0.0 3.0910330000000004\nC 6.182066000000001 6.182066 3.091033000000001\nC 4.970760178197923e-16 3.091033 1.8927118347544202e-16\nC 4.970760178197923e-16 3.091033 6.182066\nC 6.182066000000001 3.091033 5.678135504263261e-16\nC 6.182066000000001 3.091033 6.182066000000001\nC 4.970760178197923e-16 3.091033 3.091033\nC 6.182066000000001 3.091033 3.0910330000000004\nC 3.091033 0.0 1.8927118347544202e-16\nC 3.091033 0.0 6.182066\nC 3.091033000000001 6.182066 5.678135504263261e-16\nC 3.091033000000001 6.182066 6.182066000000001\nC 3.091033 0.0 3.091033\nC 3.091033000000001 6.182066 3.0910330000000004\nC 3.0910330000000004 3.091033 3.7854236695088403e-16\nC 3.0910330000000004 3.091033 6.182066\nC 3.0910330000000004 3.091033 3.0910330000000004","xyz");
-	viewer_17332198844859653.setStyle({"elem": "C"},{"stick": {"radius": 0.15, "color": "#814929"}, "sphere": {"scale": 0.3, "color": "#814929"}});
-	viewer_17332198844859653.setStyle({"elem": "Dy"},{"stick": {"radius": 0.15, "color": "#3106FD"}, "sphere": {"scale": 0.3, "color": "#3106FD"}});
-	viewer_17332198844859653.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 6.182066, "y": 0.0, "z": 3.7854236695088403e-16}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 3.7854236695088403e-16}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 6.182066}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 6.182066, "y": 0.0, "z": 3.7854236695088403e-16}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 7.570847339017681e-16}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 6.182066, "y": 0.0, "z": 3.7854236695088403e-16}, "end": {"x": 6.182066, "y": 0.0, "z": 6.182066}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 3.7854236695088403e-16}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 7.570847339017681e-16}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 3.7854236695088403e-16}, "end": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 6.182066}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 0.0, "y": 0.0, "z": 6.182066}, "end": {"x": 6.182066, "y": 0.0, "z": 6.182066}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 0.0, "y": 0.0, "z": 6.182066}, "end": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 6.182066}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 6.182066000000001, "y": 6.182066, "z": 7.570847339017681e-16}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 6.182066000000001}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 6.182066, "y": 0.0, "z": 6.182066}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 6.182066000000001}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.addLine({"start": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 6.182066}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 6.182066000000001}, "color": "black", "linewidth": 2});
-	viewer_17332198844859653.zoomTo();
-viewer_17332198844859653.render();
+viewer_17338830891121988 = $3Dmol.createViewer(document.getElementById("3dmolviewer_17338830891121988"),{backgroundColor:"white"});
+viewer_17338830891121988.zoomTo();
+	viewer_17338830891121988.addModel("35\nXYZ file generated with PBC expansion\nDy 1.5455165000000002 1.5455165 1.5455165000000002\nDy 1.5455165000000002 1.5455165 4.6365495\nDy 1.5455165000000006 4.6365495 1.5455165000000004\nDy 1.5455165000000006 4.6365495 4.6365495\nDy 4.6365495 1.5455165 1.5455165000000004\nDy 4.6365495 1.5455165 4.6365495\nDy 4.636549500000002 4.6365495 1.5455165000000006\nDy 4.636549500000002 4.6365495 4.636549500000001\nC 0.0 0.0 0.0\nC 0.0 0.0 6.182066\nC 9.941520356395846e-16 6.182066 3.7854236695088403e-16\nC 9.941520356395846e-16 6.182066 6.182066\nC 6.182066 0.0 3.7854236695088403e-16\nC 6.182066 0.0 6.182066\nC 6.182066000000001 6.182066 7.570847339017681e-16\nC 6.182066000000001 6.182066 6.182066000000001\nC 0.0 0.0 3.091033\nC 9.941520356395846e-16 6.182066 3.0910330000000004\nC 6.182066 0.0 3.0910330000000004\nC 6.182066000000001 6.182066 3.091033000000001\nC 4.970760178197923e-16 3.091033 1.8927118347544202e-16\nC 4.970760178197923e-16 3.091033 6.182066\nC 6.182066000000001 3.091033 5.678135504263261e-16\nC 6.182066000000001 3.091033 6.182066000000001\nC 4.970760178197923e-16 3.091033 3.091033\nC 6.182066000000001 3.091033 3.0910330000000004\nC 3.091033 0.0 1.8927118347544202e-16\nC 3.091033 0.0 6.182066\nC 3.091033000000001 6.182066 5.678135504263261e-16\nC 3.091033000000001 6.182066 6.182066000000001\nC 3.091033 0.0 3.091033\nC 3.091033000000001 6.182066 3.0910330000000004\nC 3.0910330000000004 3.091033 3.7854236695088403e-16\nC 3.0910330000000004 3.091033 6.182066\nC 3.0910330000000004 3.091033 3.0910330000000004","xyz");
+	viewer_17338830891121988.setStyle({"elem": "C"},{"stick": {"radius": 0.15, "color": "#814929"}, "sphere": {"scale": 0.3, "color": "#814929"}});
+	viewer_17338830891121988.setStyle({"elem": "Dy"},{"stick": {"radius": 0.15, "color": "#3106FD"}, "sphere": {"scale": 0.3, "color": "#3106FD"}});
+	viewer_17338830891121988.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 6.182066, "y": 0.0, "z": 3.7854236695088403e-16}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 3.7854236695088403e-16}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 0, "y": 0, "z": 0}, "end": {"x": 0.0, "y": 0.0, "z": 6.182066}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 6.182066, "y": 0.0, "z": 3.7854236695088403e-16}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 7.570847339017681e-16}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 6.182066, "y": 0.0, "z": 3.7854236695088403e-16}, "end": {"x": 6.182066, "y": 0.0, "z": 6.182066}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 3.7854236695088403e-16}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 7.570847339017681e-16}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 3.7854236695088403e-16}, "end": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 6.182066}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 0.0, "y": 0.0, "z": 6.182066}, "end": {"x": 6.182066, "y": 0.0, "z": 6.182066}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 0.0, "y": 0.0, "z": 6.182066}, "end": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 6.182066}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 6.182066000000001, "y": 6.182066, "z": 7.570847339017681e-16}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 6.182066000000001}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 6.182066, "y": 0.0, "z": 6.182066}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 6.182066000000001}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.addLine({"start": {"x": 9.941520356395846e-16, "y": 6.182066, "z": 6.182066}, "end": {"x": 6.182066000000001, "y": 6.182066, "z": 6.182066000000001}, "color": "black", "linewidth": 2});
+	viewer_17338830891121988.zoomTo();
+viewer_17338830891121988.render();
 });
 </script>
             </div>
@@ -160,28 +160,28 @@ viewer_17332198844859653.render();
         <div class="table-container">
             <div class="scrollable-table">
                 <style  type="text/css" >
-#T_346e1_row0_col0,#T_346e1_row0_col1,#T_346e1_row1_col0,#T_346e1_row1_col1{
+#T_38134_row0_col0,#T_38134_row0_col1,#T_38134_row1_col0,#T_38134_row1_col1{
             background-color:  lightgray;
-        }</style><table id="T_346e1_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Dy1</th>        <th class="col_heading level0 col1" >C1</th>    </tr></thead><tbody>
+        }</style><table id="T_38134_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Dy1</th>        <th class="col_heading level0 col1" >C1</th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_346e1_level0_row0" class="row_heading level0 row0" >TOSS</th>
-                        <td id="T_346e1_row0_col0" class="data row0 col0" >4</td>
-                        <td id="T_346e1_row0_col1" class="data row0 col1" >-4</td>
+                        <th id="T_38134_level0_row0" class="row_heading level0 row0" >TOSS</th>
+                        <td id="T_38134_row0_col0" class="data row0 col0" >4</td>
+                        <td id="T_38134_row0_col1" class="data row0 col1" >-4</td>
             </tr>
             <tr>
-                        <th id="T_346e1_level0_row1" class="row_heading level0 row1" >BVS</th>
-                        <td id="T_346e1_row1_col0" class="data row1 col0" >3</td>
-                        <td id="T_346e1_row1_col1" class="data row1 col1" >-3</td>
+                        <th id="T_38134_level0_row1" class="row_heading level0 row1" >BVS</th>
+                        <td id="T_38134_row1_col0" class="data row1 col0" >3</td>
+                        <td id="T_38134_row1_col1" class="data row1 col1" >-3</td>
             </tr>
             <tr>
-                        <th id="T_346e1_level0_row2" class="row_heading level0 row2" >Spin</th>
-                        <td id="T_346e1_row2_col0" class="data row2 col0" >0.002</td>
-                        <td id="T_346e1_row2_col1" class="data row2 col1" >0.004</td>
+                        <th id="T_38134_level0_row2" class="row_heading level0 row2" >Spin</th>
+                        <td id="T_38134_row2_col0" class="data row2 col0" >0.002</td>
+                        <td id="T_38134_row2_col1" class="data row2 col1" >0.004</td>
             </tr>
             <tr>
-                        <th id="T_346e1_level0_row3" class="row_heading level0 row3" >Bader</th>
-                        <td id="T_346e1_row3_col0" class="data row3 col0" >7.505</td>
-                        <td id="T_346e1_row3_col1" class="data row3 col1" >5.495</td>
+                        <th id="T_38134_level0_row3" class="row_heading level0 row3" >Bader</th>
+                        <td id="T_38134_row3_col0" class="data row3 col0" >7.505</td>
+                        <td id="T_38134_row3_col1" class="data row3 col1" >5.495</td>
             </tr>
     </tbody></table>
             </div>
