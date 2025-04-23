@@ -2,151 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TOSS</title>
   <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
+      font-family: Arial, sans-serif;
+      margin: 0;
     }
 
     .main-container {
-        position: relative;
-        width: 100vw;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .bg-container {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-image: url('toss.png');
-        background-position: bottom center;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-image: url('toss.png');
+      background-position: bottom center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
     }
 
     .content-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        padding: 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      text-align: center;
     }
 
     h1 {
-        font-size: 6vw;
-        text-align: center;
-        margin-bottom: 0.5vw;
-        margin-top: 2vw;
+      font-size: 4vw;
+      margin: 0.5vw 0 0.5vw;
     }
 
-    h2 {
-        font-size: 3vw;
-        text-align: center;
+    h2 {font-size: 2vw;
+        margin: 0vw}
+
+    h2 span {color: red;}
+
+    /* Fixed-width, viewport-relative plot container */
+    #plot-container {
+      width: 60vw;
+      height: 30vw;
+      margin: 0vw auto;
+      box-sizing: border-box;
     }
 
-    h2 span {
-        color: red;
+    #plot-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* or cover */
+      display: block;
     }
 
     .button-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        width: 100%;
-        max-width: 600px;
-        padding: 0 0;
-        margin-top: 10vh;
-        margin-bottom: 5vh;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      width: 70%;
+      margin: 0vh 0 0vh;
     }
 
     button {
-        flex: 1 1 auto;
-        background-color: inherit;
-        font-size: 1.2vw;
-        font-weight: bold;
-        margin: 0vw 1.5vw;
-        padding: 0vh 0vw;
+      flex: 0 1 auto;
+      background-color: #f5f5f5;
+      background-color: inherit;
+      font-size: 1.2vw;
+      font-weight: bold;
+      margin: 0 0.5vw;
+      padding: 0.8vh 1vw;
+      border: 2px solid #888;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-0.2vw);
+      box-shadow: 0 0.4vw 0.8vw rgba(0,0,0,0.15);
+    }
+    
+    button:active {
+      background-color: #d0d0d0;
+      transform: translateY(0);
+      box-shadow: 0 0.1vw 0.3vw rgba(0,0,0,0.1);
     }
 
     footer {
-        /*background-color: #f8f9fa;*/
-        padding: 0px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1vw;
-        margin-top: 28vh;
+      padding: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1vw;
+      margin-top: 1vh;
     }
   </style>
 </head>
 <body>
   <div class="main-container">
     <div class="bg-container"></div>
-    <dic class="content-container">
+    <div class="content-container">
       <h1>TOSS</h1>
       <h2><span>T</span>singhua <span>O</span>xidation <span>S</span>tates in <span>S</span>olids</h2>
 
+      <div id="plot-container">
+        <img src="toc.png" alt="TOSS overview plot">
+      </div>
+
       <div class="button-container">
-        <button id="go-to-periodic-table">Periodic Table of Coordination Radii</button>
+        <button id="go-to-periodic-table">Coordination Radii Periodic Table</button>
         <button id="go-to-distance-distribution">Distance Distribution</button>
         <button id="go-to-BP-Finder">Bond Parameters Finder</button>
         <button id="go-to-SR-Finder">Species Radii Finder</button>
         <button id="go-to-Examples">100 Examples</button>
-
       </div>
-
-      <script>
-        document.getElementById("go-to-Examples").addEventListener("click", function() {
-          window.open("./examples.html");
-        });
-      </script>
-
-      <script>
-        document.getElementById("go-to-periodic-table").addEventListener("click", function() {
-          window.open("./coordination_radii/coordination_radii.html");
-        });
-      </script>
-
-      <script>
-        document.getElementById("go-to-distance-distribution").addEventListener("click", function() {
-          window.open("distribution.html");
-        });
-      </script>
-      
-      <script>
-        document.getElementById("go-to-3d-radii").addEventListener("click", function() {
-          window.open("3DAR.html");
-        });
-      </script>
-
-      <script>
-        document.getElementById("go-to-BP-Finder").addEventListener("click", function() {
-          window.open("./bond_finder/bond_finder.html");
-        });
-      </script>
-
-      <script>
-        document.getElementById("go-to-SR-Finder").addEventListener("click", function() {
-          window.open("./specie_finder/specie_finder.html");
-        });
-      </script>
 
       <footer>
         <p>&copy; 2023 Yue Yin and Hai Xiao. All rights reserved.</p>
         <p>Contact: <a href="mailto:yiny21@mails.tsinghua.edu.cn">yiny21@mails.tsinghua.edu.cn</a></p>
-        <!--<p style="color:black;"><a href="https://beian.miit.gov.cn">京ICP备2023009848号</a></p>-->
       </footer>
     </div>
   </div>
 
+  <script>
+    document.getElementById("go-to-periodic-table")
+      .addEventListener("click", () => window.open("./coordination_radii/coordination_radii.html"));
+    document.getElementById("go-to-distance-distribution")
+      .addEventListener("click", () => window.open("distribution.html"));
+    document.getElementById("go-to-BP-Finder")
+      .addEventListener("click", () => window.open("./bond_finder/bond_finder.html"));
+    document.getElementById("go-to-SR-Finder")
+      .addEventListener("click", () => window.open("./specie_finder/specie_finder.html"));
+    document.getElementById("go-to-Examples")
+      .addEventListener("click", () => window.open("./examples.html"));
+  </script>
 </body>
 </html>
